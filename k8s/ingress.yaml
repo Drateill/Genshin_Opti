@@ -1,18 +1,17 @@
-# EDIT ME before relying on this: set `ingressClassName` to match your
-# cluster's ingress controller, and `host` to the domain you'll point at it.
-# This host is also what you should set as the APP_HEALTH_URL GitHub Actions
-# repo variable (see DEPLOYMENT.md), since the post-deploy smoke test polls
-# it over HTTP.
+# Traefik ingress (K3s default), same pattern as the other apps on this
+# cluster (e.g. darkheresy-ingress): plain HTTP on the "web" entrypoint.
+# TLS/public exposure is handled externally by Nginx Proxy Manager, which
+# reverse-proxies genshin.drateil.ovh to the cluster's Traefik LoadBalancer.
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: genshin-optimizer
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   rules:
-    - host: genshin-optimizer.example.com
+    - host: genshin.drateil.ovh
       http:
         paths:
           - path: /
