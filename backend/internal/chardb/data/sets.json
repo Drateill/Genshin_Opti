@@ -1,0 +1,946 @@
+[
+  {
+    "key": "ADayCarvedFromRisingWinds",
+    "name": {
+      "en": "A Day Carved From Rising Winds",
+      "fr": "Journée sculptée par les vents ascendants"
+    },
+    "short": {
+      "en": "AD",
+      "fr": "JS"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: After a Normal Attack, Charged Attack, Elemental Skill, or Elemental Burst hits an opponent, gain the Blessing of Pastoral Winds effect for 6s: ATK is increased by 25%. If the equipping character has completed Witch's Homework, Blessing of Pastoral Winds will be upgraded to Resolve of Pastoral Winds, which additionally increases the CRIT Rate of the equipping character by 20%. This effect can be triggered even when the character is off-field.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Toucher un ennemi avec une attaque normale, une attaque chargée, une compétence élémentaire ou un déchaînement élémentaire accorde l'effet Bénédiction des vents pastoraux pendant 6 s : augmente l'ATQ de 25 %. Si le personnage équipé de l'artéfact a terminé son devoir de la sorcière, l'effet est converti en l'effet Détermination des vents pastoraux, augmentant en plus le taux CRIT de 20 %. Les effets décrits ci-dessus peuvent être déclenchés même lorsque le personnage fait partie de l'équipe mais n'est pas déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15044_4.png"
+  },
+  {
+    "key": "Adventurer",
+    "name": {
+      "en": "Adventurer",
+      "fr": "Aventurier"
+    },
+    "short": {
+      "en": "A",
+      "fr": "A"
+    },
+    "description": {
+      "en": "2pc: Max HP increased by 1,000. 4pc: Opening a chest regenerates 30% Max HP over 5s.",
+      "fr": "2 pièces : Augmente les PV max de 1 000 pts. 4 pièces : Restaure 30 % des PV pendant 5 s après l'ouverture d'un coffre."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10010_4.png"
+  },
+  {
+    "key": "ArchaicPetra",
+    "name": {
+      "en": "Archaic Petra",
+      "fr": "Roche ancienne"
+    },
+    "short": {
+      "en": "AP",
+      "fr": "RA"
+    },
+    "description": {
+      "en": "2pc: Gain a 15% Geo DMG Bonus. 4pc: Upon obtaining an Elemental Shard created through Crystallize or triggering a Lunar-Crystallize reaction, all party members gain a 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time.",
+      "fr": "2 pièces : Confère un bonus de DGT Géo de 15 %. 4 pièces : Lorsque vous obtenez un cristal issu d'une Cristallisation ou déclenchez une réaction de Sélénocristallisation, tous les personnages de l'équipe bénéficient d'un bonus de DGT du second élément de la réaction de 35 % pendant 10 s. Cet effet ne peut s'appliquer qu'à un seul élément à la fois."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15014_4.png"
+  },
+  {
+    "key": "AubadeOfMorningstarAndMoon",
+    "name": {
+      "en": "Aubade of Morningstar and Moon",
+      "fr": "Aubade d'astre et de lune"
+    },
+    "short": {
+      "en": "AO",
+      "fr": "AD"
+    },
+    "description": {
+      "en": "2pc: Increases Elemental Mastery by 80. 4pc: When the equipping character is off-field, Lunar Reaction DMG is increased by 20%. When the party's Moonsign Level is at least Ascendant Gleam, Lunar Reaction DMG will be further increased by 40%. This effect will disappear after the equipping character is active for 3s.",
+      "fr": "2 pièces : Augmente la maîtrise élémentaire de 80 pts. 4 pièces : Lorsque le personnage équipé de l'artéfact fait partie de l'équipe mais n'est pas déployé, les DGT de réaction sélène augmentent de 20 %, et de 40 % supplémentaires si le cycle signelunaire de l'équipe est au moins « Lueur ascendante ». Cet effet prend fin 3 s après que le personnage concerné est déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15043_4.png"
+  },
+  {
+    "key": "Berserker",
+    "name": {
+      "en": "Berserker",
+      "fr": "Berserker"
+    },
+    "short": {
+      "en": "B",
+      "fr": "B"
+    },
+    "description": {
+      "en": "2pc: CRIT Rate +12%. 4pc: When HP is below 70%, CRIT Rate increases by an additional 24%.",
+      "fr": "2 pièces : Augmente le taux CRIT de 12 %. 4 pièces : Augmente le taux CRIT de 24 % lorsque les PV sont inférieurs à 70 %."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10005_4.png"
+  },
+  {
+    "key": "BlizzardStrayer",
+    "name": {
+      "en": "Blizzard Strayer",
+      "fr": "Briseur de glace"
+    },
+    "short": {
+      "en": "BS",
+      "fr": "BD"
+    },
+    "description": {
+      "en": "2pc: Cryo DMG Bonus +15%. 4pc: When a character attacks an opponent affected by Cryo, their CRIT Rate is increased by 20%. If the opponent is Frozen, CRIT Rate is increased by an additional 20%.",
+      "fr": "2 pièces : Confère un bonus de DGT Cryo de 15 %. 4 pièces : Augmente le taux CRIT de 20 % lorsque le personnage attaque un ennemi affecté par l'élément Cryo. Confère un bonus supplémentaire de 20 % de taux CRIT si l'ennemi est gelé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_14001_4.png"
+  },
+  {
+    "key": "BloodstainedChivalry",
+    "name": {
+      "en": "Bloodstained Chivalry",
+      "fr": "Chevalerie ensanglantée"
+    },
+    "short": {
+      "en": "BC",
+      "fr": "CE"
+    },
+    "description": {
+      "en": "2pc: Physical DMG +25%. 4pc: After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s.",
+      "fr": "2 pièces : Augmente les DGT physiques de 25 %. 4 pièces : L'utilisation d'attaques chargées ne consomme pas l'endurance pendant 10 s après la défaite d'un ennemi, et ces dernières infligent 50 % de DGT supplémentaires."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15008_4.png"
+  },
+  {
+    "key": "BraveHeart",
+    "name": {
+      "en": "Brave Heart",
+      "fr": "Cœur du Brave"
+    },
+    "short": {
+      "en": "BH",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: Increases DMG by 30% against opponents with more than 50% HP.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Augmente les DGT infligés aux ennemis dont les PV sont supérieurs à 50 % de 30 %."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10002_4.png"
+  },
+  {
+    "key": "CelestialGift",
+    "name": {
+      "en": "Celestial Gift",
+      "fr": "Don céleste"
+    },
+    "short": {
+      "en": "CG",
+      "fr": "DC"
+    },
+    "description": {
+      "en": "2pc: Energy Recharge +20%. 4pc: If the equipping character has completed Witch's Homework, after they use an Elemental Skill, they gain \"Light's Guidance\" for 20s: All nearby party members gain a 20% Elemental DMG Bonus corresponding to the equipping character's Elemental Type. The equipping character can trigger this effect while off-field. DMG Bonuses provided by Artifact Sets with the same name do not stack.\n· When your party has the Hexerei: Secret Rite effect, Light's Guidance is upgraded to \"Mortal Hymn\": All nearby party members gain a 40% Elemental DMG Bonus corresponding to both the equipping character and the current active party member's Elemental Type instead. If both characters have the same Elemental Type, these bonuses will not stack.",
+      "fr": "2 pièces : Augmente la recharge d'énergie de 20 %. 4 pièces : Si le personnage équipé de l'artéfact a terminé son devoir de la sorcière et a utilisé une compétence élémentaire, il obtient l'effet Guidance de la lumière : accorde un bonus de DGT de l'élément du personnage équipé de l'artéfact de 20 % pendant 20 s à tous les personnages de l'équipe à proximité. L'effet ci-dessus peut être déclenché même si le personnage équipé de l'artéfact n'est pas déployé, et les effets d'augmentation des DGT accordés par les sets d'artéfacts du même nom ne se cumulent pas.\nLorsque l'équipe bénéficie de l'effet Hexerei : Rituel secret, l'effet Guidance de la lumière est amélioré en Hymne mortel, accordant un bonus de DGT de l'élément du personnage équipé de l'artéfact et de l'élément de votre personnage déployé de 40 % à tous les personnages de l'équipe à proximité, ce bonus n'étant pas doublé si leurs éléments sont identiques."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15045_4.png"
+  },
+  {
+    "key": "CrimsonWitchOfFlames",
+    "name": {
+      "en": "Crimson Witch of Flames",
+      "fr": "Sorcière des flammes ardentes"
+    },
+    "short": {
+      "en": "CW",
+      "fr": "SD"
+    },
+    "description": {
+      "en": "2pc: Pyro DMG Bonus +15%. 4pc: Increases Overloaded, Burning, and Burgeon DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 3 stacks.",
+      "fr": "2 pièces : Confère un bonus de DGT Pyro de 15 %. 4 pièces : Augmente les DGT infligés par Surcharge, Brûlure et Bourgeonnement de 40 % et ceux d'Évaporation et de Fonte de 15 %. L'utilisation d'une compétence élémentaire augmente pendant 10 s l'effet du set de 2 pièces de 50 %. Cet effet peut être cumulé 3 fois maximum."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15006_4.png"
+  },
+  {
+    "key": "DeepwoodMemories",
+    "name": {
+      "en": "Deepwood Memories",
+      "fr": "Souvenir de forêt"
+    },
+    "short": {
+      "en": "DM",
+      "fr": "SD"
+    },
+    "description": {
+      "en": "2pc: Dendro DMG Bonus +15%. 4pc: After Elemental Skills or Bursts hit opponents, the targets' Dendro RES will be decreased by 30% for 8s. This effect can be triggered even if the equipping character is not on the field.",
+      "fr": "2 pièces : Confère un bonus de DGT Dendro de 15 %. 4 pièces : Après qu'une compétence ou un déchaînement élémentaires a touché un ennemi, sa RÉS Dendro diminue de 30 % pendant 8 s. Cet effet peut être déclenché même si le personnage équipé de l'artéfact fait partie de l'équipe mais n'est pas déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15025_4.png"
+  },
+  {
+    "key": "DefendersWill",
+    "name": {
+      "en": "Defender's Will",
+      "fr": "Cœur du Gardien"
+    },
+    "short": {
+      "en": "DW",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: DEF +30%. 4pc: For each different element present in your own party, the wearer's Elemental RES to that corresponding element is increased by 30%.",
+      "fr": "2 pièces : Augmente la DÉF de 30 %. 4 pièces : Pour chaque personnage de l'équipe ayant un élément de type différent du personnage équipé, la RÉS élémentaire correspondante est augmentée de 30 %."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10003_4.png"
+  },
+  {
+    "key": "DesertPavilionChronicle",
+    "name": {
+      "en": "Desert Pavilion Chronicle",
+      "fr": "Chronique du Pavillon du désert"
+    },
+    "short": {
+      "en": "DP",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: Anemo DMG Bonus +15%. 4pc: When Charged Attacks hit opponents, the equipping character's Normal Attack SPD will increase by 10% while Normal, Charged, and Plunging Attack DMG will increase by 40% for 15s.",
+      "fr": "2 pièces : Confère un bonus de DGT Anémo de 15 %. 4 pièces : Lorsqu'une attaque chargée a touché un ennemi, la VIT d'attaque normale du personnage augmente de 10 % et les DGT infligés par ses attaques normales, chargées et plongeantes augmentent de 40 %, pendant 15 s."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15027_4.png"
+  },
+  {
+    "key": "DisenchantmentInDeepShadow",
+    "name": {
+      "en": "Disenchantment in Deep Shadow",
+      "fr": "Désenchantement dans l'ombre profonde"
+    },
+    "short": {
+      "en": "DI",
+      "fr": "DD"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: Increases Superconduct Reaction DMG by 80% and Stellar-Conduct Reaction DMG by 40%. When the wielder attacks opponents affected by Superconduct or Stellar-Conduct, this attack's CRIT Rate is increased by 16%.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Augmente les DGT infligés par les réactions de Supraconduction de 80 % et ceux infligés par les réactions d'Astroconduction de 40 %. Lorsque le personnage équipé de l'artéfact attaque un ennemi affecté par une réaction de Supraconduction ou d'Astroconduction, le taux CRIT de cette attaque augmente de 16 %."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15046_4.png"
+  },
+  {
+    "key": "EchoesOfAnOffering",
+    "name": {
+      "en": "Echoes of an Offering",
+      "fr": "Échos d'une offrande"
+    },
+    "short": {
+      "en": "EO",
+      "fr": "ÉD"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: When Normal Attacks hit opponents, there is a 36% chance that it will trigger Valley Rite, which will increase Normal Attack DMG by 70% of ATK. This effect will be dispelled 0.05s after a Normal Attack deals DMG. If a Normal Attack fails to trigger Valley Rite, the odds of it triggering the next time will increase by 20%. This trigger can occur once every 0.2s.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : En touchant un ennemi, les attaques normales ont 36 % de chances de déclencher l'effet Rituel de la vallée, augmentant les DGT d'attaque normale d'une valeur équivalant à 70 % de l'ATQ. Cet effet sera dissipé 0,05 s après avoir infligé des DGT avec une attaque normale. Chaque attaque normale ne déclenchant pas l'effet augmentera les chances de le déclencher la prochaine fois de 20 %. Cet effet peut être déclenché une fois toutes les 0,2 s."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15024_4.png"
+  },
+  {
+    "key": "EmblemOfSeveredFate",
+    "name": {
+      "en": "Emblem of Severed Fate",
+      "fr": "Emblème du destin brisé"
+    },
+    "short": {
+      "en": "EO",
+      "fr": "ED"
+    },
+    "description": {
+      "en": "2pc: Energy Recharge +20%. 4pc: Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way.",
+      "fr": "2 pièces : Augmente la recharge d'énergie de 20 %. 4 pièces : Augmente les DGT infligés par le déchaînement élémentaire d'une valeur équivalant à 25 % de la recharge d'énergie. Les DGT peuvent être augmentés d'un maximum de 75 % de cette manière."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15020_4.png"
+  },
+  {
+    "key": "FinaleOfTheDeepGalleries",
+    "name": {
+      "en": "Finale of the Deep Galleries",
+      "fr": "Finale des galeries profondes"
+    },
+    "short": {
+      "en": "FO",
+      "fr": "FD"
+    },
+    "description": {
+      "en": "2pc: Cryo DMG Bonus +15%. 4pc: When the equipping character has 0 Elemental Energy, Normal Attack DMG is increased by 60% and Elemental Burst DMG is increased by 60%. After the equipping character deals Normal Attack DMG, the aforementioned Elemental Burst effect will stop applying for 6s. After the equipping character deals Elemental Burst DMG, the aforementioned Normal Attack effect will stop applying for 6s. This effect can trigger even if the equipping character is off the field.",
+      "fr": "2 pièces : Confère un bonus de DGT Cryo de 15 %. 4 pièces : Lorsque le personnage équipé de l'artéfact a 0 pt d'énergie élémentaire, les DGT infligés par les attaques normales et les déchaînements élémentaires augmentent de 60 %. Le bonus ainsi accordé aux déchaînements élémentaires s'arrête pendant 6 s après que le personnage équipé de l'artéfact inflige des DGT grâce à une attaque normale. De même, le bonus ainsi accordé aux attaques normales s'arrête pendant 6 s après que le personnage équipé de l'artéfact inflige des DGT grâce à un déchaînement élémentaire. L'effet peut être déclenché même lorsque le personnage fait partie de l'équipe mais n'est pas déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15040_4.png"
+  },
+  {
+    "key": "FlowerOfParadiseLost",
+    "name": {
+      "en": "Flower of Paradise Lost",
+      "fr": "Fleur du paradis perdu"
+    },
+    "short": {
+      "en": "FO",
+      "fr": "FD"
+    },
+    "description": {
+      "en": "2pc: Increases Elemental Mastery by 80. 4pc: The equipping character's Bloom, Hyperbloom, and Burgeon reaction DMG are increased by 40%, and their Lunar-Bloom reaction DMG is increased by 10%. Additionally, after the equipping character triggers Bloom, Hyperbloom, Lunar-Bloom, or Burgeon, they will gain another 25% bonus to the effects mentioned prior. Each stack of this lasts 10s. Max 4 stacks simultaneously. This effect can only be triggered once per second. The character who equips this can still trigger its effects when not on the field.",
+      "fr": "2 pièces : Augmente la maîtrise élémentaire de 80 pts. 4 pièces : Augmente les DGT infligés par les réactions de Fleurissement, d'Exubérance et de Bourgeonnement du personnage équipé de l'artéfact de 40 % et les DGT de ses réactions de Sélénofleurissement de 10 %. De plus, lorsque le personnage équipé de l'artéfact a déclenché une réaction de Fleurissement, de Sélénofleurissement, d'Exubérance ou de Bourgeonnement, le bonus mentionné précédemment augmente de 25 % pendant 10 s. Cet effet peut être cumulé 4 fois maximum et déclenché une fois toutes les secondes. Cet effet peut être déclenché même si le personnage équipé de l'artéfact fait partie de l'équipe mais n'est pas déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15028_4.png"
+  },
+  {
+    "key": "FragmentOfHarmonicWhimsy",
+    "name": {
+      "en": "Fragment of Harmonic Whimsy",
+      "fr": "Fragment d'harmonie divergente"
+    },
+    "short": {
+      "en": "FO",
+      "fr": "FD"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: When the value of a Bond of Life increases or decreases, this character deals 18% increased DMG for 6s. Max 3 stacks.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Lorsque la valeur d'un engagement vital augmente ou diminue, les DGT infligés par le personnage augmentent de 18 % pendant 6 s. Cet effet peut être cumulé 3 fois maximum."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15035_4.png"
+  },
+  {
+    "key": "Gambler",
+    "name": {
+      "en": "Gambler",
+      "fr": "Parieur"
+    },
+    "short": {
+      "en": "G",
+      "fr": "P"
+    },
+    "description": {
+      "en": "2pc: Increases Elemental Skill DMG by 20%. 4pc: Defeating an opponent has a 100% chance to remove Elemental Skill CD. Can only occur once every 15s.",
+      "fr": "2 pièces : Augmente les DGT infligés par la compétence élémentaire de 20 %. 4 pièces : Après la défaite d'un ennemi, le TdR de compétence élémentaire a 100 % de chances d'être réinitialisé. Cet effet peut être déclenché une fois toutes les 15 s."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10008_4.png"
+  },
+  {
+    "key": "GildedDreams",
+    "name": {
+      "en": "Gilded Dreams",
+      "fr": "Rêve doré"
+    },
+    "short": {
+      "en": "GD",
+      "fr": "RD"
+    },
+    "description": {
+      "en": "2pc: Increases Elemental Mastery by 80. 4pc: Within 8s of triggering an Elemental Reaction, the character equipping this will obtain buffs based on the Elemental Type of the other party members. ATK is increased by 14% for each party member whose Elemental Type is the same as the equipping character, and Elemental Mastery is increased by 50 for every party member with a different Elemental Type. Each of the aforementioned buffs will count up to 3 characters. This effect can be triggered once every 8s. The character who equips this can still trigger its effects when not on the field.",
+      "fr": "2 pièces : Augmente la maîtrise élémentaire de 80 pts. 4 pièces : Déclencher une réaction élémentaire confère pendant 8 s au personnage équipé de l'artéfact des bonus en fonction du nombre de types élémentaires des autres personnages de l'équipe : son ATQ augmente de 14 % pour chaque membre du même type élémentaire que le sien, et sa maîtrise élémentaire augmente de 50 pts pour chaque membre de type élémentaire différent du sien. Chacun des bonus susmentionnés compte un maximum de 3 personnages. Cet effet peut être déclenché une fois toutes les 8 s, même si le personnage équipé de l'artéfact fait partie de l'équipe mais n'est pas déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15026_4.png"
+  },
+  {
+    "key": "GladiatorsFinale",
+    "name": {
+      "en": "Gladiator's Finale",
+      "fr": "Rideau du Gladiateur"
+    },
+    "short": {
+      "en": "GF",
+      "fr": "RD"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Augmente les DGT infligés par les attaques normales de 35 % lorsque ce set d'artéfacts est équipé par les personnages armés d'une épée à une main, à deux mains ou d'une arme d'hast."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15001_4.png"
+  },
+  {
+    "key": "GoldenTroupe",
+    "name": {
+      "en": "Golden Troupe",
+      "fr": "Troupe dorée"
+    },
+    "short": {
+      "en": "GT",
+      "fr": "TD"
+    },
+    "description": {
+      "en": "2pc: Increases Elemental Skill DMG by 20%. 4pc: Increases Elemental Skill DMG by 25%. Additionally, when not on the field, Elemental Skill DMG will be further increased by 25%. This effect will be cleared 2s after taking the field.",
+      "fr": "2 pièces : Augmente les DGT infligés par la compétence élémentaire de 20 %. 4 pièces : Les DGT infligés par les compétences élémentaires augmentent de 25 %. De plus, lorsque le personnage fait partie de l'équipe mais n'est pas déployé, les DGT infligés par ses compétences élémentaires augmentent de 25 % supplémentaires, cet effet prenant fin 2 s après le déploiement du personnage."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15032_4.png"
+  },
+  {
+    "key": "HeartOfDepth",
+    "name": {
+      "en": "Heart of Depth",
+      "fr": "Âme des profondeurs"
+    },
+    "short": {
+      "en": "HO",
+      "fr": "ÂD"
+    },
+    "description": {
+      "en": "2pc: Hydro DMG Bonus +15%. 4pc: After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s.",
+      "fr": "2 pièces : Confère un bonus de DGT Hydro de 15 %. 4 pièces : Augmente les DGT infligés par les attaques normales et chargées de 30 % pendant 15 s après l'utilisation d'une compétence élémentaire."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15016_4.png"
+  },
+  {
+    "key": "HeartOfTheFurnace",
+    "name": {
+      "en": "Heart of the Furnace",
+      "fr": "Cœur de la fournaise"
+    },
+    "short": {
+      "en": "HO",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: Increases the equipping character's ATK by 12% for 12s when they trigger a Stellar Glimmer reaction or deal Stellar Glimmer reaction DMG. Also increases Stellar Glimmer reaction DMG dealt by all nearby party members by 50%. The above effects can trigger even when the equipping character is not on the field, and the DMG bonus from multiple Artifact Sets with the same name do not stack.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Pendant 12 s après que le personnage équipé de l'artéfact a déclenché une réaction astrale ou infligé des DGT de réaction astrale, son ATQ augmente de 12 % et les DGT de réaction astrale infligés par tous les personnages de l'équipe à proximité augmentent de 50 %. L'effet ci-dessus peut être déclenché même si le personnage n'est pas déployé, et les effets d'augmentation des DGT accordés par les sets d'artéfacts du même nom ne se cumulent pas."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15048_4.png"
+  },
+  {
+    "key": "HuskOfOpulentDreams",
+    "name": {
+      "en": "Husk of Opulent Dreams",
+      "fr": "Coquille des rêves opulents"
+    },
+    "short": {
+      "en": "HO",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: DEF +30%. 4pc: A character equipped with this Artifact set will obtain the Curiosity effect in the following conditions: When on the field, the character gains 1 stack after hitting an opponent with a Geo attack, triggering a maximum of once every 0.3s. When off the field, the character gains 1 stack every 3s. Curiosity can stack up to 4 times, each providing 6% DEF and a 6% Geo DMG Bonus. When 6 seconds pass without gaining a Curiosity stack, 1 stack is lost.",
+      "fr": "2 pièces : Augmente la DÉF de 30 %. 4 pièces : Un personnage équipé de ce set d'artéfacts obtiendra 1 cumul de curiosité des façons suivantes : sur le champ de bataille, il obtient 1 cumul en touchant un ennemi avec une attaque Géo, ceci pouvant être déclenché une fois toutes les 0,3 s ; en faisant partie de l'équipe mais en n'étant pas déployé, il obtient 1 cumul toutes les 3 s. La curiosité peut être cumulée 4 fois maximum, chaque cumul accordant 6 % de bonus de DÉF et 6 % de bonus de DGT Géo. Si 6 s s'écoulent sans obtenir de cumul de curiosité, 1 cumul sera perdu."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15021_4.png"
+  },
+  {
+    "key": "Instructor",
+    "name": {
+      "en": "Instructor",
+      "fr": "Instructeur"
+    },
+    "short": {
+      "en": "I",
+      "fr": "I"
+    },
+    "description": {
+      "en": "2pc: Increases Elemental Mastery by 80. 4pc: Upon triggering an Elemental Reaction, increases all party members' Elemental Mastery by 120 for 8s.",
+      "fr": "2 pièces : Augmente la maîtrise élémentaire de 80 pts. 4 pièces : Augmente la maîtrise élémentaire de tous les personnages de l'équipe de 120 pts pendant 8 s après avoir déclenché une réaction élémentaire."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10007_4.png"
+  },
+  {
+    "key": "Lavawalker",
+    "name": {
+      "en": "Lavawalker",
+      "fr": "Marcheur du feu"
+    },
+    "short": {
+      "en": "L",
+      "fr": "MD"
+    },
+    "description": {
+      "en": "2pc: Pyro RES increased by 40%. 4pc: Increases DMG against opponents affected by Pyro by 35%.",
+      "fr": "2 pièces : Augmente la RÉS Pyro de 40 %. 4 pièces : Augmente les DGT infligés aux ennemis affectés par l'élément Pyro de 35 %."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_14003_4.png"
+  },
+  {
+    "key": "LongNightsOath",
+    "name": {
+      "en": "Long Night's Oath",
+      "fr": "Serment de la longue nuit"
+    },
+    "short": {
+      "en": "LN",
+      "fr": "SD"
+    },
+    "description": {
+      "en": "2pc: Plunging Attack DMG increased by 25%. 4pc: After the equipping character's Plunging Attack/Charged Attack/Elemental Skill hits an opponent, they will gain 1/2/2 stack(s) of \"Radiance Everlasting.\" Plunging Attacks, Charged Attacks, or Elemental Skills can each trigger this effect once every 1s. Radiance Everlasting: Plunging Attacks deal 15% increased DMG for 6s. Max 5 stacks. Each stack's duration is counted independently.",
+      "fr": "2 pièces : Les DGT infligés par les attaques plongeantes augmentent de 25 %. 4 pièces : Lorsque le personnage équipé de l'artéfact a touché un ennemi avec une attaque plongeante, une attaque chargée ou une compétence élémentaire, il obtient respectivement 1, 2 ou 2 cumuls de radiance éternelle, ces différents types d'attaque pouvant chacun déclencher cet effet une fois toutes les secondes. La radiance éternelle augmente les DGT infligés par les attaques plongeantes de 15 % pendant 6 s et peut se cumuler 5 fois maximum, la durée de chaque cumul étant calculée de façon indépendante."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15039_4.png"
+  },
+  {
+    "key": "LuckyDog",
+    "name": {
+      "en": "Lucky Dog",
+      "fr": "Chanceux"
+    },
+    "short": {
+      "en": "LD",
+      "fr": "C"
+    },
+    "description": {
+      "en": "2pc: DEF increased by 100. 4pc: Picking up Mora restores 300 HP.",
+      "fr": "2 pièces : Augmente la DÉF de 100 pts. 4 pièces : Collecter des moras restaure 300 PV."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10011_4.png"
+  },
+  {
+    "key": "MaidenBeloved",
+    "name": {
+      "en": "Maiden Beloved",
+      "fr": "Amour chéri"
+    },
+    "short": {
+      "en": "MB",
+      "fr": "AC"
+    },
+    "description": {
+      "en": "2pc: Character Healing Effectiveness +15%. 4pc: Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s.",
+      "fr": "2 pièces : Augmente les soins effectués par le personnage de 15 %. 4 pièces : Augmente les soins reçus par tous les personnages de l'équipe de 20 % pendant 10 s après l'utilisation d'une compétence élémentaire ou d'un déchaînement élémentaire."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_14004_4.png"
+  },
+  {
+    "key": "MarechausseeHunter",
+    "name": {
+      "en": "Marechaussee Hunter",
+      "fr": "Chasseur de la Maréchaussée"
+    },
+    "short": {
+      "en": "MH",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: Normal and Charged Attack DMG +15%. 4pc: When current HP increases or decreases, CRIT Rate will be increased by 12% for 5s. Max 3 stacks.",
+      "fr": "2 pièces : Augmente les DGT infligés par les attaques normales et chargées de 15 %. 4 pièces : Lorsque les PV actuels du personnage augmentent ou diminuent, son taux CRIT augmente de 12 % pendant 5 s. Cet effet peut être cumulé 3 fois maximum."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15031_4.png"
+  },
+  {
+    "key": "MartialArtist",
+    "name": {
+      "en": "Martial Artist",
+      "fr": "Artiste martial"
+    },
+    "short": {
+      "en": "MA",
+      "fr": "AM"
+    },
+    "description": {
+      "en": "2pc: Normal and Charged Attack DMG +15%. 4pc: After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s.",
+      "fr": "2 pièces : Augmente les DGT infligés par les attaques normales et chargées de 15 %. 4 pièces : Augmente les DGT infligés par les attaques normales et chargées de 25 % pendant 8 s après l'utilisation d'une compétence élémentaire."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10006_4.png"
+  },
+  {
+    "key": "NightOfTheSkysUnveiling",
+    "name": {
+      "en": "Night of the Sky's Unveiling",
+      "fr": "Nuit de la révélation céleste"
+    },
+    "short": {
+      "en": "NO",
+      "fr": "ND"
+    },
+    "description": {
+      "en": "2pc: Increases Elemental Mastery by 80. 4pc: When nearby party members trigger Lunar Reactions, if the equipping character is on the field, gain the Gleaming Moon: Intent effect for 4s: Increases CRIT Rate by 15%/30% when the party's Moonsign is Nascent Gleam/Ascendant Gleam. All party members' Lunar Reaction DMG is increased by 10% for each different Gleaming Moon effect that party members have. Effects from Gleaming Moon cannot stack.",
+      "fr": "2 pièces : Augmente la maîtrise élémentaire de 80 pts. 4 pièces : Lorsqu'un personnage de l'équipe à proximité déclenche une réaction sélène alors que le personnage équipé de l'artéfact est sur le terrain, ce dernier obtient l'effet Lune étincelante « Intention » pendant 4 s : augmente le taux CRIT de 15 % ou de 30 % lorsque la signelune de l'équipe est respectivement de type Lueur naissante ou ascendante. De plus, les DGT infligés par les réactions sélènes déclenchées par tous les personnages de l'équipe augmentent de 10 % pour chaque lune étincelante de type différent des personnages de l'équipe. Les bonus accordés par l'effet Lune étincelante ne se cumulent pas."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15041_4.png"
+  },
+  {
+    "key": "NighttimeWhispersInTheEchoingWoods",
+    "name": {
+      "en": "Nighttime Whispers in the Echoing Woods",
+      "fr": "Murmure nocturne en forêt d'échos"
+    },
+    "short": {
+      "en": "NW",
+      "fr": "MN"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: After using an Elemental Skill, gain a 20% Geo DMG Bonus for 10s. When under a shield granted by the Crystallize reaction, or when Moondrifts formed by Lunar-Crystallize reactions are nearby, the above effect is increased by 150%. When these conditions are no longer met, this additional increase disappears after 1s.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Après l'utilisation d'une compétence élémentaire, le bonus de DGT Géo augmente de 20 % pendant 10 s. Sous la protection d'un bouclier généré par une réaction de Cristallisation, ou s'il existe un voile lunaire créé par une réaction de Sélénocristallisation à proximité, cet effet augmente de 150 %, cette augmentation supplémentaire disparaissant 1 s après que ces conditions ne sont pas remplies."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15034_4.png"
+  },
+  {
+    "key": "NoblesseOblige",
+    "name": {
+      "en": "Noblesse Oblige",
+      "fr": "Ancien rituel royal"
+    },
+    "short": {
+      "en": "NO",
+      "fr": "AR"
+    },
+    "description": {
+      "en": "2pc: Elemental Burst DMG +20%. 4pc: Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack.",
+      "fr": "2 pièces : Augmente les DGT infligés par le déchaînement élémentaire de 20 %. 4 pièces : Augmente l'ATQ de tous les personnages de l'équipe de 20 % pendant 12 s après un déchaînement élémentaire. Cet effet est non cumulable."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15007_4.png"
+  },
+  {
+    "key": "NymphsDream",
+    "name": {
+      "en": "Nymph's Dream",
+      "fr": "Rêve de la nymphe"
+    },
+    "short": {
+      "en": "ND",
+      "fr": "RD"
+    },
+    "description": {
+      "en": "2pc: Hydro DMG Bonus +15%. 4pc: After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered, lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG Bonus will be increased by 4%/9%/15%. Mirrored Nymph stacks created by Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts exist independently.",
+      "fr": "2 pièces : Confère un bonus de DGT Hydro de 15 %. 4 pièces : Lorsqu'une attaque normale, chargée ou plongeante, une compétence ou un déchaînement élémentaires a touché un ennemi, un cumul de l'effet Nymphe reflétée de 8 s est généré. Avec 1, 2 ou au minimum 3 cumuls de nymphe reflétée, l'ATQ augmente respectivement de 7 %/16 %/25 % et le bonus de DGT Hydro de 4 %/9 %/15 %. Les cumuls de nymphe reflétée obtenus grâce aux différents types d'attaques (normales, chargées, plongeantes, compétences et déchaînements élémentaires) existent indépendamment les uns des autres."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15029_4.png"
+  },
+  {
+    "key": "ObsidianCodex",
+    "name": {
+      "en": "Obsidian Codex",
+      "fr": "Codex d'obsidienne"
+    },
+    "short": {
+      "en": "OC",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: While the equipping character is in Nightsoul's Blessing and is on the field, their DMG dealt is increased by 15%. 4pc: After the equipping character consumes 1 Nightsoul point while on the field, CRIT Rate increases by 40% for 6s. This effect can trigger once every second.",
+      "fr": "2 pièces : Lorsque le personnage équipé de l'artéfact bénéficie d'une bénédiction noctâme et est sur le terrain, les DGT qu'il inflige augmentent de 15 %. 4 pièces : Lorsque le personnage équipé de l'artéfact a consommé 1 pt de noctâme sur le terrain, le taux CRIT augmente de 40 % pendant 6 s. Cet effet peut être déclenché une fois toutes les secondes."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15038_4.png"
+  },
+  {
+    "key": "OceanHuedClam",
+    "name": {
+      "en": "Ocean-Hued Clam",
+      "fr": "Palourde aux teintes océaniques"
+    },
+    "short": {
+      "en": "OC",
+      "fr": "PA"
+    },
+    "description": {
+      "en": "2pc: Healing Bonus +15%. 4pc: When the character equipping this artifact set heals a character in the party, a Sea-Dyed Foam will appear for 3 seconds, accumulating the amount of HP recovered from healing (including overflow healing). At the end of the duration, the Sea-Dyed Foam will explode, dealing DMG to nearby opponents based on 90% of the accumulated healing. (This DMG is calculated similarly to Reactions such as Electro-Charged, and Superconduct, but is not affected by Elemental Mastery, Character Levels, or Reaction DMG Bonuses). Only one Sea-Dyed Foam can be produced every 3.5 seconds. Each Sea-Dyed Foam can accumulate up to 30,000 HP (including overflow healing). There can be no more than one Sea-Dyed Foam active at any given time. This effect can still be triggered even when the character who is using this artifact set is not on the field.",
+      "fr": "2 pièces : Augmente le bonus de soins de 15 %. 4 pièces : Lorsqu'un personnage équipé de ce set d'artéfacts soigne un personnage de l'équipe, une mousse marine apparaîtra pendant 3 s, accumulant la quantité de PV récupérée grâce au soin (y compris tout surplus au-dessus de 100 %). À la fin de la durée, la mousse marine explosera, infligeant des DGT aux ennemis proches d'une valeur équivalant à 90 % du soin accumulé (Ces DGT sont calculés de la même manière que les réactions d'Électrocution et de Supraconduction, mais ne sont pas affectés par la maîtrise élémentaire, les niveaux des personnages ou les bonus de DGT de réactions élémentaires). Une mousse marine peut être générée une fois toutes les 3,5 s, et chaque mousse marine peut accumuler jusqu'à 30 000 PV, incluant tout surplus au-dessus de 100 %. Il ne peut exister qu'une seule mousse marine à la fois. Cet effet peut être déclenché même lorsque le personnage équipé de ce set d'artéfacts fait partie de l'équipe mais n'est pas déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15022_4.png"
+  },
+  {
+    "key": "PaleFlame",
+    "name": {
+      "en": "Pale Flame",
+      "fr": "Flamme blême"
+    },
+    "short": {
+      "en": "PF",
+      "fr": "FB"
+    },
+    "description": {
+      "en": "2pc: Physical DMG is increased by 25%. 4pc: When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%.",
+      "fr": "2 pièces : Augmente les DGT physiques de 25 %. 4 pièces : Lorsqu'une compétence élémentaire a touché un ennemi, l'ATQ augmente de 9 % pendant 7 s. Cet effet peut être cumulé 2 fois maximum et déclenché une fois toutes les 0,3 s. Une fois 2 cumuls atteints, l'effet du set de 2 pièces augmente de 100 %."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15018_4.png"
+  },
+  {
+    "key": "ResolutionOfSojourner",
+    "name": {
+      "en": "Resolution of Sojourner",
+      "fr": "Cœur du Voyageur"
+    },
+    "short": {
+      "en": "RO",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: Increases Charged Attack CRIT Rate by 30%.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Augmente le taux CRIT des attaques chargées de 30 %."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10001_4.png"
+  },
+  {
+    "key": "RetracingBolide",
+    "name": {
+      "en": "Retracing Bolide",
+      "fr": "Météore inversé"
+    },
+    "short": {
+      "en": "RB",
+      "fr": "MI"
+    },
+    "description": {
+      "en": "2pc: Increases Shield Strength by 35%. 4pc: While protected by a shield, gain an additional 40% Normal and Charged Attack DMG.",
+      "fr": "2 pièces : Augmente la force du bouclier de 35 %. 4 pièces : Les attaques normales et chargées infligent un bonus de 40 % de DGT lorsque le personnage est sous la protection d'un bouclier."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15015_4.png"
+  },
+  {
+    "key": "ScarletProof",
+    "name": {
+      "en": "Scarlet Proof",
+      "fr": "Preuve écarlate"
+    },
+    "short": {
+      "en": "SP",
+      "fr": "PÉ"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: Increases the equipping character's CRIT Rate by 16%, and their Stellar Swirl reaction DMG dealt by 40%, for 10s after they trigger a Stellar Swirl reaction.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Augmente le taux CRIT du personnage équipé de l'artéfact de 16 % et ses DGT de réaction d'Astrodispersion de 40 % pendant 10 s lorsqu'il a déclenché une réaction d'Astrodispersion."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15047_4.png"
+  },
+  {
+    "key": "Scholar",
+    "name": {
+      "en": "Scholar",
+      "fr": "Érudit"
+    },
+    "short": {
+      "en": "S",
+      "fr": "É"
+    },
+    "description": {
+      "en": "2pc: Energy Recharge +20%. 4pc: Gaining Elemental Particles or Orbs gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occur once every 3s.",
+      "fr": "2 pièces : Augmente la recharge d'énergie de 20 %. 4 pièces : Les personnages armés d'un arc ou d'un catalyseur récupèrent 3 pts d'énergie supplémentaire à chaque fois qu'une particule ou un orbe élémentaires sont récupérés. Cet effet peut être déclenché une fois toutes les 3 s."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10012_4.png"
+  },
+  {
+    "key": "ScrollOfTheHeroOfCinderCity",
+    "name": {
+      "en": "Scroll of the Hero of Cinder City",
+      "fr": "Parchemin du héros de la Cité de braise"
+    },
+    "short": {
+      "en": "SO",
+      "fr": "PD"
+    },
+    "description": {
+      "en": "2pc: When a nearby party member triggers a Nightsoul Burst, the equipping character regenerates 6 Elemental Energy. 4pc: After the equipping character triggers a reaction related to their Elemental Type, all nearby party members gain a 12% Elemental DMG Bonus for the Elemental Types involved in the elemental reaction for 15s. If the equipping character is in the Nightsoul's Blessing state when triggering this effect, all nearby party members gain an additional 28% Elemental DMG Bonus for the Elemental Types involved in the elemental reaction for 20s. The equipping character can trigger this effect while off-field, and the DMG bonus from Artifact Sets with the same name do not stack.",
+      "fr": "2 pièces : Lorsqu'un membre de l'équipe à proximité déclenche une éruption noctâme, le personnage équipé de l'artéfact récupère 6 pts d'énergie élémentaire. 4 pièces : Lorsque le personnage équipé de l'artéfact a déclenché une réaction liée à son type élémentaire, le bonus de DGT élémentaires des éléments concernés par cette réaction augmente de 12 % pendant 15 s pour tous les personnages de l'équipe à proximité. Si le personnage équipé de l'artéfact bénéficie d'une bénédiction noctâme lors du déclenchement de cet effet, le bonus de DGT élémentaires des éléments concernés par cette réaction augmente de 28 % supplémentaires pendant 20 s pour tous les personnages de l'équipe à proximité. L'effet ci-dessus peut être déclenché même si le personnage n'est pas déployé, et les effets d'augmentation des DGT accordés par les sets d'artéfacts du même nom ne se cumulent pas."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15037_4.png"
+  },
+  {
+    "key": "ShimenawasReminiscence",
+    "name": {
+      "en": "Shimenawa's Reminiscence",
+      "fr": "Réminiscence nostalgique"
+    },
+    "short": {
+      "en": "SR",
+      "fr": "RN"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that duration.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Lorsque le personnage possède au minimum 15 pts d'énergie élémentaire, libérer une compétence élémentaire entraîne une perte de 15 pts d'énergie, mais les DGT infligés par son attaque normale, chargée et plongeante augmentent de 50 % pendant 10 s. Cet effet ne se déclenchera plus pendant cette durée."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15019_4.png"
+  },
+  {
+    "key": "SilkenMoonsSerenade",
+    "name": {
+      "en": "Silken Moon's Serenade",
+      "fr": "Sérénade de la lune soyeuse"
+    },
+    "short": {
+      "en": "SM",
+      "fr": "SD"
+    },
+    "description": {
+      "en": "2pc: Energy Recharge +20%. 4pc: When dealing Elemental DMG, gain the Gleaming Moon: Devotion effect for 8s: Increases all party members' Elemental Mastery by 60/120 when the party's Moonsign is Nascent Gleam/Ascendant Gleam. The equipping character can trigger this effect while off-field. All party members' Lunar Reaction DMG is increased by 10% for each different Gleaming Moon effect that party members have. Effects from Gleaming Moon cannot stack.",
+      "fr": "2 pièces : Augmente la recharge d'énergie de 20 %. 4 pièces : Infliger des DGT élémentaires accorde l'effet Lune étincelante « Dévotion » pendant 8 s : augmente la maîtrise élémentaire de tous les personnages de l'équipe de 60 pts ou de 120 pts lorsque la signelune de l'équipe est respectivement de type Lueur naissante ou ascendante. L'effet ci-dessus peut être déclenché même si le personnage équipé de l'artéfact n'est pas déployé. De plus, les DGT infligés par les réactions sélènes déclenchées par tous les personnages de l'équipe augmentent de 10 % pour chaque lune étincelante de type différent des personnages de l'équipe. Les bonus accordés par l'effet Lune étincelante ne se cumulent pas."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15042_4.png"
+  },
+  {
+    "key": "SongOfDaysPast",
+    "name": {
+      "en": "Song of Days Past",
+      "fr": "Chanson des jours d'antan"
+    },
+    "short": {
+      "en": "SO",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: Healing Bonus +15%. 4pc: When the equipping character heals a party member, the Yearning effect will be created for 6s, which records the total amount of healing provided (including overflow healing). When the duration expires, the Yearning effect will be transformed into the \"Waves of Days Past\" effect: When your active party member hits an opponent with a Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, or Elemental Burst, the DMG dealt will be increased by 8% of the total healing amount recorded by the Yearning effect. The \"Waves of Days Past\" effect is removed after it has taken effect 5 times or after 10s. A single instance of the Yearning effect can record up to 15,000 healing, and only a single instance can exist at once, but it can record the healing from multiple equipping characters. Equipping characters on standby can still trigger this effect.",
+      "fr": "2 pièces : Augmente le bonus de soins de 15 %. 4 pièces : Lorsque le personnage équipé de l'artéfact soigne un personnage de l'équipe, l'effet Désir est créé pendant 6 s, accumulant la quantité de PV soignés (y compris tout surplus au-dessus de 100 %). À la fin de la durée, l'effet Désir est converti en l'effet Vague d'antan : lorsque votre personnage déployé touche un ennemi avec une attaque normale, chargée ou plongeante, une compétence ou un déchaînement élémentaires, les DGT infligés augmentent d'une valeur équivalant à 8 % de la quantité de PV accumulée par l'effet Désir. L'effet Vague d'antan est annulé après avoir été déclenché 5 fois ou après 10 s. L'effet Désir peut accumuler jusqu'à 15 000 PV et il ne peut en exister qu'un seul à la fois, mais il peut accumuler les soins effectués par plusieurs personnages équipés de cet artéfact. Cet effet peut être déclenché même si les personnages équipés de cet artéfact font partie de l'équipe mais ne sont pas déployés."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15033_4.png"
+  },
+  {
+    "key": "TenacityOfTheMillelith",
+    "name": {
+      "en": "Tenacity of the Millelith",
+      "fr": "Ténacité du Millelithe"
+    },
+    "short": {
+      "en": "TO",
+      "fr": "TD"
+    },
+    "description": {
+      "en": "2pc: HP +20%. 4pc: When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s. This effect can be triggered once every 0.5s. This effect can still be triggered even when the character who is using this artifact set is not on the field.",
+      "fr": "2 pièces : Les PV sont augmentés de 20 %. 4 pièces : Lorsqu'une compétence élémentaire a touché un ennemi, l'ATQ de tous les personnages de l'équipe à proximité augmente de 20 % et la force de leur bouclier augmente de 30 % pendant 3 s. Cet effet peut être déclenché une fois toutes les 0,5 s, même lorsque le personnage équipé de ce set d'artéfacts fait partie de l'équipe mais n'est pas déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15017_4.png"
+  },
+  {
+    "key": "TheExile",
+    "name": {
+      "en": "The Exile",
+      "fr": "Exilé"
+    },
+    "short": {
+      "en": "TE",
+      "fr": "E"
+    },
+    "description": {
+      "en": "2pc: Energy Recharge +20%. 4pc: Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack.",
+      "fr": "2 pièces : Augmente la recharge d'énergie de 20 %. 4 pièces : Le déchaînement élémentaire restaure 2 pts d'énergie élémentaire à tous les personnages de l'équipe (à l'exception du porteur) toutes les 2 s pendant 6 s. Cet effet est non cumulable."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10009_4.png"
+  },
+  {
+    "key": "ThunderingFury",
+    "name": {
+      "en": "Thundering Fury",
+      "fr": "Colère de tonnerre"
+    },
+    "short": {
+      "en": "TF",
+      "fr": "CD"
+    },
+    "description": {
+      "en": "2pc: Electro DMG Bonus +15%. 4pc: Increases the DMG caused by Overloaded, Electro-Charged, Superconduct, and Hyperbloom by 40%, the DMG Bonus conferred by Aggravate by 20%, and the DMG caused by Lunar-Charged and Stellar-Conduct by 20%. When Quicken or the aforementioned Elemental Reactions are triggered, Elemental Skill CD is decreased by 1s. Can only occur once every 0.8s.",
+      "fr": "2 pièces : Confère un bonus de DGT Électro de 15 %. 4 pièces : Augmente les DGT infligés par les réactions de Surcharge, d'Électrocution, de Supraconduction et d'Exubérance de 40 %, le bonus de DGT accordé par les réactions de Suractivation de 20 % et les DGT infligés par les réactions de Sélénocution et d'Astroconduction de 20 %. Au déclenchement de ces réactions élémentaires ou d'une réaction de Stimulation, le TdR de la compétence élémentaire diminue de 1 s. Cet effet peut être déclenché une fois toutes les 0,8 s."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15005_4.png"
+  },
+  {
+    "key": "Thundersoother",
+    "name": {
+      "en": "Thundersoother",
+      "fr": "Dompteur de foudre"
+    },
+    "short": {
+      "en": "T",
+      "fr": "DD"
+    },
+    "description": {
+      "en": "2pc: Electro RES increased by 40%. 4pc: Increases DMG against opponents affected by Electro by 35%.",
+      "fr": "2 pièces : Augmente la RÉS Électro de 40 %. 4 pièces : Augmente les DGT infligés aux ennemis affectés par l'élément Électro de 35 %."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_14002_4.png"
+  },
+  {
+    "key": "TinyMiracle",
+    "name": {
+      "en": "Tiny Miracle",
+      "fr": "Miracle"
+    },
+    "short": {
+      "en": "TM",
+      "fr": "M"
+    },
+    "description": {
+      "en": "2pc: All Elemental RES increased by 20%. 4pc: Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s.",
+      "fr": "2 pièces : Augmente toutes les RÉS élémentaires de 20 %. 4 pièces : Les DGT élémentaires subis augmentent la RÉS à l'élément correspondant de 30 % pendant 10 s. Cet effet peut être déclenché une fois toutes les 10 s."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10004_4.png"
+  },
+  {
+    "key": "TravelingDoctor",
+    "name": {
+      "en": "Traveling Doctor",
+      "fr": "Médecin itinérant"
+    },
+    "short": {
+      "en": "TD",
+      "fr": "MI"
+    },
+    "description": {
+      "en": "2pc: Increases incoming healing by 20%. 4pc: Using Elemental Burst restores 20% HP.",
+      "fr": "2 pièces : Augmente les soins reçus par le personnage de 20 %. 4 pièces : Le déchaînement élémentaire restaure 20 % des PV."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_10013_4.png"
+  },
+  {
+    "key": "UnfinishedReverie",
+    "name": {
+      "en": "Unfinished Reverie",
+      "fr": "Rêverie incomplète"
+    },
+    "short": {
+      "en": "UR",
+      "fr": "RI"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: After leaving combat for 3s, DMG dealt increased by 50%. In combat, if no Burning opponents are nearby for more than 6s, this DMG Bonus will decrease by 10% per second until it reaches 0%. When a Burning opponent exists, it will increase by 10% instead until it reaches 50%. This effect still triggers if the equipping character is off-field.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Après avoir été hors combat pendant 3 s, les DGT infligés augmentent de 50 %. En combat, si aucun ennemi brûlé n'est à proximité pendant plus de 6 s, cette augmentation de DGT diminue de 10 % toutes les secondes, jusqu'à atteindre 0 % ; si un ennemi brûlé est à proximité, elle augmente de 10 % toutes les secondes, jusqu'à atteindre 50 %. Cet effet peut être déclenché même lorsque le personnage équipé de ce set d'artéfacts fait partie de l'équipe mais n'est pas déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15036_4.png"
+  },
+  {
+    "key": "VermillionHereafter",
+    "name": {
+      "en": "Vermillion Hereafter",
+      "fr": "Au-delà cinabrin"
+    },
+    "short": {
+      "en": "VH",
+      "fr": "AC"
+    },
+    "description": {
+      "en": "2pc: ATK +18%. 4pc: After using an Elemental Burst, this character will gain the Nascent Light effect, increasing their ATK by 8% for 16s. When the character's HP decreases, their ATK will further increase by 10%. This further increase can occur this way a maximum of 4 times. This effect can be triggered once every 0.8s. Nascent Light will be dispelled when the character leaves the field. If an Elemental Burst is used again during the duration of Nascent Light, the original Nascent Light will be dispelled.",
+      "fr": "2 pièces : Augmente l'ATQ de 18 %. 4 pièces : Lorsqu'un personnage utilise un déchaînement élémentaire, il gagne l'effet Lumière latente pendant 16 s, augmentant son ATQ de 8 %, puis de 10 % supplémentaires à chaque fois que ses PV diminuent. Cette augmentation supplémentaire peut être cumulée 4 fois maximum et déclenchée une fois toutes les 0,8 s. L'effet Lumière latente cesse lorsque le personnage quitte le champ de bataille. Si le personnage utilise à nouveau son déchaînement élémentaire alors que la Lumière latente est en effet, l'effet original de Lumière latente est dissipé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15023_4.png"
+  },
+  {
+    "key": "ViridescentVenerer",
+    "name": {
+      "en": "Viridescent Venerer",
+      "fr": "Ombre de la Verte Chasseuse"
+    },
+    "short": {
+      "en": "VV",
+      "fr": "OD"
+    },
+    "description": {
+      "en": "2pc: Anemo DMG Bonus +15%. 4pc: Increases Swirl reaction DMG dealt by 60%, and Stellar Swirl reaction DMG dealt by 20%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s. Upon triggering a Stellar Swirl in the opponent, will also decrease their Cryo RES by 40%. RES debuffs of the same elemental type do not stack.",
+      "fr": "2 pièces : Confère un bonus de DGT Anémo de 15 %. 4 pièces : Augmente les DGT infligés par les réactions de Dispersion de 60 % et ceux des réactions d'Astrodispersion de 20 %, et diminue la RÉS de l'élément dispersé correspondant des ennemis de 40 % pendant 10 s. De plus, déclencher une réaction d'Astrodispersion sur un ennemi diminue également sa RÉS Cryo de 40 %, les diminutions de RÉS du même type élémentaire ne se cumulant pas."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15002_4.png"
+  },
+  {
+    "key": "VourukashasGlow",
+    "name": {
+      "en": "Vourukasha's Glow",
+      "fr": "Lueur du vourukasha"
+    },
+    "short": {
+      "en": "VG",
+      "fr": "LD"
+    },
+    "description": {
+      "en": "2pc: HP +20%. 4pc: Elemental Skill and Elemental Burst DMG will be increased by 10%. After the equipping character takes DMG, the aforementioned DMG Bonus is increased by 80% for 5s. This effect increase can have 5 stacks. The duration of each stack is counted independently. These effects can be triggered even when the equipping character is not on the field.",
+      "fr": "2 pièces : Les PV sont augmentés de 20 %. 4 pièces : Les DGT infligés par les compétences et déchaînements élémentaires augmentent de 10 %. Lorsque le personnage équipé de l'artéfact a subi des DGT, cet effet de bonus de DGT augmente de 80 % pendant 5 s. Cet effet peut être cumulé 5 fois maximum, la durée de chaque cumul étant calculée de façon indépendante. Cet effet peut être déclenché même si le personnage fait partie de l'équipe mais n'est pas déployé."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15030_4.png"
+  },
+  {
+    "key": "WanderersTroupe",
+    "name": {
+      "en": "Wanderer's Troupe",
+      "fr": "Bande vagabonde"
+    },
+    "short": {
+      "en": "WT",
+      "fr": "BV"
+    },
+    "description": {
+      "en": "2pc: Increases Elemental Mastery by 80. 4pc: Increases Charged Attack DMG by 35% if the character uses a Catalyst or a Bow.",
+      "fr": "2 pièces : Augmente la maîtrise élémentaire de 80 pts. 4 pièces : Augmente les DGT infligés par les attaques chargées de 35 % lorsque ce set d'artéfacts est équipé par les personnages armés d'un arc ou d'un catalyseur."
+    },
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_RelicIcon_15003_4.png"
+  }
+]

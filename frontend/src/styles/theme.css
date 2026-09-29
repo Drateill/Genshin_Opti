@@ -1,0 +1,45 @@
+/* Forge theme tokens — dark console dashboard, pyro-orange + teal glow,
+   monospace numerics. Ported 1:1 from the Claude Design prototype
+   (project/Artifact Optimizer App.dc.html). Muted text is intentionally a
+   single token: the design chat found seven scattered ad-hoc grays failing
+   contrast checks one at a time, and collapsed them all to one value. */
+:root {
+  --acc: 0.7 0.19 40;
+  --acc-lt: 0.82 0.15 48;
+
+  --bg-body: oklch(0.15 0.012 280);
+  --bg-page: oklch(0.17 0.012 280);
+  --bg-topbar: oklch(0.165 0.012 280 / 0.92);
+  --bg-card: oklch(0.215 0.013 280);
+  --bg-card-raised: oklch(0.235 0.013 280);
+  --bg-input: oklch(0.18 0.012 280);
+  --bg-chip: oklch(0.25 0.014 280);
+  --bg-row-sel: oklch(0.255 0.015 280);
+
+  --border: oklch(0.32 0.02 280);
+  --border-strong: oklch(0.34 0.02 280);
+  --track: oklch(0.3 0.02 280);
+
+  --text: oklch(0.95 0.005 280);
+  --text-bright: oklch(0.94 0.005 280);
+  --text-strong: oklch(0.85 0.005 280);
+  --text-mid: oklch(0.9 0.005 280);
+  --muted: oklch(0.72 0.01 280);
+
+  --green: oklch(0.82 0.16 150);
+  --green-bg: oklch(0.7 0.16 150 / 0.14);
+  --red: oklch(0.74 0.18 30);
+  --red-bg: oklch(0.68 0.2 25 / 0.16);
+  --teal: oklch(0.78 0.12 195);
+  --teal-strong: oklch(0.82 0.12 195);
+  --teal-bg: oklch(0.78 0.12 195 / 0.08);
+  --teal-border: oklch(0.78 0.12 195 / 0.25);
+
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+}
+
+.accent-orange { --acc: 0.7 0.19 40; --acc-lt: 0.82 0.15 48; }
+.accent-teal { --acc: 0.72 0.15 195; --acc-lt: 0.84 0.12 195; }
+.accent-purple { --acc: 0.7 0.16 300; --acc-lt: 0.83 0.13 300; }
+.accent-green { --acc: 0.75 0.16 145; --acc-lt: 0.86 0.13 145; }

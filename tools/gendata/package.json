@@ -1,0 +1,15 @@
+{
+  "name": "gendata",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generates backend/internal/chardb/data/*.json from genshin-db. Run `node generate.js`.",
+  "main": "generate.js",
+  "scripts": {
+    "generate": "node generate.js"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "genshin-db": "^5.2.14"
+  }
+}

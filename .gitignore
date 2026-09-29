@@ -1,0 +1,7 @@
+# personal GOOD exports / scratch files — not meant to be committed
+genshin_export_*.json
+new.json
+
+# OS
+.DS_Store
+Thumbs.db

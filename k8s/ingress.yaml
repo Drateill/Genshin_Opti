@@ -1,0 +1,24 @@
+# EDIT ME before relying on this: set `ingressClassName` to match your
+# cluster's ingress controller, and `host` to the domain you'll point at it.
+# This host is also what you should set as the APP_HEALTH_URL GitHub Actions
+# repo variable (see DEPLOYMENT.md), since the post-deploy smoke test polls
+# it over HTTP.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: genshin-optimizer
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: genshin-optimizer.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80

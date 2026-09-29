@@ -1,0 +1,3187 @@
+[
+  {
+    "key": "Absolution",
+    "name": {
+      "en": "Absolution",
+      "fr": "Absolution"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Estoc.png"
+  },
+  {
+    "key": "Akuoumaru",
+    "name": {
+      "en": "Akuoumaru",
+      "fr": "Akuoumaru"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Maria.png"
+  },
+  {
+    "key": "AlleyHunter",
+    "name": {
+      "en": "Alley Hunter",
+      "fr": "Traqueur des impasses"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Outlaw.png"
+  },
+  {
+    "key": "AmenomaKageuchi",
+    "name": {
+      "en": "Amenoma Kageuchi",
+      "fr": "Lame kageuchi d'Amenoma"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Bakufu.png"
+  },
+  {
+    "key": "AmosBow",
+    "name": {
+      "en": "Amos' Bow",
+      "fr": "Arc d'Amos"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 49.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Amos.png"
+  },
+  {
+    "key": "AngelosHeptades",
+    "name": {
+      "en": "Angelos' Heptades",
+      "fr": "Heptades des anges"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 740.6,
+    "maxSubStatValue": 16.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_FairyGarden.png"
+  },
+  {
+    "key": "AquaSimulacra",
+    "name": {
+      "en": "Aqua Simulacra",
+      "fr": "Simulacre d'eau"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Kirin.png"
+  },
+  {
+    "key": "AquilaFavonia",
+    "name": {
+      "en": "Aquila Favonia",
+      "fr": "Épée du faucon"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "physical_dmg_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Falcon.png"
+  },
+  {
+    "key": "AshGravenDrinkingHorn",
+    "name": {
+      "en": "Ash-Graven Drinking Horn",
+      "fr": "Corne à boire cendrée"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "hp_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_ConchSprayer.png"
+  },
+  {
+    "key": "AstralVulturesCrimsonPlumage",
+    "name": {
+      "en": "Astral Vulture's Crimson Plumage",
+      "fr": "Plumage cramoisi du vautour astral"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Qoyllorsnova.png"
+  },
+  {
+    "key": "ATeaspoonOfTranscendence",
+    "name": {
+      "en": "A Teaspoon of Transcendence",
+      "fr": "Une cuillerée de transcendance"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_CrystallineSword.png"
+  },
+  {
+    "key": "AthameArtis",
+    "name": {
+      "en": "Athame Artis",
+      "fr": "Athame Artis"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 33.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Motsognir.png"
+  },
+  {
+    "key": "AThousandBlazingSuns",
+    "name": {
+      "en": "A Thousand Blazing Suns",
+      "fr": "Mille soleils brûlants"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 740.6,
+    "maxSubStatValue": 11,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_RadianceSword.png"
+  },
+  {
+    "key": "AThousandFloatingDreams",
+    "name": {
+      "en": "A Thousand Floating Dreams",
+      "fr": "Mille rêves flottants"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "em",
+    "maxATK": 541.8,
+    "maxSubStatValue": 264.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Ayus.png"
+  },
+  {
+    "key": "Azurelight",
+    "name": {
+      "en": "Azurelight",
+      "fr": "Éclazur"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 22.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_OuterSword.png"
+  },
+  {
+    "key": "BalladOfTheBoundlessBlue",
+    "name": {
+      "en": "Ballad of the Boundless Blue",
+      "fr": "Ballade d'un azur infini"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_DandelionPoem.png"
+  },
+  {
+    "key": "BalladOfTheFjords",
+    "name": {
+      "en": "Ballad of the Fjords",
+      "fr": "Ballade des fjords"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Shanty.png"
+  },
+  {
+    "key": "BeaconOfTheReedSea",
+    "name": {
+      "en": "Beacon of the Reed Sea",
+      "fr": "Balise de la mer de roseaux"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 33.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Deshret.png"
+  },
+  {
+    "key": "BeyondTheChrysalis",
+    "name": {
+      "en": "Beyond the Chrysalis",
+      "fr": "Au-delà de la chrysalide"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Samosvist.png"
+  },
+  {
+    "key": "BlackcliffAgate",
+    "name": {
+      "en": "Blackcliff Agate",
+      "fr": "Agate de Rochenoire"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "critDMG_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Blackrock.png"
+  },
+  {
+    "key": "BlackcliffLongsword",
+    "name": {
+      "en": "Blackcliff Longsword",
+      "fr": "Épée longue de Rochenoire"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "critDMG_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 36.8,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Blackrock.png"
+  },
+  {
+    "key": "BlackcliffPole",
+    "name": {
+      "en": "Blackcliff Pole",
+      "fr": "Lance de Rochenoire"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "critDMG_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Blackrock.png"
+  },
+  {
+    "key": "BlackcliffSlasher",
+    "name": {
+      "en": "Blackcliff Slasher",
+      "fr": "Trancheuse de Rochenoire"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "critDMG_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Blackrock.png"
+  },
+  {
+    "key": "BlackcliffWarbow",
+    "name": {
+      "en": "Blackcliff Warbow",
+      "fr": "Arc de guerre de Rochenoire"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "critDMG_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 36.8,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Blackrock.png"
+  },
+  {
+    "key": "BlackmarrowLantern",
+    "name": {
+      "en": "Blackmarrow Lantern",
+      "fr": "Lanterne à moelle sombre"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 454.4,
+    "maxSubStatValue": 220.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Ilmarinen.png"
+  },
+  {
+    "key": "BlackTassel",
+    "name": {
+      "en": "Black Tassel",
+      "fr": "Pampille noire"
+    },
+    "type": "polearm",
+    "rarity": 3,
+    "subStatKey": "hp_",
+    "maxATK": 354.4,
+    "maxSubStatValue": 46.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Noire.png"
+  },
+  {
+    "key": "BladeOfAtonement",
+    "name": {
+      "en": "Blade of Atonement",
+      "fr": "Lame de rédemption"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_GlintstoneClaymore.png"
+  },
+  {
+    "key": "BloodsoakedRuins",
+    "name": {
+      "en": "Bloodsoaked Ruins",
+      "fr": "Ruines sanglantes"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 22.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_TummaLyhty.png"
+  },
+  {
+    "key": "BloodtaintedGreatsword",
+    "name": {
+      "en": "Bloodtainted Greatsword",
+      "fr": "Épée sanglante"
+    },
+    "type": "claymore",
+    "rarity": 3,
+    "subStatKey": "em",
+    "maxATK": 354.4,
+    "maxSubStatValue": 187.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Siegfry.png"
+  },
+  {
+    "key": "BreezeborneRefrain",
+    "name": {
+      "en": "Breezeborne Refrain",
+      "fr": "Refrain dans le vent"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Windtalker.png"
+  },
+  {
+    "key": "CalamityOfEshu",
+    "name": {
+      "en": "Calamity of Eshu",
+      "fr": "La calamité d'Eshu"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_SacrificialNgombe.png"
+  },
+  {
+    "key": "CalamityQueller",
+    "name": {
+      "en": "Calamity Queller",
+      "fr": "Étouffeur de calamités"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 740.6,
+    "maxSubStatValue": 16.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Santika.png"
+  },
+  {
+    "key": "CashflowSupervision",
+    "name": {
+      "en": "Cashflow Supervision",
+      "fr": "Supervision de trésorerie"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 22.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Wheatley.png"
+  },
+  {
+    "key": "ChainBreaker",
+    "name": {
+      "en": "Chain Breaker",
+      "fr": "Brise-chaîne"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Isikhulu.png"
+  },
+  {
+    "key": "CinnabarSpindle",
+    "name": {
+      "en": "Cinnabar Spindle",
+      "fr": "Fuseau de cinabre"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "def_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 69,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Opus.png"
+  },
+  {
+    "key": "ClashOfKings",
+    "name": {
+      "en": "Clash of Kings",
+      "fr": "Choc des rois"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_SandMemoria.png"
+  },
+  {
+    "key": "Cloudforged",
+    "name": {
+      "en": "Cloudforged",
+      "fr": "Nimbus-forgé"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Ultimatum.png"
+  },
+  {
+    "key": "CompoundBow",
+    "name": {
+      "en": "Compound Bow",
+      "fr": "Arc à poulies"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "physical_dmg_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 69,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Exotic.png"
+  },
+  {
+    "key": "CoolSteel",
+    "name": {
+      "en": "Cool Steel",
+      "fr": "Lame froide"
+    },
+    "type": "sword",
+    "rarity": 3,
+    "subStatKey": "atk_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 35.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Steel.png"
+  },
+  {
+    "key": "CovenantOfFrostAndSnow",
+    "name": {
+      "en": "Covenant of Frost and Snow",
+      "fr": "Alliance du givre et de la neige"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "def_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 51.7,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_GlintstoneBow.png"
+  },
+  {
+    "key": "CranesEchoingCall",
+    "name": {
+      "en": "Crane's Echoing Call",
+      "fr": "Écho de la grue"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 740.6,
+    "maxSubStatValue": 16.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_MountainGale.png"
+  },
+  {
+    "key": "CrescentPike",
+    "name": {
+      "en": "Crescent Pike",
+      "fr": "Pique du croissant de lune"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "physical_dmg_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 34.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Exotic.png"
+  },
+  {
+    "key": "CrimsonMoonsSemblance",
+    "name": {
+      "en": "Crimson Moon's Semblance",
+      "fr": "Semblance de la lune écarlate"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 22.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_BloodMoon.png"
+  },
+  {
+    "key": "DarkIronSword",
+    "name": {
+      "en": "Dark Iron Sword",
+      "fr": "Épée en fer noir"
+    },
+    "type": "sword",
+    "rarity": 3,
+    "subStatKey": "em",
+    "maxATK": 401.3,
+    "maxSubStatValue": 140.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Darker.png"
+  },
+  {
+    "key": "DawningFrost",
+    "name": {
+      "en": "Dawning Frost",
+      "fr": "Frimas d'aube"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "critDMG_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Ziedas.png"
+  },
+  {
+    "key": "Deathmatch",
+    "name": {
+      "en": "Deathmatch",
+      "fr": "Scion de la victoire"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 36.8,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Gladiator.png"
+  },
+  {
+    "key": "DebateClub",
+    "name": {
+      "en": "Debate Club",
+      "fr": "Épée de la raison"
+    },
+    "type": "claymore",
+    "rarity": 3,
+    "subStatKey": "atk_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 35.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Reasoning.png"
+  },
+  {
+    "key": "DialoguesOfTheDesertSages",
+    "name": {
+      "en": "Dialogues of the Desert Sages",
+      "fr": "Dialogues des sages du désert"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "hp_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Caduceus.png"
+  },
+  {
+    "key": "DisasterAndRemorse",
+    "name": {
+      "en": "Disaster and Remorse",
+      "fr": "Désastre et remords"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 22.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Carbine.png"
+  },
+  {
+    "key": "DodocoTales",
+    "name": {
+      "en": "Dodoco Tales",
+      "fr": "Contes de Dodoco"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Ludiharpastum.png"
+  },
+  {
+    "key": "DragonsBane",
+    "name": {
+      "en": "Dragon's Bane",
+      "fr": "Fléau du dragon"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 454.4,
+    "maxSubStatValue": 220.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Stardust.png"
+  },
+  {
+    "key": "DragonspineSpear",
+    "name": {
+      "en": "Dragonspine Spear",
+      "fr": "Lance Dosdragon"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "physical_dmg_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 69,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Everfrost.png"
+  },
+  {
+    "key": "EarthShaker",
+    "name": {
+      "en": "Earth Shaker",
+      "fr": "Trembleur de terre"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Isikhulu.png"
+  },
+  {
+    "key": "EchoesOfTheHeart",
+    "name": {
+      "en": "Echoes of the Heart",
+      "fr": "Écho du cœur"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_GlintstoneCatalyst.png"
+  },
+  {
+    "key": "ElegyForTheEnd",
+    "name": {
+      "en": "Elegy for the End",
+      "fr": "Ultime soupir"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "enerRech_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Widsith.png"
+  },
+  {
+    "key": "Emberwell",
+    "name": {
+      "en": "Emberwell",
+      "fr": "Puits-de-braises"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_GlintstoneSword.png"
+  },
+  {
+    "key": "EmeraldOrb",
+    "name": {
+      "en": "Emerald Orb",
+      "fr": "Orbe jadien"
+    },
+    "type": "catalyst",
+    "rarity": 3,
+    "subStatKey": "em",
+    "maxATK": 448.2,
+    "maxSubStatValue": 93.7,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Jade.png"
+  },
+  {
+    "key": "EndOfTheLine",
+    "name": {
+      "en": "End of the Line",
+      "fr": "Chalutier"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Fin.png"
+  },
+  {
+    "key": "EngulfingLightning",
+    "name": {
+      "en": "Engulfing Lightning",
+      "fr": "Lumière du faucheur"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "enerRech_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Narukami.png"
+  },
+  {
+    "key": "EtherlightSpindlelute",
+    "name": {
+      "en": "Etherlight Spindlelute",
+      "fr": "Lyre du tisse-lumière"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_SeeliesLute.png"
+  },
+  {
+    "key": "EverlastingMoonglow",
+    "name": {
+      "en": "Everlasting Moonglow",
+      "fr": "Lueur de la lune éternelle"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "hp_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 49.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Kaleido.png"
+  },
+  {
+    "key": "ExaiphanesBlade",
+    "name": {
+      "en": "Exaiphanes Blade",
+      "fr": "Lame exaphane"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 33.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_WeaponQuestSnezhnaya.png"
+  },
+  {
+    "key": "EyeOfPerception",
+    "name": {
+      "en": "Eye of Perception",
+      "fr": "Œil de la perception"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Truelens.png"
+  },
+  {
+    "key": "FadingTwilight",
+    "name": {
+      "en": "Fading Twilight",
+      "fr": "Crépuscule couchant"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Fallensun.png"
+  },
+  {
+    "key": "FangOfTheMountainKing",
+    "name": {
+      "en": "Fang of the Mountain King",
+      "fr": "Croc du roi de la montagne"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 740.6,
+    "maxSubStatValue": 11,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_EmeraldSword.png"
+  },
+  {
+    "key": "FavoniusCodex",
+    "name": {
+      "en": "Favonius Codex",
+      "fr": "Code de Favonius"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Zephyrus.png"
+  },
+  {
+    "key": "FavoniusGreatsword",
+    "name": {
+      "en": "Favonius Greatsword",
+      "fr": "Espadon de Favonius"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 61.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Zephyrus.png"
+  },
+  {
+    "key": "FavoniusLance",
+    "name": {
+      "en": "Favonius Lance",
+      "fr": "Lance de Favonius"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Zephyrus.png"
+  },
+  {
+    "key": "FavoniusSword",
+    "name": {
+      "en": "Favonius Sword",
+      "fr": "Épée de Favonius"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 61.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Zephyrus.png"
+  },
+  {
+    "key": "FavoniusWarbow",
+    "name": {
+      "en": "Favonius Warbow",
+      "fr": "Arc de chasse de Favonius"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 61.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Zephyrus.png"
+  },
+  {
+    "key": "FerrousShadow",
+    "name": {
+      "en": "Ferrous Shadow",
+      "fr": "Ombre ferreuse"
+    },
+    "type": "claymore",
+    "rarity": 3,
+    "subStatKey": "hp_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 35.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Glaive.png"
+  },
+  {
+    "key": "FesteringDesire",
+    "name": {
+      "en": "Festering Desire",
+      "fr": "Croc suppurant"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Magnum.png"
+  },
+  {
+    "key": "FilletBlade",
+    "name": {
+      "en": "Fillet Blade",
+      "fr": "Couteau à filets"
+    },
+    "type": "sword",
+    "rarity": 3,
+    "subStatKey": "atk_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 35.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Sashimi.png"
+  },
+  {
+    "key": "FinaleOfTheDeep",
+    "name": {
+      "en": "Finale of the Deep",
+      "fr": "Final des profondeurs"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Vorpal.png"
+  },
+  {
+    "key": "FlameForgedInsight",
+    "name": {
+      "en": "Flame-Forged Insight",
+      "fr": "Perception forgée par les flammes"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Polilith.png"
+  },
+  {
+    "key": "FleuveCendreFerryman",
+    "name": {
+      "en": "Fleuve Cendre Ferryman",
+      "fr": "Passeur du Fleuve cendré"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Machination.png"
+  },
+  {
+    "key": "FlowerWreathedFeathers",
+    "name": {
+      "en": "Flower-Wreathed Feathers",
+      "fr": "Plumard de fleurs"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Umpakati.png"
+  },
+  {
+    "key": "FlowingPurity",
+    "name": {
+      "en": "Flowing Purity",
+      "fr": "Pureté fluide"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Vorpal.png"
+  },
+  {
+    "key": "FluteOfEzpitzal",
+    "name": {
+      "en": "Flute of Ezpitzal",
+      "fr": "Flûte d'ezpitzal"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "def_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 69,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Isikhulu.png"
+  },
+  {
+    "key": "FootprintOfTheRainbow",
+    "name": {
+      "en": "Footprint of the Rainbow",
+      "fr": "Trace d'arc-en-ciel"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "def_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 51.7,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Isikhulu.png"
+  },
+  {
+    "key": "ForestRegalia",
+    "name": {
+      "en": "Forest Regalia",
+      "fr": "Apparat de la forêt"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Arakalari.png"
+  },
+  {
+    "key": "ForgedByTheGoldenMelody",
+    "name": {
+      "en": "Forged by the Golden Melody",
+      "fr": "Forgée par la loi d'or"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_EscapeWheel.png"
+  },
+  {
+    "key": "FracturedHalo",
+    "name": {
+      "en": "Fractured Halo",
+      "fr": "Halo fracturé"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Perdix.png"
+  },
+  {
+    "key": "FreedomSworn",
+    "name": {
+      "en": "Freedom-Sworn",
+      "fr": "Serment de la liberté"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "em",
+    "maxATK": 608.1,
+    "maxSubStatValue": 198.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Widsith.png"
+  },
+  {
+    "key": "Frostbearer",
+    "name": {
+      "en": "Frostbearer",
+      "fr": "Fruit du permafrost"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Everfrost.png"
+  },
+  {
+    "key": "Frostbreath",
+    "name": {
+      "en": "Frostbreath",
+      "fr": "Souffle de givre"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_FaesCrystalle.png"
+  },
+  {
+    "key": "FruitfulHook",
+    "name": {
+      "en": "Fruitful Hook",
+      "fr": "Crochet fructueux"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Umpakati.png"
+  },
+  {
+    "key": "FruitOfFulfillment",
+    "name": {
+      "en": "Fruit of Fulfillment",
+      "fr": "Le fruit de l'accomplissement"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Arakalari.png"
+  },
+  {
+    "key": "GestOfTheMightyWolf",
+    "name": {
+      "en": "Gest of the Mighty Wolf",
+      "fr": "Geste du loup puissant"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 33.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_EnsisAquilonis.png"
+  },
+  {
+    "key": "GoldenFrostboundOath",
+    "name": {
+      "en": "Golden Frostbound Oath",
+      "fr": "Serment de gel doré"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Alkonost.png"
+  },
+  {
+    "key": "HakushinRing",
+    "name": {
+      "en": "Hakushin Ring",
+      "fr": "Anneau des Hakushin"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Bakufu.png"
+  },
+  {
+    "key": "Halberd",
+    "name": {
+      "en": "Halberd",
+      "fr": "Hallebarde"
+    },
+    "type": "polearm",
+    "rarity": 3,
+    "subStatKey": "atk_",
+    "maxATK": 448.2,
+    "maxSubStatValue": 23.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Halberd.png"
+  },
+  {
+    "key": "Hamayumi",
+    "name": {
+      "en": "Hamayumi",
+      "fr": "Arc d'exorcisme"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Bakufu.png"
+  },
+  {
+    "key": "HaranGeppakuFutsu",
+    "name": {
+      "en": "Haran Geppaku Futsu",
+      "fr": "Lune ondulante de Futsu"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 33.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Amenoma.png"
+  },
+  {
+    "key": "HarbingerOfDawn",
+    "name": {
+      "en": "Harbinger of Dawn",
+      "fr": "Messager de l'Aube"
+    },
+    "type": "sword",
+    "rarity": 3,
+    "subStatKey": "critDMG_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 46.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Dawn.png"
+  },
+  {
+    "key": "HereticsMoltenBlade",
+    "name": {
+      "en": "Heretic's Molten Blade",
+      "fr": "Lame de lave de l'hérétique"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_SerpentTooth.png"
+  },
+  {
+    "key": "HuntersPath",
+    "name": {
+      "en": "Hunter's Path",
+      "fr": "La voie du chasseur"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Ayus.png"
+  },
+  {
+    "key": "HymnOfTheMaelstrom",
+    "name": {
+      "en": "Hymn of the Maelstrom",
+      "fr": "Hymne dans le maelström"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "hp_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Bludnye.png"
+  },
+  {
+    "key": "IbisPiercer",
+    "name": {
+      "en": "Ibis Piercer",
+      "fr": "Perceur d'ibis"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Ibis.png"
+  },
+  {
+    "key": "IronSting",
+    "name": {
+      "en": "Iron Sting",
+      "fr": "Piqûre de fer"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Exotic.png"
+  },
+  {
+    "key": "JadefallsSplendor",
+    "name": {
+      "en": "Jadefall's Splendor",
+      "fr": "Splendeur de l'azur"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "hp_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 49.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Morax.png"
+  },
+  {
+    "key": "JadeVista",
+    "name": {
+      "en": "Jade Vista",
+      "fr": "Vue de jade"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_ShatteredMirror.png"
+  },
+  {
+    "key": "KagotsurubeIsshin",
+    "name": {
+      "en": "Kagotsurube Isshin",
+      "fr": "Kagotsurube Isshin"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Youtou.png"
+  },
+  {
+    "key": "KagurasVerity",
+    "name": {
+      "en": "Kagura's Verity",
+      "fr": "Vérité de Kagura"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Narukami.png"
+  },
+  {
+    "key": "KatsuragikiriNagamasa",
+    "name": {
+      "en": "Katsuragikiri Nagamasa",
+      "fr": "Espadon de Nagamasa"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Bakufu.png"
+  },
+  {
+    "key": "KeyOfKhajNisut",
+    "name": {
+      "en": "Key of Khaj-Nisut",
+      "fr": "Clé de Khaj-Nisut"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "hp_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Deshret.png"
+  },
+  {
+    "key": "KingsSquire",
+    "name": {
+      "en": "King's Squire",
+      "fr": "Le valet du roi"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Arakalari.png"
+  },
+  {
+    "key": "KitainCrossSpear",
+    "name": {
+      "en": "Kitain Cross Spear",
+      "fr": "Lance en croix de Kitain"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 564.8,
+    "maxSubStatValue": 110.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Bakufu.png"
+  },
+  {
+    "key": "LightbearingMoonshard",
+    "name": {
+      "en": "Lightbearing Moonshard",
+      "fr": "Éclat lunaire luminescent"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_SilverwareSaw.png"
+  },
+  {
+    "key": "LightOfFoliarIncision",
+    "name": {
+      "en": "Light of Foliar Incision",
+      "fr": "Lumière d'incision foliaire"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Ayus.png"
+  },
+  {
+    "key": "LionsRoar",
+    "name": {
+      "en": "Lion's Roar",
+      "fr": "Rugissement du Lion"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Rockkiller.png"
+  },
+  {
+    "key": "LithicBlade",
+    "name": {
+      "en": "Lithic Blade",
+      "fr": "Épée antique des Millelithes"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Lapis.png"
+  },
+  {
+    "key": "LithicSpear",
+    "name": {
+      "en": "Lithic Spear",
+      "fr": "Lance des Millelithes"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Lapis.png"
+  },
+  {
+    "key": "LostPrayerToTheSacredWinds",
+    "name": {
+      "en": "Lost Prayer to the Sacred Winds",
+      "fr": "L'origine des Quatre Vents"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 33.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Fourwinds.png"
+  },
+  {
+    "key": "LumidouceElegy",
+    "name": {
+      "en": "Lumidouce Elegy",
+      "fr": "Élégie de Lumidouce"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 33.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Muguet.png"
+  },
+  {
+    "key": "LuxuriousSeaLord",
+    "name": {
+      "en": "Luxurious Sea-Lord",
+      "fr": "Illustre seigneur des mers"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_MillenniaTuna.png"
+  },
+  {
+    "key": "MagicGuide",
+    "name": {
+      "en": "Magic Guide",
+      "fr": "Guide de magie"
+    },
+    "type": "catalyst",
+    "rarity": 3,
+    "subStatKey": "em",
+    "maxATK": 354.4,
+    "maxSubStatValue": 187.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Intro.png"
+  },
+  {
+    "key": "MailedFlower",
+    "name": {
+      "en": "Mailed Flower",
+      "fr": "Fleur de mailles"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 564.8,
+    "maxSubStatValue": 110.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Fleurfair.png"
+  },
+  {
+    "key": "MakhairaAquamarine",
+    "name": {
+      "en": "Makhaira Aquamarine",
+      "fr": "Aigue-marine de Makhaira"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Pleroma.png"
+  },
+  {
+    "key": "MappaMare",
+    "name": {
+      "en": "Mappa Mare",
+      "fr": "Atlas des terres et des mers"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 564.8,
+    "maxSubStatValue": 110.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Exotic.png"
+  },
+  {
+    "key": "MasterKey",
+    "name": {
+      "en": "Master Key",
+      "fr": "Clé universelle"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 61.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Ilmarinen.png"
+  },
+  {
+    "key": "MemoryOfDust",
+    "name": {
+      "en": "Memory of Dust",
+      "fr": "Chaînes mortelles"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 49.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Kunwu.png"
+  },
+  {
+    "key": "Messenger",
+    "name": {
+      "en": "Messenger",
+      "fr": "Messager"
+    },
+    "type": "bow",
+    "rarity": 3,
+    "subStatKey": "critDMG_",
+    "maxATK": 448.2,
+    "maxSubStatValue": 31.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Msg.png"
+  },
+  {
+    "key": "MissiveWindspear",
+    "name": {
+      "en": "Missive Windspear",
+      "fr": "Lance du vent saisonnier"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Windvane.png"
+  },
+  {
+    "key": "MistsplitterReforged",
+    "name": {
+      "en": "Mistsplitter Reforged",
+      "fr": "Reflet de tranche-brume"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Narukami.png"
+  },
+  {
+    "key": "MitternachtsWaltz",
+    "name": {
+      "en": "Mitternachts Waltz",
+      "fr": "Valse nocturne"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "physical_dmg_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 51.7,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Nachtblind.png"
+  },
+  {
+    "key": "Moonpiercer",
+    "name": {
+      "en": "Moonpiercer",
+      "fr": "Perce-lune"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 564.8,
+    "maxSubStatValue": 110.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Arakalari.png"
+  },
+  {
+    "key": "MoonweaversDawn",
+    "name": {
+      "en": "Moonweaver's Dawn",
+      "fr": "Aube du tisse-lune"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Miekka.png"
+  },
+  {
+    "key": "MountainBracingBolt",
+    "name": {
+      "en": "Mountain-Bracing Bolt",
+      "fr": "Clou soutenant les montagnes"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Umpakati.png"
+  },
+  {
+    "key": "MouunsMoon",
+    "name": {
+      "en": "Mouun's Moon",
+      "fr": "Lune de Mouun"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Maria.png"
+  },
+  {
+    "key": "NewBough",
+    "name": {
+      "en": "New Bough",
+      "fr": "Nouvelle branche"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "critDMG_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_SpikedStake.png"
+  },
+  {
+    "key": "NightweaversLookingGlass",
+    "name": {
+      "en": "Nightweaver's Looking Glass",
+      "fr": "Miroir du tisse-nuit"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "em",
+    "maxATK": 541.8,
+    "maxSubStatValue": 264.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_MenulisRing.png"
+  },
+  {
+    "key": "NocturnesCurtainCall",
+    "name": {
+      "en": "Nocturne's Curtain Call",
+      "fr": "Rappel de la nocturne"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Brisingamen.png"
+  },
+  {
+    "key": "OathswornEye",
+    "name": {
+      "en": "Oathsworn Eye",
+      "fr": "Œil d'assermentation"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Jyanome.png"
+  },
+  {
+    "key": "OtherworldlyStory",
+    "name": {
+      "en": "Otherworldly Story",
+      "fr": "Conte d'un autre monde"
+    },
+    "type": "catalyst",
+    "rarity": 3,
+    "subStatKey": "enerRech_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 39,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Lightnov.png"
+  },
+  {
+    "key": "PeakPatrolSong",
+    "name": {
+      "en": "Peak Patrol Song",
+      "fr": "Chanson de patrouille de sommet"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "def_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 82.7,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_XochitlsTube.png"
+  },
+  {
+    "key": "PolarStar",
+    "name": {
+      "en": "Polar Star",
+      "fr": "Étoile polaire"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 33.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Worldbane.png"
+  },
+  {
+    "key": "PortablePowerSaw",
+    "name": {
+      "en": "Portable Power Saw",
+      "fr": "Scie électrique portative"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "hp_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Mechanic.png"
+  },
+  {
+    "key": "Predator",
+    "name": {
+      "en": "Predator",
+      "fr": "Predator"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Predator.png"
+  },
+  {
+    "key": "PrimordialJadeCutter",
+    "name": {
+      "en": "Primordial Jade Cutter",
+      "fr": "Coupeur de jade primordial"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Morax.png"
+  },
+  {
+    "key": "PrimordialJadeWingedSpear",
+    "name": {
+      "en": "Primordial Jade Winged-Spear",
+      "fr": "Lance de jade ailée"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 22.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Morax.png"
+  },
+  {
+    "key": "PrizedIsshinBlade",
+    "name": {
+      "en": "Prized Isshin Blade",
+      "fr": "Chef-d'œuvre Isshin"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_YoutouEnchanted.png"
+  },
+  {
+    "key": "PrizedIsshinBlade",
+    "name": {
+      "en": "Prized Isshin Blade",
+      "fr": "Chef-d'œuvre Isshin"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 0,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_YoutouShattered.png"
+  },
+  {
+    "key": "PrizedIsshinBlade",
+    "name": {
+      "en": "Prized Isshin Blade",
+      "fr": "Chef-d'œuvre Isshin"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 20.7,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_YoutouEnchanted.png"
+  },
+  {
+    "key": "ProspectorsDrill",
+    "name": {
+      "en": "Prospector's Drill",
+      "fr": "Foret de prospecteur"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Mechanic.png"
+  },
+  {
+    "key": "ProspectorsShovel",
+    "name": {
+      "en": "Prospector's Shovel",
+      "fr": "Pelle du prospecteur"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Ilmarinen.png"
+  },
+  {
+    "key": "PrototypeAmber",
+    "name": {
+      "en": "Prototype Amber",
+      "fr": "Malice (prototype)"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "hp_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Proto.png"
+  },
+  {
+    "key": "PrototypeArchaic",
+    "name": {
+      "en": "Prototype Archaic",
+      "fr": "Espadon (prototype)"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Proto.png"
+  },
+  {
+    "key": "PrototypeCrescent",
+    "name": {
+      "en": "Prototype Crescent",
+      "fr": "Lune paisible (prototype)"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Proto.png"
+  },
+  {
+    "key": "PrototypeRancour",
+    "name": {
+      "en": "Prototype Rancour",
+      "fr": "Tailleur de pierre (prototype)"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "physical_dmg_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 34.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Proto.png"
+  },
+  {
+    "key": "PrototypeStarglitter",
+    "name": {
+      "en": "Prototype Starglitter",
+      "fr": "Guisarme stellaire (prototype)"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Proto.png"
+  },
+  {
+    "key": "RainbowSerpentsRainBow",
+    "name": {
+      "en": "Rainbow Serpent's Rain Bow",
+      "fr": "Arc pluvial du serpent arc-en-ciel"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_ElegguaBow.png"
+  },
+  {
+    "key": "Rainslasher",
+    "name": {
+      "en": "Rainslasher",
+      "fr": "Fluorescence"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Perdue.png"
+  },
+  {
+    "key": "RangeGauge",
+    "name": {
+      "en": "Range Gauge",
+      "fr": "Jauge de portée"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Mechanic.png"
+  },
+  {
+    "key": "RavenBow",
+    "name": {
+      "en": "Raven Bow",
+      "fr": "Arc du corbeau"
+    },
+    "type": "bow",
+    "rarity": 3,
+    "subStatKey": "em",
+    "maxATK": 448.2,
+    "maxSubStatValue": 93.7,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Crowfeather.png"
+  },
+  {
+    "key": "RecurveBow",
+    "name": {
+      "en": "Recurve Bow",
+      "fr": "Arc courbé"
+    },
+    "type": "bow",
+    "rarity": 3,
+    "subStatKey": "hp_",
+    "maxATK": 354.4,
+    "maxSubStatValue": 46.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Curve.png"
+  },
+  {
+    "key": "RedhornStonethresher",
+    "name": {
+      "en": "Redhorn Stonethresher",
+      "fr": "Brise-pierre de corne rouge"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Itadorimaru.png"
+  },
+  {
+    "key": "ReliquaryOfTruth",
+    "name": {
+      "en": "Reliquary of Truth",
+      "fr": "Reliquaire de la vérité"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Sistrum.png"
+  },
+  {
+    "key": "RightfulReward",
+    "name": {
+      "en": "Rightful Reward",
+      "fr": "Récompense légitime"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "hp_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Vorpal.png"
+  },
+  {
+    "key": "RingOfYaxche",
+    "name": {
+      "en": "Ring of Yaxche",
+      "fr": "Anneau de Yaxche"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "hp_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Isikhulu.png"
+  },
+  {
+    "key": "RoyalBow",
+    "name": {
+      "en": "Royal Bow",
+      "fr": "Arc royal"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Theocrat.png"
+  },
+  {
+    "key": "RoyalGreatsword",
+    "name": {
+      "en": "Royal Greatsword",
+      "fr": "Espadon royal"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Theocrat.png"
+  },
+  {
+    "key": "RoyalGrimoire",
+    "name": {
+      "en": "Royal Grimoire",
+      "fr": "Grimoire royal"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Theocrat.png"
+  },
+  {
+    "key": "RoyalLongsword",
+    "name": {
+      "en": "Royal Longsword",
+      "fr": "Épée longue royale"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Theocrat.png"
+  },
+  {
+    "key": "RoyalSpear",
+    "name": {
+      "en": "Royal Spear",
+      "fr": "Lance de chasse royale"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Theocrat.png"
+  },
+  {
+    "key": "Rust",
+    "name": {
+      "en": "Rust",
+      "fr": "Arc rouillé"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Recluse.png"
+  },
+  {
+    "key": "SacrificersStaff",
+    "name": {
+      "en": "Sacrificer's Staff",
+      "fr": "Bâton de sacrificateur"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 620,
+    "maxSubStatValue": 9.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Krivule.png"
+  },
+  {
+    "key": "SacrificialBow",
+    "name": {
+      "en": "Sacrificial Bow",
+      "fr": "Arc rituel"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Fossil.png"
+  },
+  {
+    "key": "SacrificialFragments",
+    "name": {
+      "en": "Sacrificial Fragments",
+      "fr": "Mémoires de rituels"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 454.4,
+    "maxSubStatValue": 220.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Fossil.png"
+  },
+  {
+    "key": "SacrificialGreatsword",
+    "name": {
+      "en": "Sacrificial Greatsword",
+      "fr": "Espadon rituel"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Fossil.png"
+  },
+  {
+    "key": "SacrificialJade",
+    "name": {
+      "en": "Sacrificial Jade",
+      "fr": "Jade sacrificiel"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 36.8,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Yue.png"
+  },
+  {
+    "key": "SacrificialSword",
+    "name": {
+      "en": "Sacrificial Sword",
+      "fr": "Épée rituelle"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 61.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Fossil.png"
+  },
+  {
+    "key": "SapwoodBlade",
+    "name": {
+      "en": "Sapwood Blade",
+      "fr": "Lame d'aubier"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Arakalari.png"
+  },
+  {
+    "key": "ScionOfTheBlazingSun",
+    "name": {
+      "en": "Scion of the Blazing Sun",
+      "fr": "Descendant du soleil flamboyant"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 18.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Gurabad.png"
+  },
+  {
+    "key": "SequenceOfSolitude",
+    "name": {
+      "en": "Sequence of Solitude",
+      "fr": "Séquence de solitude"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "hp_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Stinger.png"
+  },
+  {
+    "key": "SerenitysCall",
+    "name": {
+      "en": "Serenity's Call",
+      "fr": "Appel de sérénité"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 61.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Ilmarinen.png"
+  },
+  {
+    "key": "SerpentSpine",
+    "name": {
+      "en": "Serpent Spine",
+      "fr": "Ossature du dragon"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Kione.png"
+  },
+  {
+    "key": "SharpshootersOath",
+    "name": {
+      "en": "Sharpshooter's Oath",
+      "fr": "Serment de l'archer"
+    },
+    "type": "bow",
+    "rarity": 3,
+    "subStatKey": "critDMG_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 46.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Arjuna.png"
+  },
+  {
+    "key": "SilverLight",
+    "name": {
+      "en": "Silver Light",
+      "fr": "Lumière argentée"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Fajian.png"
+  },
+  {
+    "key": "SilvershowerHeartstrings",
+    "name": {
+      "en": "Silvershower Heartstrings",
+      "fr": "Corde de pluie blanche"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "hp_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Arcdange.png"
+  },
+  {
+    "key": "SkyriderGreatsword",
+    "name": {
+      "en": "Skyrider Greatsword",
+      "fr": "Grande épée céleste"
+    },
+    "type": "claymore",
+    "rarity": 3,
+    "subStatKey": "physical_dmg_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 43.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Mitsurugi.png"
+  },
+  {
+    "key": "SkyriderSword",
+    "name": {
+      "en": "Skyrider Sword",
+      "fr": "Épée céleste"
+    },
+    "type": "sword",
+    "rarity": 3,
+    "subStatKey": "enerRech_",
+    "maxATK": 354.4,
+    "maxSubStatValue": 52.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Mitsurugi.png"
+  },
+  {
+    "key": "SkywardAtlas",
+    "name": {
+      "en": "Skyward Atlas",
+      "fr": "Atlas de la Voûte d'Azur"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 33.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Dvalin.png"
+  },
+  {
+    "key": "SkywardBlade",
+    "name": {
+      "en": "Skyward Blade",
+      "fr": "Lame de la Voûte d'Azur"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "enerRech_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Dvalin.png"
+  },
+  {
+    "key": "SkywardHarp",
+    "name": {
+      "en": "Skyward Harp",
+      "fr": "Ailes de la Voûte d'Azur"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 22.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Dvalin.png"
+  },
+  {
+    "key": "SkywardPride",
+    "name": {
+      "en": "Skyward Pride",
+      "fr": "Fierté de la Voûte d'Azur"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "enerRech_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 36.8,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Dvalin.png"
+  },
+  {
+    "key": "SkywardSpine",
+    "name": {
+      "en": "Skyward Spine",
+      "fr": "Berge de la Voûte d'Azur"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "enerRech_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 36.8,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Dvalin.png"
+  },
+  {
+    "key": "Slingshot",
+    "name": {
+      "en": "Slingshot",
+      "fr": "Lance-pierres"
+    },
+    "type": "bow",
+    "rarity": 3,
+    "subStatKey": "critRate_",
+    "maxATK": 354.4,
+    "maxSubStatValue": 31.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Sling.png"
+  },
+  {
+    "key": "SnareHook",
+    "name": {
+      "en": "Snare Hook",
+      "fr": "Crochet de capture"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 61.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Ilmarinen.png"
+  },
+  {
+    "key": "SnowTombedStarsilver",
+    "name": {
+      "en": "Snow-Tombed Starsilver",
+      "fr": "Tombe-neige en argétoile"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "physical_dmg_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 34.5,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Dragonfell.png"
+  },
+  {
+    "key": "SolarPearl",
+    "name": {
+      "en": "Solar Pearl",
+      "fr": "Perle solaire"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Resurrection.png"
+  },
+  {
+    "key": "SongOfBrokenPines",
+    "name": {
+      "en": "Song of Broken Pines",
+      "fr": "Ode au chant du vent"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "physical_dmg_",
+    "maxATK": 740.6,
+    "maxSubStatValue": 20.7,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Widsith.png"
+  },
+  {
+    "key": "SongOfStillness",
+    "name": {
+      "en": "Song of Stillness",
+      "fr": "Chant de quiétude"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Vorpal.png"
+  },
+  {
+    "key": "SongOfTheVigil",
+    "name": {
+      "en": "Song of the Vigil",
+      "fr": "Chant de la veillée"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 564.8,
+    "maxSubStatValue": 110.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_GlintstonePolearm.png"
+  },
+  {
+    "key": "SplendorOfTranquilWaters",
+    "name": {
+      "en": "Splendor of Tranquil Waters",
+      "fr": "Splendeur des eaux calmes"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Regalis.png"
+  },
+  {
+    "key": "StaffOfHoma",
+    "name": {
+      "en": "Staff of Homa",
+      "fr": "Bâton de Homa"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Homa.png"
+  },
+  {
+    "key": "StaffOfTheScarletSands",
+    "name": {
+      "en": "Staff of the Scarlet Sands",
+      "fr": "Bâton des sables écarlates"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Deshret.png"
+  },
+  {
+    "key": "StarcallersWatch",
+    "name": {
+      "en": "Starcaller's Watch",
+      "fr": "Veillée d'appel d'étoiles"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "em",
+    "maxATK": 541.8,
+    "maxSubStatValue": 264.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Figurines.png"
+  },
+  {
+    "key": "SturdyBone",
+    "name": {
+      "en": "Sturdy Bone",
+      "fr": "Os robuste"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Umpakati.png"
+  },
+  {
+    "key": "SummitShaper",
+    "name": {
+      "en": "Summit Shaper",
+      "fr": "Tranche-sommets"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 49.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Kunwu.png"
+  },
+  {
+    "key": "SunnyMorningSleepIn",
+    "name": {
+      "en": "Sunny Morning Sleep-In",
+      "fr": "Matinée flânée sous le soleil"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "em",
+    "maxATK": 541.8,
+    "maxSubStatValue": 264.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_SakuraFan.png"
+  },
+  {
+    "key": "SurfsUp",
+    "name": {
+      "en": "Surf's Up",
+      "fr": "Instant surfant"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_MechaPufferfish.png"
+  },
+  {
+    "key": "SwordOfDescension",
+    "name": {
+      "en": "Sword of Descension",
+      "fr": "Épée de la descente"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 440.2,
+    "maxSubStatValue": 35.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Psalmus.png"
+  },
+  {
+    "key": "SwordOfNarzissenkreuz",
+    "name": {
+      "en": "Sword of Narzissenkreuz",
+      "fr": "Lame du Narzissenkreuz"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Purewill.png"
+  },
+  {
+    "key": "SymphonistOfScents",
+    "name": {
+      "en": "Symphonist of Scents",
+      "fr": "Symphoniste des senteurs"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Trident.png"
+  },
+  {
+    "key": "TalkingStick",
+    "name": {
+      "en": "Talking Stick",
+      "fr": "Bâton bavard"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 18.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_BeastTamer.png"
+  },
+  {
+    "key": "TamayurateiNoOhanashi",
+    "name": {
+      "en": "Tamayuratei no Ohanashi",
+      "fr": "Tamayuratei no Ohanashi"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Aoandon.png"
+  },
+  {
+    "key": "TheAlleyFlash",
+    "name": {
+      "en": "The Alley Flash",
+      "fr": "Éclair des impasses"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 620,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Outlaw.png"
+  },
+  {
+    "key": "TheBell",
+    "name": {
+      "en": "The Bell",
+      "fr": "Épée-horloge"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "hp_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Troupe.png"
+  },
+  {
+    "key": "TheBlackSword",
+    "name": {
+      "en": "The Black Sword",
+      "fr": "Épée noire"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Bloodstained.png"
+  },
+  {
+    "key": "TheCatch",
+    "name": {
+      "en": "The Catch",
+      "fr": "« La prise »"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 45.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Mori.png"
+  },
+  {
+    "key": "TheDaybreakChronicles",
+    "name": {
+      "en": "The Daybreak Chronicles",
+      "fr": "Les chroniques de l'aube"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Arianna.png"
+  },
+  {
+    "key": "TheDockhandsAssistant",
+    "name": {
+      "en": "The Dockhand's Assistant",
+      "fr": "L'assistant du docker"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "hp_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Mechanic.png"
+  },
+  {
+    "key": "TheFirstGreatMagic",
+    "name": {
+      "en": "The First Great Magic",
+      "fr": "La première grande magie"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Pledge.png"
+  },
+  {
+    "key": "TheFlute",
+    "name": {
+      "en": "The Flute",
+      "fr": "Flûte"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Troupe.png"
+  },
+  {
+    "key": "TheStringless",
+    "name": {
+      "en": "The Stringless",
+      "fr": "Dernière corde"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Troupe.png"
+  },
+  {
+    "key": "TheUnforged",
+    "name": {
+      "en": "The Unforged",
+      "fr": "Lame brute"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 49.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Kunwu.png"
+  },
+  {
+    "key": "TheViridescentHunt",
+    "name": {
+      "en": "The Viridescent Hunt",
+      "fr": "Arc de chasse verdoyant"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Viridescent.png"
+  },
+  {
+    "key": "TheWidsith",
+    "name": {
+      "en": "The Widsith",
+      "fr": "Mouvement vagabond"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "critDMG_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Troupe.png"
+  },
+  {
+    "key": "ThrillingTalesOfDragonSlayers",
+    "name": {
+      "en": "Thrilling Tales of Dragon Slayers",
+      "fr": "Histoire des chasseurs de dragon"
+    },
+    "type": "catalyst",
+    "rarity": 3,
+    "subStatKey": "hp_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 35.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Pulpfic.png"
+  },
+  {
+    "key": "ThunderingPulse",
+    "name": {
+      "en": "Thundering Pulse",
+      "fr": "Pulsation du tonnerre"
+    },
+    "type": "bow",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 66.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Narukami.png"
+  },
+  {
+    "key": "TidalShadow",
+    "name": {
+      "en": "Tidal Shadow",
+      "fr": "Ombre tidale"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 41.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Vorpal.png"
+  },
+  {
+    "key": "TomeOfTheEternalFlow",
+    "name": {
+      "en": "Tome of the Eternal Flow",
+      "fr": "Tome du flux éternel"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Iudex.png"
+  },
+  {
+    "key": "ToukabouShigure",
+    "name": {
+      "en": "Toukabou Shigure",
+      "fr": "Pluie florale"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Kasabouzu.png"
+  },
+  {
+    "key": "TravelersHandySword",
+    "name": {
+      "en": "Traveler's Handy Sword",
+      "fr": "Épée du voyageur"
+    },
+    "type": "sword",
+    "rarity": 3,
+    "subStatKey": "def_",
+    "maxATK": 448.2,
+    "maxSubStatValue": 29.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Traveler.png"
+  },
+  {
+    "key": "TulaytullahsRemembrance",
+    "name": {
+      "en": "Tulaytullah's Remembrance",
+      "fr": "Mémoire de Tulaytullah"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Alaya.png"
+  },
+  {
+    "key": "TwinNephrite",
+    "name": {
+      "en": "Twin Nephrite",
+      "fr": "Néphrite jumelle"
+    },
+    "type": "catalyst",
+    "rarity": 3,
+    "subStatKey": "critRate_",
+    "maxATK": 448.2,
+    "maxSubStatValue": 15.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Phoney.png"
+  },
+  {
+    "key": "UltimateOverlordsMegaMagicSword",
+    "name": {
+      "en": "Ultimate Overlord's Mega Magic Sword",
+      "fr": "« Méga épée magique du suzerain ultime »"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Champion.png"
+  },
+  {
+    "key": "UrakuMisugiri",
+    "name": {
+      "en": "Uraku Misugiri",
+      "fr": "Uraku Misugiri"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 541.8,
+    "maxSubStatValue": 88.2,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Needle.png"
+  },
+  {
+    "key": "Verdict",
+    "name": {
+      "en": "Verdict",
+      "fr": "Condamneur"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 22.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_GoldenVerdict.png"
+  },
+  {
+    "key": "VividNotions",
+    "name": {
+      "en": "Vivid Notions",
+      "fr": "Notions colorées"
+    },
+    "type": "catalyst",
+    "rarity": 5,
+    "subStatKey": "critDMG_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 44.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_VaresaTransformer.png"
+  },
+  {
+    "key": "VortexVanquisher",
+    "name": {
+      "en": "Vortex Vanquisher",
+      "fr": "Perceur prismatique"
+    },
+    "type": "polearm",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 49.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Kunwu.png"
+  },
+  {
+    "key": "WanderingEvenstar",
+    "name": {
+      "en": "Wandering Evenstar",
+      "fr": "Étoile du soir errante"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Pleroma.png"
+  },
+  {
+    "key": "WavebreakersFin",
+    "name": {
+      "en": "Wavebreaker's Fin",
+      "fr": "Aileron de brise-vagues"
+    },
+    "type": "polearm",
+    "rarity": 4,
+    "subStatKey": "atk_",
+    "maxATK": 620,
+    "maxSubStatValue": 13.8,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Maria.png"
+  },
+  {
+    "key": "WaveridingWhirl",
+    "name": {
+      "en": "Waveriding Whirl",
+      "fr": "Tourbillon sur les vagues"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 454.4,
+    "maxSubStatValue": 61.3,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Umpakati.png"
+  },
+  {
+    "key": "Whiteblind",
+    "name": {
+      "en": "Whiteblind",
+      "fr": "Ombre immaculée"
+    },
+    "type": "claymore",
+    "rarity": 4,
+    "subStatKey": "def_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 51.7,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Exotic.png"
+  },
+  {
+    "key": "WhiteIronGreatsword",
+    "name": {
+      "en": "White Iron Greatsword",
+      "fr": "Grande épée en fer blanc"
+    },
+    "type": "claymore",
+    "rarity": 3,
+    "subStatKey": "def_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 43.9,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Tin.png"
+  },
+  {
+    "key": "WhitelakeFrostfeather",
+    "name": {
+      "en": "Whitelake Frostfeather",
+      "fr": "Plume hivernale du lac blanc"
+    },
+    "type": "sword",
+    "rarity": 5,
+    "subStatKey": "critRate_",
+    "maxATK": 674.3,
+    "maxSubStatValue": 22.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Swanlake.png"
+  },
+  {
+    "key": "WhiteTassel",
+    "name": {
+      "en": "White Tassel",
+      "fr": "Pampille blanche"
+    },
+    "type": "polearm",
+    "rarity": 3,
+    "subStatKey": "critRate_",
+    "maxATK": 401.3,
+    "maxSubStatValue": 23.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Pole_Ruby.png"
+  },
+  {
+    "key": "WindblumeOde",
+    "name": {
+      "en": "Windblume Ode",
+      "fr": "Ode aux alizées"
+    },
+    "type": "bow",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Bow_Fleurfair.png"
+  },
+  {
+    "key": "WineAndSong",
+    "name": {
+      "en": "Wine and Song",
+      "fr": "Vins et chants"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "enerRech_",
+    "maxATK": 564.8,
+    "maxSubStatValue": 30.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_Outlaw.png"
+  },
+  {
+    "key": "WintersHeavyHeart",
+    "name": {
+      "en": "Winter's Heavy Heart",
+      "fr": "Le cœur lourd de l'hiver"
+    },
+    "type": "catalyst",
+    "rarity": 4,
+    "subStatKey": "critDMG_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 55.1,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Catalyst_FrostScepter.png"
+  },
+  {
+    "key": "WolfFang",
+    "name": {
+      "en": "Wolf-Fang",
+      "fr": "Croc de loup"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "critRate_",
+    "maxATK": 509.6,
+    "maxSubStatValue": 27.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Boreas.png"
+  },
+  {
+    "key": "WolfsGravestone",
+    "name": {
+      "en": "Wolf's Gravestone",
+      "fr": "Mort-du-loup"
+    },
+    "type": "claymore",
+    "rarity": 5,
+    "subStatKey": "atk_",
+    "maxATK": 608.1,
+    "maxSubStatValue": 49.6,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Claymore_Wolfmound.png"
+  },
+  {
+    "key": "XiphosMoonlight",
+    "name": {
+      "en": "Xiphos' Moonlight",
+      "fr": "Clair de lune de Xiphos"
+    },
+    "type": "sword",
+    "rarity": 4,
+    "subStatKey": "em",
+    "maxATK": 509.6,
+    "maxSubStatValue": 165.4,
+    "icon": "https://upload-os-bbs.mihoyo.com/game_record/genshin/equip/UI_EquipIcon_Sword_Pleroma.png"
+  }
+]

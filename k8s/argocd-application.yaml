@@ -1,0 +1,28 @@
+# NOT synced by ArgoCD itself — this describes the Application to ArgoCD,
+# so it must be applied once, by hand, against your cluster's `argocd`
+# namespace to register the app:
+#
+#   kubectl apply -n argocd -f k8s/argocd-application.yaml
+#
+# After that, ArgoCD watches this repo's k8s/ path (via the kustomization.yaml
+# in this same directory) and auto-syncs on every push to main.
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: genshin-optimizer
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Drateill/Genshin_Opti.git
+    targetRevision: main
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: genshin-optimizer
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

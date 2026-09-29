@@ -1,0 +1,107 @@
+[
+  {
+    "key": "Hilichurl",
+    "name": { "en": "Hilichurl", "fr": "Hilichurl" },
+    "level": 20,
+    "resPct": 10,
+    "category": "common"
+  },
+  {
+    "key": "Mitachurl",
+    "name": { "en": "Mitachurl", "fr": "Mitachourl" },
+    "level": 40,
+    "resPct": 10,
+    "category": "common"
+  },
+  {
+    "key": "RuinGuard",
+    "name": { "en": "Ruin Guard", "fr": "Gardien des ruines" },
+    "level": 50,
+    "resPct": 10,
+    "category": "common"
+  },
+  {
+    "key": "RuinGrader",
+    "name": { "en": "Ruin Grader", "fr": "Trancheur des ruines" },
+    "level": 60,
+    "resPct": 10,
+    "category": "common"
+  },
+  {
+    "key": "AbyssMage",
+    "name": { "en": "Abyss Mage", "fr": "Mage de l'Abysse" },
+    "level": 50,
+    "resPct": 10,
+    "category": "common"
+  },
+  {
+    "key": "FatuiPyroAgent",
+    "name": { "en": "Fatui Pyro Agent", "fr": "Agent Pyro des Fatui" },
+    "level": 60,
+    "resPct": 10,
+    "category": "common"
+  },
+  {
+    "key": "FatuiElectroCicinMage",
+    "name": { "en": "Fatui Electro Cicin Mage", "fr": "Mage Cicin Electro des Fatui" },
+    "level": 60,
+    "resPct": 10,
+    "category": "common"
+  },
+  {
+    "key": "FatuiCryoCicinMage",
+    "name": { "en": "Fatui Cryo Cicin Mage", "fr": "Mage Cicin Cryo des Fatui" },
+    "level": 60,
+    "resPct": 10,
+    "category": "common"
+  },
+  {
+    "key": "Whopperflower",
+    "name": { "en": "Whopperflower", "fr": "Fleurgueule" },
+    "level": 40,
+    "resPct": 10,
+    "category": "common"
+  },
+  {
+    "key": "RhodeiaOfLoch",
+    "name": { "en": "Rhodeia of Loch (Oceanid)", "fr": "Rhodeia du lac (Océanide)" },
+    "level": 90,
+    "resPct": 10,
+    "category": "boss"
+  },
+  {
+    "key": "ChildeTartaglia",
+    "name": { "en": "Childe (Tartaglia)", "fr": "Childe (Tartaglia)" },
+    "level": 90,
+    "resPct": 10,
+    "category": "boss"
+  },
+  {
+    "key": "Azhdaha",
+    "name": { "en": "Azhdaha", "fr": "Azhdaha" },
+    "level": 90,
+    "resPct": 10,
+    "category": "boss"
+  },
+  {
+    "key": "MaguuKenki",
+    "name": { "en": "Maguu Kenki", "fr": "Maguu Kenki" },
+    "level": 90,
+    "resPct": 10,
+    "category": "boss"
+  },
+  {
+    "key": "SignoraLaSignora",
+    "name": { "en": "La Signora", "fr": "La Signora" },
+    "level": 90,
+    "resPct": 10,
+    "category": "boss"
+  },
+  {
+    "key": "Andrius",
+    "name": { "en": "Wolf of the North Challenge (Andrius)", "fr": "Défi du Loup du Nord (Andrius)" },
+    "level": 90,
+    "resPct": 10,
+    "category": "boss"
+  }
+]
