@@ -5,8 +5,11 @@ on:
     branches: [main]
 
 env:
-  BACKEND_IMAGE: ghcr.io/${{ github.repository_owner }}/genshin_opti-backend
-  FRONTEND_IMAGE: ghcr.io/${{ github.repository_owner }}/genshin_opti-frontend
+  # GHCR image names must be lowercase; github.repository_owner keeps the
+  # GitHub username's casing ("Drateill"), so this is hardcoded rather than
+  # derived — GitHub Actions expressions have no built-in lowercase().
+  BACKEND_IMAGE: ghcr.io/drateill/genshin_opti-backend
+  FRONTEND_IMAGE: ghcr.io/drateill/genshin_opti-frontend
 
 permissions:
   contents: write
