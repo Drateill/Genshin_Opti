@@ -1,6 +1,8 @@
-import { useState, type SyntheticEvent } from 'react';
+import { useState, type CSSProperties, type SyntheticEvent } from 'react';
 import type { RosterEntry, SetInfo, StatRange, WeaponOption } from '../api/types';
-import { circletOpts, constraintStats, sandsOpts, gobletOpts, TOPN_OPTS } from '../lib/refdata';
+import {
+  ELEMENTS, ELEM_COLOR, activeResonances, circletOpts, constraintStats, sandsOpts, gobletOpts, TOPN_OPTS,
+} from '../lib/refdata';
 import { useT } from '../i18n';
 import type { Dict } from '../i18n/translations';
 
@@ -18,6 +20,8 @@ interface Props {
   topN: number;
   weaponOptions: WeaponOption[];
   weaponId: number | undefined;
+  team: (string | null)[]; // 3 teammate element slots, null = unpicked
+  onSetTeamSlot: (index: number, element: string | null) => void;
   onSelectWeapon: (id: number) => void;
   onSelectChar: (key: string) => void;
   onSelectSet: (key: string) => void;
@@ -31,6 +35,20 @@ interface Props {
   onToggleIncludeEquippedByOthers: (v: boolean) => void;
   onSolve: () => void;
   solving: boolean;
+}
+
+const ELEM_CODE: Record<string, string> = {
+  Pyro: 'PY', Hydro: 'HY', Anemo: 'AN', Electro: 'EL', Dendro: 'DE', Cryo: 'CR', Geo: 'GE',
+};
+function elemCode(element: string): string {
+  return ELEM_CODE[element] ?? element.slice(0, 2).toUpperCase();
+}
+
+// --el is read by the .elem-tile/.team-slot-row.self/.resonance-row CSS to
+// tint that element (and anything nesting inside it, via inheritance) with
+// its own hue instead of the app's single accent color.
+function elemStyle(element: string): CSSProperties {
+  return { '--el': ELEM_COLOR[element as keyof typeof ELEM_COLOR] } as CSSProperties;
 }
 
 function initialsFor(name: string): string {
@@ -69,6 +87,7 @@ export default function ConfigureView(props: Props) {
   const [weaponSearch, setWeaponSearch] = useState('');
   const selected = props.roster.find((r) => r.key === props.charKey);
   const dmgKey = selected?.dmgKey || 'pyro_dmg_';
+  const resonances = activeResonances(selected?.element ?? '', props.team);
   const canSolve =
     !!selected?.known &&
     !!props.targetSetKey &&
@@ -117,6 +136,7 @@ export default function ConfigureView(props: Props) {
       </div>
 
       <div className="configure-grid-top">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
         {/* character */}
         <div className="card">
           <div className="card-label">{t.configure.character}</div>
@@ -159,6 +179,77 @@ export default function ConfigureView(props: Props) {
               </button>
             ))}
           </div>
+        </div>
+
+        {/* team / elemental resonance */}
+        <div className="card">
+          <div className="card-label">
+            {t.configure.team} <span style={{ color: 'var(--muted)' }}>{t.configure.teamTag}</span>
+          </div>
+          <div className="set-target-hint" style={{ marginBottom: 12 }}>
+            {t.configure.teamHint}
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div className="team-slot-row self" style={selected?.element ? elemStyle(selected.element) : undefined}>
+              <span className="team-slot-label">{t.configure.teamSlotLabel(4)}</span>
+              <span className="elem-tile self">{selected?.element ? elemCode(selected.element) : '—'}</span>
+              <span className="team-self-name">{selected?.name ?? '—'}</span>
+              <span className="team-self-tag">
+                {selected?.element ? t.configure.teamLocked(selected.element) : ''}
+              </span>
+            </div>
+            {props.team.map((cur, i) => (
+              <div className="team-slot-row" key={i}>
+                <span className="team-slot-label">{t.configure.teamSlotLabel(i + 1)}</span>
+                <div className="team-slot-opts">
+                  {ELEMENTS.map((el) => (
+                    <button
+                      key={el}
+                      type="button"
+                      title={el}
+                      aria-pressed={cur === el}
+                      className={'elem-tile' + (cur === el ? ' active' : '')}
+                      style={elemStyle(el)}
+                      onClick={() => props.onSetTeamSlot(i, cur === el ? null : el)}
+                    >
+                      {elemCode(el)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          {resonances.length > 0 && (
+            <div className="resonance-box">
+              <div className="card-label" style={{ marginBottom: 10 }}>
+                {t.configure.activeResonance}
+              </div>
+              <div className="resonance-list">
+                {resonances.map((r) => {
+                  const info = t.resonances[r.element];
+                  return (
+                    <div
+                      className={'resonance-row' + (r.primary ? ' primary' : '')}
+                      style={elemStyle(r.element)}
+                      key={r.element}
+                    >
+                      <span className="elem-tile self" style={{ width: 26, height: 26 }}>
+                        {elemCode(r.element)}
+                      </span>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div className="resonance-title">{info.title}</div>
+                        <div className="resonance-effect">{info.effect}</div>
+                      </div>
+                      <div className="resonance-tag">
+                        {r.primary ? '' : t.configure.resonanceNotModeled}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
         </div>
 
         {/* target set */}

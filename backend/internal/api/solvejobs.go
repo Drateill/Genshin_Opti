@@ -128,7 +128,7 @@ func (a *API) handleSolveStart(w http.ResponseWriter, r *http.Request) {
 	currentReq := solver.Request{
 		CharacterKey: req.CharacterKey, TargetSetKey: req.TargetSetKey, TargetSetKey2: req.TargetSetKey2,
 		WeaponATK: curWeaponATK, WeaponSubKey: curWeaponSubKey, WeaponSubValue: curWeaponSubVal,
-		Constraints: req.Constraints,
+		Constraints: req.Constraints, TeamElements: req.TeamElements,
 	}
 
 	id, job := newSolveJob()
@@ -138,6 +138,7 @@ func (a *API) handleSolveStart(w http.ResponseWriter, r *http.Request) {
 		SlotConstraints: req.SlotConstraints, Constraints: req.Constraints, TopN: req.TopN,
 		IncludeEquippedByOthers: req.IncludeEquippedByOthers,
 		Lang:                    req.Lang,
+		TeamElements:            req.TeamElements,
 		Progress:                &job.progress,
 	}
 	go func() {

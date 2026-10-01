@@ -143,6 +143,13 @@ type SolveRequest struct {
 	// on a character other than CharacterKey are eligible for the build.
 	// Unequipped artifacts and CharacterKey's own gear are always eligible.
 	IncludeEquippedByOthers bool `json:"includeEquippedByOthers"`
+	// TeamElements holds 0-3 elemental keys ("Pyro", "Hydro", ...) for the
+	// optimized character's teammates. Combined with the character's own
+	// element, 2+ party members sharing an element triggers that element's
+	// resonance (see solver.resonanceBonus) — only the resonances that feed
+	// a stat this solver tracks (Pyro/Electro/Cryo/Dendro) affect the build
+	// totals; the rest are display-only in the frontend.
+	TeamElements []string `json:"teamElements,omitempty"`
 	// Lang is the UI language ("en" | "fr") the solver's free-text Reason
 	// message (SolveResponse.Reason) should be written in when no builds are
 	// found. Everything else in the response is plain data the frontend

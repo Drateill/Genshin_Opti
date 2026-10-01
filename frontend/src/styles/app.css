@@ -723,6 +723,152 @@
   color: oklch(var(--acc-lt));
 }
 
+/* ---------------- team / elemental resonance ---------------- */
+
+.team-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--bg-chip);
+  border: 1px solid var(--border-strong);
+}
+.team-slot-row.self {
+  background: oklch(var(--el, var(--acc)) / 0.08);
+  border-color: oklch(var(--el, var(--acc)) / 0.3);
+}
+.team-slot-label {
+  width: 20px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.team-slot-opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.elem-tile {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--bg-chip);
+  border: 1px solid var(--border-strong);
+  /* --el is set on every element tile (see elemStyle in ConfigureView), so
+     the letter code is always tinted in that element's color, even when
+     unselected — only the background/border/glow are reserved for the
+     active state below. */
+  color: oklch(var(--el) / 0.75);
+  transition: all 0.12s ease;
+}
+.elem-tile.active {
+  background: oklch(var(--el, var(--acc)) / 0.2);
+  border-color: oklch(var(--el, var(--acc)) / 0.6);
+  color: oklch(var(--el, var(--acc-lt)));
+  box-shadow: 0 0 12px oklch(var(--el, var(--acc)) / 0.35);
+}
+.elem-tile.self {
+  width: 30px;
+  height: 30px;
+  background: oklch(var(--el, var(--acc)) / 0.2);
+  border-color: oklch(var(--el, var(--acc)) / 0.6);
+  color: oklch(var(--el, var(--acc-lt)));
+  cursor: default;
+  flex: none;
+}
+.team-self-name {
+  flex: 1;
+  font-weight: 600;
+  font-size: 13px;
+}
+.team-self-tag {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--muted);
+}
+
+.resonance-box {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 11px;
+  background: var(--bg-body);
+  border: 1px solid var(--border);
+}
+.resonance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.resonance-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 11px;
+  border-radius: 9px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  opacity: 0.6;
+}
+.resonance-row.primary {
+  background: oklch(var(--el, var(--acc)) / 0.1);
+  border-color: oklch(var(--el, var(--acc)) / 0.45);
+  opacity: 1;
+}
+.resonance-title {
+  font-weight: 700;
+  font-size: 13px;
+}
+.resonance-row.primary .resonance-title {
+  color: oklch(var(--el, var(--acc-lt)));
+  text-shadow: 0 0 10px oklch(var(--el, var(--acc)) / 0.45);
+}
+.resonance-effect {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.resonance-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+  text-align: right;
+}
+
+/* ---------------- configure top row: target-set/weapon card height ---------------- */
+/* The left column (character + team cards stacked) is left auto-height, so
+   it's never clipped — team card height varies with how many resonances
+   are showing. The target-set/weapon cards get their own fixed height
+   instead: a plain max-height on their list (with the card left auto)
+   would stretch the *card* to match the left column via grid's default
+   align-items:stretch while leaving the *list* capped short of it, i.e.
+   exactly the dead-space-below-the-list bug this replaces. Giving the
+   card itself a definite height — with the list as a flex:1 child — lets
+   the list fill it exactly, right to the bottom, with no cap mismatch. */
+.configure-grid-top > .card {
+  display: flex;
+  flex-direction: column;
+  height: min(760px, calc(100vh - 280px));
+}
+.configure-grid-top > .card > .set-list {
+  flex: 1;
+  min-height: 0;
+  max-height: none;
+}
+@media (max-width: 760px) {
+  .configure-grid-top > .card {
+    height: auto;
+  }
+}
+
 .constraint-input-list {
   display: flex;
   flex-direction: column;

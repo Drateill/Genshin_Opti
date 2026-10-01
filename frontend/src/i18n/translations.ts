@@ -104,6 +104,14 @@ export const en = {
     topN: (n: number) => `Top ${n}`,
     min: 'min',
     max: 'max',
+    team: 'TEAM',
+    teamTag: '· Elemental resonance',
+    teamHint: 'Pick the elements of your 3 teammates. 2+ of the same element triggers a resonance.',
+    teamSlotLabel: (n: number) => `0${n}`,
+    teamNone: 'None',
+    teamLocked: (element: string) => `${element} · locked`,
+    activeResonance: 'ACTIVE RESONANCE',
+    resonanceNotModeled: 'not modeled',
   },
   results: {
     title: 'Optimal builds',
@@ -242,6 +250,18 @@ export const en = {
     bow: 'Bow',
     catalyst: 'Catalyst',
   },
+  // Elemental resonance text, keyed by the same element names chardb/the
+  // roster already use (RosterEntry.element) — untranslated proper nouns,
+  // same spelling in every supported language.
+  resonances: {
+    Pyro: { title: 'Fervent Flames', effect: 'ATK +25%' },
+    Electro: { title: 'High Voltage', effect: 'Energy Recharge +25%' },
+    Cryo: { title: 'Shattering Ice', effect: 'CRIT Rate +15% vs. Cryo-affected enemies' },
+    Dendro: { title: 'Sprawling Greenery', effect: 'Elemental Mastery +30' },
+    Hydro: { title: 'Soothing Water', effect: 'Max HP +25%' },
+    Anemo: { title: 'Impetuous Winds', effect: 'Stamina consumption reduced' },
+    Geo: { title: 'Enduring Rock', effect: 'DMG +15% while shielded, RES +20%' },
+  },
 };
 
 export type Dict = typeof en;
@@ -350,6 +370,14 @@ export const fr: Dict = {
     topN: (n: number) => `Top ${n}`,
     min: 'min',
     max: 'max',
+    team: 'ÉQUIPE',
+    teamTag: '· Résonance élémentaire',
+    teamHint: '2 personnages ou plus du même élément déclenchent une résonance.',
+    teamSlotLabel: (n: number) => `0${n}`,
+    teamNone: 'Aucun',
+    teamLocked: (element: string) => `${element} · verrouillé`,
+    activeResonance: 'RÉSONANCE ACTIVE',
+    resonanceNotModeled: 'non modélisé',
   },
   results: {
     title: 'Builds optimaux',
@@ -484,5 +512,14 @@ export const fr: Dict = {
     polearm: 'Lance',
     bow: 'Arc',
     catalyst: 'Catalyseur',
+  },
+  resonances: {
+    Pyro: { title: 'Flammes ardentes', effect: 'ATQ +25%' },
+    Electro: { title: 'Haute tension', effect: "Recharge d'Énergie +25%" },
+    Cryo: { title: 'Glace fracassante', effect: 'Taux CRIT +15% contre les ennemis affectés par Cryo' },
+    Dendro: { title: 'Verdure exubérante', effect: 'Maîtrise Élémentaire +30' },
+    Hydro: { title: 'Eaux apaisantes', effect: 'PV max +25%' },
+    Anemo: { title: 'Vents impétueux', effect: "Consommation d'endurance réduite" },
+    Geo: { title: 'Roche résistante', effect: 'DGT +15% sous bouclier, RES +20%' },
   },
 };

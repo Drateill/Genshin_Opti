@@ -65,6 +65,53 @@ type Request struct {
 	// Lang is the UI language ("en" | "fr") for the Reason message built
 	// when zero builds are found; empty/unrecognized falls back to English.
 	Lang string
+	// TeamElements holds 0-3 teammate elemental keys for resonance — see
+	// resonanceBonus.
+	TeamElements []string
+}
+
+// elementFromDmgKey derives a character's canonical element key (e.g.
+// "Pyro") from their chardb.CharRef.DmgKey (e.g. "pyro_dmg_"), the same
+// value resonanceBonus and the frontend's team-element picker key against.
+func elementFromDmgKey(dmgKey string) string {
+	el := strings.TrimSuffix(dmgKey, "_dmg_")
+	if el == "" {
+		return ""
+	}
+	return strings.ToUpper(el[:1]) + el[1:]
+}
+
+// resonanceBonus returns the flat stat bonuses granted by elemental
+// resonance — 2+ of the 4 party members (the optimized character plus up to
+// 3 teammates in Request.TeamElements) sharing an element — matching the
+// real game's resonance system. Only the 4 resonances that feed a stat this
+// solver already tracks are modeled (Pyro ATK%, Electro Energy Recharge%,
+// Cryo CRIT Rate, Dendro Elemental Mastery); Hydro/Anemo/Geo resonance has
+// no equivalent tracked stat and is ignored here (the frontend still shows
+// them as informational).
+func resonanceBonus(charElement string, teamElements []string) (atkPct, erPct, critRate, em float64) {
+	counts := map[string]int{}
+	if charElement != "" {
+		counts[charElement]++
+	}
+	for _, el := range teamElements {
+		if el != "" {
+			counts[el]++
+		}
+	}
+	if counts["Pyro"] >= 2 {
+		atkPct = 25
+	}
+	if counts["Electro"] >= 2 {
+		erPct = 25
+	}
+	if counts["Cryo"] >= 2 {
+		critRate = 15
+	}
+	if counts["Dendro"] >= 2 {
+		em = 30
+	}
+	return
 }
 
 func (s *Solver) pieceCV(a model.Artifact) float64 {
@@ -103,12 +150,13 @@ func (s *Solver) totalsFor(pieces []model.Artifact, ref chardb.CharRef, req Requ
 			add(sub.Key, sub.Value)
 		}
 	}
+	resAtk, resEr, resCr, resEm := resonanceBonus(elementFromDmgKey(ref.DmgKey), req.TeamElements)
 	return model.BuildTotals{
-		CritRate:       sums["critRate_"] + chardb.DefaultCritRate,
+		CritRate:       sums["critRate_"] + chardb.DefaultCritRate + resCr,
 		CritDMG:        sums["critDMG_"] + chardb.DefaultCritDMG,
-		ElementMaster:  sums["em"],
-		EnergyRecharge: sums["enerRech_"] + chardb.DefaultEnergyRecharge,
-		ATK:            (ref.BaseATK+req.WeaponATK)*(1+sums["atk_"]/100) + sums["atk"],
+		ElementMaster:  sums["em"] + resEm,
+		EnergyRecharge: sums["enerRech_"] + chardb.DefaultEnergyRecharge + resEr,
+		ATK:            (ref.BaseATK+req.WeaponATK)*(1+(sums["atk_"]+resAtk)/100) + sums["atk"],
 		ElementalDMG:   sums[ref.DmgKey],
 	}
 }

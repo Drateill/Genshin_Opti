@@ -45,6 +45,7 @@ export default function App() {
   const [includeEquippedByOthers, setIncludeEquippedByOthers] = useState(true);
   const [weaponOptions, setWeaponOptions] = useState<WeaponOption[]>([]);
   const [weaponId, setWeaponId] = useState<number | undefined>(undefined);
+  const [team, setTeam] = useState<(string | null)[]>([null, null, null]);
 
   // solve
   const [solving, setSolving] = useState(false);
@@ -68,6 +69,7 @@ export default function App() {
     setShowSolverStats(saved.showSolverStats ?? true);
     setDefaultTopN(saved.defaultTopN ?? 5);
     setIncludeEquippedByOthers(saved.includeEquippedByOthers ?? true);
+    setTeam(saved.team ?? [null, null, null]);
     importRaw(saved.rawText, saved, initialLang).then((ok) => {
       if (ok) setView(saved.view === 'results' ? 'configure' : saved.view ?? 'configure');
     });
@@ -99,9 +101,13 @@ export default function App() {
     savePersisted({
       rawText, view, charKey, targetSetKey, targetSetKey2: dualSetMode ? targetSetKey2 : undefined,
       weaponId, sands, goblet, circlet, constraints, topN,
-      accent, showSolverStats, defaultTopN, includeEquippedByOthers, lang,
+      accent, showSolverStats, defaultTopN, includeEquippedByOthers, lang, team,
     });
-  }, [rawText, view, charKey, targetSetKey, targetSetKey2, dualSetMode, weaponId, sands, goblet, circlet, constraints, topN, accent, showSolverStats, defaultTopN, includeEquippedByOthers, lang]);
+  }, [rawText, view, charKey, targetSetKey, targetSetKey2, dualSetMode, weaponId, sands, goblet, circlet, constraints, topN, accent, showSolverStats, defaultTopN, includeEquippedByOthers, lang, team]);
+
+  function setTeamSlot(index: number, element: string | null) {
+    setTeam((prev) => prev.map((v, i) => (i === index ? element : v)));
+  }
 
   const toggleIn = (list: string[], setter: (v: string[]) => void, val: string) => {
     setter(list.includes(val) ? list.filter((x) => x !== val) : [...list, val]);
@@ -294,6 +300,7 @@ export default function App() {
         topN,
         includeEquippedByOthers,
         lang,
+        teamElements: team.filter((el): el is string => !!el),
       });
       for (;;) {
         const p = await api.solveProgress(jobId);
@@ -363,6 +370,8 @@ export default function App() {
             topN={topN}
             weaponOptions={weaponOptions}
             weaponId={weaponId}
+            team={team}
+            onSetTeamSlot={setTeamSlot}
             onSelectWeapon={setWeaponId}
             onSelectChar={selectChar}
             onSelectSet={onSelectSet}

@@ -95,6 +95,7 @@ export interface SolveRequest {
   topN: number;
   includeEquippedByOthers: boolean;
   lang?: string;
+  teamElements?: string[]; // 0-3 teammate element keys ("Pyro", "Hydro", ...) for elemental resonance
 }
 
 export interface BuildTotals {

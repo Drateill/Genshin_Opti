@@ -24,6 +24,7 @@ export interface PersistedState {
   constraints?: Record<string, StatRange>;
   topN?: number;
   includeEquippedByOthers?: boolean;
+  team?: (string | null)[];
   accent?: Accent;
   showSolverStats?: boolean;
   defaultTopN?: number;
