@@ -98,6 +98,7 @@ export const en = {
     objective: 'OBJECTIVE',
     critValue: 'Crit Value',
     critValueFormula: 'CR×2 + CD',
+    objectiveMaximize: 'Maximize total',
     realDmg: 'Real DMG',
     realDmgSoon: 'V2 · soon',
     resultsToReturn: 'RESULTS TO RETURN',
@@ -117,6 +118,7 @@ export const en = {
     title: 'Optimal builds',
     metaCount: (n: number) => `${n} results`,
     metaSolveStats: (ms: number, branches: number) => ` · solved in ${ms} ms · ${branches} branches pruned`,
+    rankedBy: (label: string) => `Ranked by ${label}`,
     editConfiguration: '← Edit configuration',
     timedOut:
       'Search capped for performance — these are the best builds found before the time budget ran out, not necessarily the true optimum. Try a narrower slot filter or fewer candidates and solve again.',
@@ -235,6 +237,10 @@ export const en = {
   statsAbbrev: {
     em: 'EM',
     enerRech_: 'ER%',
+    critRate_: 'CR',
+    critDMG_: 'CD',
+    atk: 'ATK',
+    hp: 'HP',
   },
   slots: {
     flower: 'Flower',
@@ -364,6 +370,7 @@ export const fr: Dict = {
     objective: 'OBJECTIF',
     critValue: 'Valeur Crit',
     critValueFormula: 'CC×2 + DC',
+    objectiveMaximize: 'Maximiser le total',
     realDmg: 'Dégâts réels',
     realDmgSoon: 'V2 · bientôt',
     resultsToReturn: 'RÉSULTATS À RENVOYER',
@@ -383,6 +390,7 @@ export const fr: Dict = {
     title: 'Builds optimaux',
     metaCount: (n: number) => `${n} résultats`,
     metaSolveStats: (ms: number, branches: number) => ` · résolu en ${ms} ms · ${branches} branches élaguées`,
+    rankedBy: (label: string) => `Classé par ${label}`,
     editConfiguration: '← Modifier la configuration',
     timedOut:
       "Recherche limitée pour la performance — voici les meilleurs builds trouvés avant la fin du temps imparti, pas nécessairement l'optimum réel. Essayez un filtre d'emplacement plus étroit ou moins de candidats et relancez la recherche.",
@@ -498,6 +506,10 @@ export const fr: Dict = {
   statsAbbrev: {
     em: 'MÉ',
     enerRech_: 'RE%',
+    critRate_: 'CC',
+    critDMG_: 'DC',
+    atk: 'ATQ',
+    hp: 'PV',
   },
   slots: {
     flower: 'Fleur',

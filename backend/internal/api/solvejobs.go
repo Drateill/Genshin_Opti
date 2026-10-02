@@ -136,6 +136,7 @@ func (a *API) handleSolveStart(w http.ResponseWriter, r *http.Request) {
 		CharacterKey: req.CharacterKey, TargetSetKey: req.TargetSetKey, TargetSetKey2: req.TargetSetKey2,
 		WeaponATK: weaponATK, WeaponSubKey: weaponSubKey, WeaponSubValue: weaponSubVal,
 		SlotConstraints: req.SlotConstraints, Constraints: req.Constraints, TopN: req.TopN,
+		Objective:               req.Objective,
 		IncludeEquippedByOthers: req.IncludeEquippedByOthers,
 		Lang:                    req.Lang,
 		TeamElements:            req.TeamElements,

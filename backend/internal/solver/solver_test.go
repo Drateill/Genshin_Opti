@@ -367,3 +367,43 @@ func TestSolve_DualSetMode_DoesNotAffectSingleSetMode(t *testing.T) {
 		t.Fatalf("expected single-set behavior unchanged, got %+v", res.Builds)
 	}
 }
+
+func flowerOf(pieces []model.Artifact) model.Artifact {
+	for _, p := range pieces {
+		if p.SlotKey == "flower" {
+			return p
+		}
+	}
+	return model.Artifact{}
+}
+
+// TestSolve_ObjectiveHPPicksHighestHPBuild verifies a non-default Objective
+// actually changes which pieces the search keeps, not just how the already
+// CV-best builds get displayed — the scenario the "some supports don't care
+// about Crit Value" feature request was about. The competing flower has
+// zero Crit Value but far more flat HP, so it must lose under the default
+// objective and win under Objective: "hp".
+func TestSolve_ObjectiveHPPicksHighestHPBuild(t *testing.T) {
+	inv := baseInventory()
+	inv = append(inv, mkArt(6, "SetA", "flower", "hp", 4780, stat("hp", 5000))) // cv 0, +5000 flat HP
+
+	resCV, err := New(inv).Solve(Request{CharacterKey: "HuTao", TargetSetKey: "SetA", TopN: 5})
+	if err != nil {
+		t.Fatalf("Solve failed: %v", err)
+	}
+	if got := flowerOf(resCV.Builds[0].Pieces).ID; got != 1 {
+		t.Fatalf("expected the default objective to keep the high-CV flower (id 1), got id=%d", got)
+	}
+
+	resHP, err := New(inv).Solve(Request{CharacterKey: "HuTao", TargetSetKey: "SetA", TopN: 5, Objective: "hp"})
+	if err != nil {
+		t.Fatalf("Solve failed: %v", err)
+	}
+	if got := flowerOf(resHP.Builds[0].Pieces).ID; got != 6 {
+		t.Fatalf("expected Objective \"hp\" to pick the high-HP flower (id 6), got id=%d", got)
+	}
+	if resHP.Builds[0].Totals.HP <= resCV.Builds[0].Totals.HP {
+		t.Errorf("expected the hp-objective build's total HP (%v) to exceed the crit-value build's (%v)",
+			resHP.Builds[0].Totals.HP, resCV.Builds[0].Totals.HP)
+	}
+}

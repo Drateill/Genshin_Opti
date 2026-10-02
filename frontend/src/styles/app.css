@@ -932,16 +932,21 @@
 
 .objective-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 9px;
   margin-bottom: 18px;
 }
 .objective-card {
-  flex: 1;
+  flex: 1 1 100px;
+  min-width: 90px;
   padding: 11px 13px;
   border-radius: 9px;
   text-align: center;
   background: oklch(0.22 0.013 280);
   border: 1px solid var(--border);
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 .objective-card.active {
   background: oklch(var(--acc) / 0.16);
@@ -949,6 +954,7 @@
 }
 .objective-card.disabled {
   opacity: 0.55;
+  cursor: default;
 }
 .objective-title {
   font-weight: 700;

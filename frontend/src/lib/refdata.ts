@@ -26,7 +26,7 @@ export const chardb = {
   ]),
 };
 
-function abbrev(t: Dict, key: string): string {
+export function abbrev(t: Dict, key: string): string {
   return (t.statsAbbrev as Record<string, string>)[key] ?? t.stats[key as keyof Dict['stats']] ?? key;
 }
 
@@ -74,10 +74,39 @@ export function constraintStats(t: Dict): ConstraintStatOpt[] {
     { key: 'enerRech_', label: t.stats.enerRech_, pct: true },
     { key: 'em', label: t.stats.em, pct: false },
     { key: 'atk', label: t.stats.atk, pct: false },
+    { key: 'hp', label: t.stats.hp, pct: false },
   ];
 }
 
 export const TOPN_OPTS = [3, 5, 8, 10];
+
+export interface ObjectiveOpt {
+  key: string;
+  title: string;
+  formula: string;
+}
+
+// objectiveOpts lists every stat the solver can maximize (backend:
+// solver.pieceScore / model.SolveRequest.Objective) — "critValue" (CR×2+CD)
+// stays the default; the rest let a support who doesn't care about Crit
+// Value (max HP, Energy Recharge, ATK, ...) steer the search itself rather
+// than just re-sorting CV-picked builds, which wouldn't surface a build
+// with great HP/ER but mediocre CV. dmgLabel is the solving character's own
+// elemental DMG% stat label (falls back to a generic "Elemental DMG" when
+// no character/dmgKey is known yet).
+export function objectiveOpts(t: Dict, dmgLabel: string): ObjectiveOpt[] {
+  const maximize = t.configure.objectiveMaximize;
+  return [
+    { key: 'critValue', title: t.configure.critValue, formula: t.configure.critValueFormula },
+    { key: 'critRate_', title: t.stats.critRate_, formula: maximize },
+    { key: 'critDMG_', title: t.stats.critDMG_, formula: maximize },
+    { key: 'hp', title: t.stats.hp, formula: maximize },
+    { key: 'atk', title: t.stats.atk, formula: maximize },
+    { key: 'enerRech_', title: t.stats.enerRech_, formula: maximize },
+    { key: 'em', title: t.stats.em, formula: maximize },
+    { key: 'elementalDmg', title: dmgLabel, formula: maximize },
+  ];
+}
 
 export const ELEMENTS = ['Pyro', 'Hydro', 'Anemo', 'Electro', 'Dendro', 'Cryo', 'Geo'] as const;
 export type Element = (typeof ELEMENTS)[number];

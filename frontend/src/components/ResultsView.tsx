@@ -9,7 +9,7 @@ import type {
   SolveResponse,
   WeaponOption,
 } from '../api/types';
-import { SLOT_TAG, chardb } from '../lib/refdata';
+import { SLOT_TAG, abbrev, chardb } from '../lib/refdata';
 import { fmtStat, trimNum } from '../lib/format';
 import { applyMainStatUpgrade, applyWeaponUpgrade, mainStatAtLevel20 } from '../lib/buildmath';
 import { localeTag, useLanguage } from '../i18n';
@@ -25,6 +25,7 @@ interface Props {
   roster: RosterEntry[];
   charKey: string;
   weapon?: WeaponOption;
+  objective: string;
   selIdx: number;
   onSelectRank: (i: number) => void;
   onBackToConfigure: () => void;
@@ -158,9 +159,28 @@ const COMPARE_ROWS: CompareRow[] = [
   { key: 'cd', label: (t) => t.stats.critDMG_, value: (t) => t.critDMG, fmt: (v) => `${v.toFixed(1)}%` },
   { key: 'em', label: (t) => t.stats.em, value: (t) => t.elementalMastery, fmt: (v) => Math.round(v).toString() },
   { key: 'atk', label: (t) => t.stats.atk, value: (t) => t.atk, fmt: (v, locale) => Math.round(v).toLocaleString(locale) },
+  { key: 'hp', label: (t) => t.stats.hp, value: (t) => t.hp, fmt: (v, locale) => Math.round(v).toLocaleString(locale) },
   { key: 'er', label: (t) => t.stats.enerRech_, value: (t) => t.energyRecharge, fmt: (v) => `${v.toFixed(1)}%` },
   { key: 'edmg', label: (t) => t.results.elementalDmgLabel, value: (t) => t.elementalDMG, fmt: (v) => `${v.toFixed(1)}%` },
 ];
+
+// OBJECTIVE_ROW_KEY maps a solve Objective (api/types.ts SolveRequest.objective)
+// to the COMPARE_ROWS entry it corresponds to — used to rank/label builds by
+// whichever stat was actually solved for, instead of always Crit Value.
+const OBJECTIVE_ROW_KEY: Record<string, string> = {
+  critValue: 'cv', critRate_: 'cr', critDMG_: 'cd', em: 'em', atk: 'atk', hp: 'hp', enerRech_: 'er', elementalDmg: 'edmg',
+};
+
+function objectiveRow(objective: string): CompareRow {
+  const key = OBJECTIVE_ROW_KEY[objective] ?? 'cv';
+  return COMPARE_ROWS.find((r) => r.key === key) ?? COMPARE_ROWS[0];
+}
+
+function objectiveTag(t: Dict, objective: string, dmgKey: string): string {
+  if (objective === 'critValue') return 'CV';
+  if (objective === 'elementalDmg') return statLabel(t, dmgKey);
+  return abbrev(t, objective);
+}
 
 function fmtDelta(fmt: (v: number, locale: string) => string, delta: number, locale: string): string {
   const text = fmt(Math.abs(delta), locale);
@@ -181,23 +201,41 @@ export default function ResultsView(props: Props) {
   // ranks or re-solving drops the preview rather than carrying stale numbers.
   const [selectedOverride, setSelectedOverride] = useState<BuildResult | null>(null);
   const [currentOverride, setCurrentOverride] = useState<BuildResult | null>(null);
-  useEffect(() => setSelectedOverride(null), [props.selIdx, results]);
-  useEffect(() => setCurrentOverride(null), [results]);
+  // Tracks whether the "weapon to 90" preview has already been applied to
+  // each override — unlike the per-piece "to 20" buttons (which detect
+  // "already upgraded" from the piece's own level in the build state), the
+  // weapon's level/ATK/substat come from props, not the build, so without
+  // this a second click would stack another level-90 bump on top of the
+  // first instead of being a no-op.
+  const [selectedWeaponUpgraded, setSelectedWeaponUpgraded] = useState(false);
+  const [currentWeaponUpgraded, setCurrentWeaponUpgraded] = useState(false);
+  useEffect(() => {
+    setSelectedOverride(null);
+    setSelectedWeaponUpgraded(false);
+  }, [props.selIdx, results]);
+  useEffect(() => {
+    setCurrentOverride(null);
+    setCurrentWeaponUpgraded(false);
+  }, [results]);
+
+  const charEntry = props.roster.find((r) => r.key === props.charKey);
+  const dmgKey = charEntry?.dmgKey ?? '';
+  const row = objectiveRow(props.objective);
+  const rowValue = (b: BuildResult) => row.value(b.totals, b.critValue);
+  const tag = objectiveTag(t, props.objective, dmgKey);
 
   const metaText = results
     ? t.results.metaCount(builds.length) +
       (props.showSolverStats ? t.results.metaSolveStats(results.solveMs, results.prunedBranches) : '')
     : '';
 
-  const maxCv = builds[0]?.critValue ?? 1;
-  const minCv = builds[builds.length - 1]?.critValue ?? 0;
-  const span = Math.max(maxCv - minCv, 1e-6);
+  const maxMetric = builds.length ? rowValue(builds[0]) : 1;
+  const minMetric = builds.length ? rowValue(builds[builds.length - 1]) : 0;
+  const span = Math.max(maxMetric - minMetric, 1e-6);
 
   const selectedFound: BuildResult | undefined = builds[Math.min(props.selIdx, builds.length - 1)];
   const selected = selectedOverride ?? selectedFound;
   const currentBuild = currentOverride ?? results?.currentBuild;
-  const charEntry = props.roster.find((r) => r.key === props.charKey);
-  const dmgKey = charEntry?.dmgKey ?? '';
   const weapon = props.weapon;
   const canUpgradeWeapon = !!weapon && weapon.known && weapon.level < 90 && weapon.atk > 0;
 
@@ -206,7 +244,9 @@ export default function ResultsView(props: Props) {
       <div className="results-header">
         <div className="results-title-row">
           <span className="results-title">{t.results.title}</span>
-          <span className="results-meta">{metaText}</span>
+          <span className="results-meta">
+            {t.results.rankedBy(row.label(t))} · {metaText}
+          </span>
         </div>
         <button className="btn btn-secondary" onClick={props.onBackToConfigure}>
           {t.results.editConfiguration}
@@ -221,7 +261,8 @@ export default function ResultsView(props: Props) {
           <div className="rank-list">
             {builds.map((b, i) => {
               const failed = b.checks.filter((c) => !c.met).length;
-              const barPct = builds.length < 2 ? 100 : Math.round(22 + ((b.critValue - minCv) / span) * 78);
+              const metric = rowValue(b);
+              const barPct = builds.length < 2 ? 100 : Math.round(22 + ((metric - minMetric) / span) * 78);
               return (
                 <button
                   key={i}
@@ -231,8 +272,8 @@ export default function ResultsView(props: Props) {
                   <div className="rank-num">{i + 1}</div>
                   <div>
                     <div className="rank-cv-row">
-                      <span className="rank-cv-value">{b.critValue.toFixed(1)}</span>
-                      <span className="rank-cv-label">CV</span>
+                      <span className="rank-cv-value">{row.fmt(metric, locale)}</span>
+                      <span className="rank-cv-label">{tag}</span>
                     </div>
                     <div className="rank-cv-bar">
                       <div className="rank-cv-bar-fill" style={{ width: `${barPct}%` }} />
@@ -262,17 +303,28 @@ export default function ResultsView(props: Props) {
               {props.targetSetKey2 &&
                 ` + ${setName(props.sets, props.targetSetKey2)} ×${selected.onSetCount2 ?? 0}`}
             </span>
-            {canUpgradeWeapon && (
+            {canUpgradeWeapon && !selectedWeaponUpgraded && (
               <button
                 className="slot-upgrade-btn"
-                onClick={() => setSelectedOverride(applyWeaponUpgrade(selected, weapon!.atk, weapon!.level, dmgKey))}
+                onClick={() => {
+                  setSelectedOverride(
+                    applyWeaponUpgrade(selected, weapon!.atk, weapon!.level, weapon!.subStatKey, weapon!.subStatValue, dmgKey)
+                  );
+                  setSelectedWeaponUpgraded(true);
+                }}
                 title={t.results.upgradeWeaponToMaxTitle}
               >
                 {t.results.upgradeWeaponToMax}
               </button>
             )}
             {selectedOverride && (
-              <button className="preview-reset-btn" onClick={() => setSelectedOverride(null)}>
+              <button
+                className="preview-reset-btn"
+                onClick={() => {
+                  setSelectedOverride(null);
+                  setSelectedWeaponUpgraded(false);
+                }}
+              >
                 {t.results.resetToActualLevels}
               </button>
             )}
@@ -314,6 +366,10 @@ export default function ResultsView(props: Props) {
                 <div>
                   <div className="total-item-label">{t.stats.atk}</div>
                   <div className="total-item-value">{Math.round(selected.totals.atk).toLocaleString(locale)}</div>
+                </div>
+                <div>
+                  <div className="total-item-label">{t.stats.hp}</div>
+                  <div className="total-item-value">{Math.round(selected.totals.hp).toLocaleString(locale)}</div>
                 </div>
                 <div>
                   <div className="total-item-label">{t.stats.enerRech_}</div>
@@ -359,19 +415,28 @@ export default function ResultsView(props: Props) {
             {currentBuild && !currentBuild.complete && (
               <span className="detail-setlabel">{t.results.slotsEquipped(currentBuild.pieces.length)}</span>
             )}
-            {canUpgradeWeapon && currentBuild && (
+            {canUpgradeWeapon && currentBuild && !currentWeaponUpgraded && (
               <button
                 className="slot-upgrade-btn"
-                onClick={() =>
-                  setCurrentOverride(applyWeaponUpgrade(currentBuild, weapon!.atk, weapon!.level, dmgKey))
-                }
+                onClick={() => {
+                  setCurrentOverride(
+                    applyWeaponUpgrade(currentBuild, weapon!.atk, weapon!.level, weapon!.subStatKey, weapon!.subStatValue, dmgKey)
+                  );
+                  setCurrentWeaponUpgraded(true);
+                }}
                 title={t.results.upgradeWeaponToMaxTitle}
               >
                 {t.results.upgradeWeaponToMax}
               </button>
             )}
             {currentOverride && (
-              <button className="preview-reset-btn" onClick={() => setCurrentOverride(null)}>
+              <button
+                className="preview-reset-btn"
+                onClick={() => {
+                  setCurrentOverride(null);
+                  setCurrentWeaponUpgraded(false);
+                }}
+              >
                 {t.results.resetToActualLevels}
               </button>
             )}

@@ -22,6 +22,7 @@ export interface PersistedState {
   goblet?: string[];
   circlet?: string[];
   constraints?: Record<string, StatRange>;
+  objective?: string;
   topN?: number;
   includeEquippedByOthers?: boolean;
   team?: (string | null)[];

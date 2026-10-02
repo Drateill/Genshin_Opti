@@ -56,8 +56,12 @@ type Request struct {
 	WeaponSubValue  float64
 	SlotConstraints map[string][]string
 	Constraints     map[string]model.StatRange // stat key -> min/max bounds on the finished build's total
-	TopN            int
-	Progress        *Progress // optional; when set, Solve reports live progress into it
+	// Objective selects which stat Solve maximizes — see
+	// model.SolveRequest.Objective's doc comment for the recognized values.
+	// Empty/unrecognized behaves like "critValue".
+	Objective string
+	TopN      int
+	Progress  *Progress // optional; when set, Solve reports live progress into it
 	// IncludeEquippedByOthers, when false, excludes artifacts whose Location
 	// is a character other than CharacterKey from consideration — only
 	// unequipped pieces and CharacterKey's own gear remain eligible.
@@ -135,6 +139,51 @@ func (s *Solver) pieceCV(a model.Artifact) float64 {
 	return cv
 }
 
+// objectives lists every Request.Objective value Solve recognizes besides
+// the default "critValue" — see model.SolveRequest.Objective's doc comment.
+var objectives = map[string]bool{
+	"hp": true, "atk": true, "enerRech_": true, "em": true,
+	"critRate_": true, "critDMG_": true, "elementalDmg": true,
+}
+
+// normalizeObjective falls back to "critValue" for empty/unrecognized input.
+func normalizeObjective(o string) string {
+	if objectives[o] {
+		return o
+	}
+	return "critValue"
+}
+
+// pieceScore is one artifact's contribution toward the chosen Solve
+// objective — the per-piece quantity the branch-and-bound search sums,
+// sorts and prunes on. For "critValue" this is exactly pieceCV. For every
+// other objective it's the piece's marginal contribution to the matching
+// model.BuildTotals field: a %-based stat (atk_, hp_) is scaled by the
+// character/weapon's fixed base so it's directly comparable to a flat
+// contribution of the same stat, which keeps the score additive across
+// pieces — required for the DFS's suffix-sum pruning bound to stay valid,
+// exactly like pieceCV already is.
+func (s *Solver) pieceScore(a model.Artifact, objective string, ref chardb.CharRef, req Request) float64 {
+	switch objective {
+	case "hp":
+		return statValueOf(a, "hp") + ref.BaseHP/100*statValueOf(a, "hp_")
+	case "atk":
+		return statValueOf(a, "atk") + (ref.BaseATK+req.WeaponATK)/100*statValueOf(a, "atk_")
+	case "enerRech_":
+		return statValueOf(a, "enerRech_")
+	case "em":
+		return statValueOf(a, "em")
+	case "critRate_":
+		return statValueOf(a, "critRate_")
+	case "critDMG_":
+		return statValueOf(a, "critDMG_")
+	case "elementalDmg":
+		return statValueOf(a, ref.DmgKey)
+	default:
+		return s.pieceCV(a)
+	}
+}
+
 func (s *Solver) totalsFor(pieces []model.Artifact, ref chardb.CharRef, req Request) model.BuildTotals {
 	sums := map[string]float64{}
 	add := func(k string, v float64) { sums[k] += v }
@@ -157,6 +206,7 @@ func (s *Solver) totalsFor(pieces []model.Artifact, ref chardb.CharRef, req Requ
 		ElementMaster:  sums["em"] + resEm,
 		EnergyRecharge: sums["enerRech_"] + chardb.DefaultEnergyRecharge + resEr,
 		ATK:            (ref.BaseATK+req.WeaponATK)*(1+(sums["atk_"]+resAtk)/100) + sums["atk"],
+		HP:             ref.BaseHP*(1+sums["hp_"]/100) + sums["hp"],
 		ElementalDMG:   sums[ref.DmgKey],
 	}
 }
@@ -173,6 +223,8 @@ func valueForKey(t model.BuildTotals, dmgKey, key string) (float64, bool) {
 		return t.EnergyRecharge, true
 	case "atk":
 		return t.ATK, true
+	case "hp":
+		return t.HP, true
 	case dmgKey:
 		return t.ElementalDMG, true
 	}
@@ -211,8 +263,8 @@ func (s *Solver) buildChecks(t model.BuildTotals, dmgKey string, constraints map
 }
 
 type candidate struct {
-	a  model.Artifact
-	cv float64
+	a     model.Artifact
+	score float64 // this piece's contribution under the active Solve objective — see pieceScore
 }
 
 const (
@@ -273,7 +325,7 @@ func capCandidates(all []candidate, constraints map[string]model.StatRange, limi
 			keep[byKey[i].a.ID] = byKey[i]
 		}
 	}
-	keepTop(func(c candidate) float64 { return c.cv }, limit)
+	keepTop(func(c candidate) float64 { return c.score }, limit)
 	for key := range constraints {
 		for _, k := range relatedStatKeys(key) {
 			keepTop(func(c candidate) float64 { return statValueOf(c.a, k) }, limit/2)
@@ -283,7 +335,7 @@ func capCandidates(all []candidate, constraints map[string]model.StatRange, limi
 	for _, c := range keep {
 		out = append(out, c)
 	}
-	sort.Slice(out, func(i, j int) bool { return out[i].cv > out[j].cv })
+	sort.Slice(out, func(i, j int) bool { return out[i].score > out[j].score })
 	return out
 }
 
@@ -363,6 +415,7 @@ func (s *Solver) Solve(req Request) (model.SolveResponse, error) {
 	if topN <= 0 {
 		topN = 5
 	}
+	objective := normalizeObjective(req.Objective)
 
 	t0 := time.Now()
 	pruned, rejected, leafCount := 0, 0, 0
@@ -387,15 +440,16 @@ func (s *Solver) Solve(req Request) (model.SolveResponse, error) {
 			if len(allow) > 0 && !contains(allow, a.MainStatKey) {
 				continue
 			}
-			out = append(out, candidate{a: a, cv: s.pieceCV(a)})
+			out = append(out, candidate{a: a, score: s.pieceScore(a, objective, ref, req)})
 		}
-		sort.Slice(out, func(i, j int) bool { return out[i].cv > out[j].cv })
+		sort.Slice(out, func(i, j int) bool { return out[i].score > out[j].score })
 		return capCandidates(out, req.Constraints, maxCandidatesPerSlot)
 	}
 
 	seen := map[string]bool{}
 	type scored struct {
-		cv     float64
+		score  float64
+		cv     float64 // the build's real Crit Value, always tracked for display regardless of objective
 		pieces []model.Artifact
 	}
 	var best []scored
@@ -404,10 +458,10 @@ func (s *Solver) Solve(req Request) (model.SolveResponse, error) {
 		if len(best) < topN {
 			return math.Inf(-1)
 		}
-		return best[len(best)-1].cv
+		return best[len(best)-1].score
 	}
 
-	consider := func(cv float64, pick []model.Artifact) {
+	consider := func(score float64, pick []model.Artifact) {
 		if req.Progress != nil {
 			req.Progress.Tested.Add(1)
 		}
@@ -439,9 +493,13 @@ func (s *Solver) Solve(req Request) (model.SolveResponse, error) {
 			rejected++
 			return
 		}
+		cv := 0.0
+		for _, p := range pick {
+			cv += s.pieceCV(p)
+		}
 		pieces := append([]model.Artifact{}, pick...)
-		best = append(best, scored{cv, pieces})
-		sort.Slice(best, func(i, j int) bool { return best[i].cv > best[j].cv })
+		best = append(best, scored{score, cv, pieces})
+		sort.Slice(best, func(i, j int) bool { return best[i].score > best[j].score })
 		if len(best) > topN {
 			best = best[:topN]
 		}
@@ -472,26 +530,26 @@ func (s *Solver) Solve(req Request) (model.SolveResponse, error) {
 		suffix := make([]float64, len(order))
 		acc := 0.0
 		for i := len(order) - 1; i >= 0; i-- {
-			acc += cands[order[i]][0].cv
+			acc += cands[order[i]][0].score
 			suffix[i] = acc
 		}
 		var pick []model.Artifact
-		var dfs func(i int, pcv float64)
-		dfs = func(i int, pcv float64) {
+		var dfs func(i int, pscore float64)
+		dfs = func(i int, pscore float64) {
 			if stopped {
 				return
 			}
 			if i == len(order) {
-				consider(pcv, pick)
+				consider(pscore, pick)
 				return
 			}
-			if pcv+suffix[i] <= worst() {
+			if pscore+suffix[i] <= worst() {
 				pruned++
 				return
 			}
 			for _, e := range cands[order[i]] {
 				pick = append(pick, e.a)
-				dfs(i+1, pcv+e.cv)
+				dfs(i+1, pscore+e.score)
 				pick = pick[:len(pick)-1]
 			}
 		}

@@ -137,8 +137,13 @@ type SolveRequest struct {
 	WeaponID        *int                 `json:"weaponId,omitempty"` // ID of an owned WeaponOption to equip; omitted/nil = no weapon
 	SlotConstraints map[string][]string  `json:"slotConstraints"`    // sands/goblet/circlet -> allowed main stat keys
 	Constraints     map[string]StatRange `json:"constraints"`        // stat key -> min/max bounds on the finished build's total
-	Objective       string               `json:"objective"`          // "critValue" (V1) | "dmg" (V2, not implemented)
-	TopN            int                  `json:"topN"`
+	// Objective is the stat the solver maximizes when picking/ranking builds:
+	// "critValue" (default) | "hp" | "atk" | "enerRech_" | "em" | "critRate_"
+	// | "critDMG_" | "elementalDmg" (the solving character's own elemental
+	// DMG% stat). Empty or unrecognized falls back to "critValue". "dmg" (the
+	// spec's V2 real-damage objective) is not implemented.
+	Objective string `json:"objective"`
+	TopN      int    `json:"topN"`
 	// IncludeEquippedByOthers controls whether artifacts currently equipped
 	// on a character other than CharacterKey are eligible for the build.
 	// Unequipped artifacts and CharacterKey's own gear are always eligible.
@@ -164,6 +169,7 @@ type BuildTotals struct {
 	ElementMaster  float64 `json:"elementalMastery"`
 	EnergyRecharge float64 `json:"energyRecharge"`
 	ATK            float64 `json:"atk"`
+	HP             float64 `json:"hp"`
 	ElementalDMG   float64 `json:"elementalDMG"`
 }
 

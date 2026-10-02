@@ -1,7 +1,7 @@
 import { useState, type CSSProperties, type SyntheticEvent } from 'react';
 import type { RosterEntry, SetInfo, StatRange, WeaponOption } from '../api/types';
 import {
-  ELEMENTS, ELEM_COLOR, activeResonances, circletOpts, constraintStats, sandsOpts, gobletOpts, TOPN_OPTS,
+  ELEMENTS, ELEM_COLOR, activeResonances, circletOpts, constraintStats, sandsOpts, gobletOpts, objectiveOpts, TOPN_OPTS,
 } from '../lib/refdata';
 import { useT } from '../i18n';
 import type { Dict } from '../i18n/translations';
@@ -30,6 +30,8 @@ interface Props {
   onToggleGoblet: (key: string) => void;
   onToggleCirclet: (key: string) => void;
   onSetConstraint: (key: string, field: 'min' | 'max', value: number | undefined) => void;
+  objective: string;
+  onSelectObjective: (key: string) => void;
   onSetTopN: (n: number) => void;
   includeEquippedByOthers: boolean;
   onToggleIncludeEquippedByOthers: (v: boolean) => void;
@@ -496,10 +498,16 @@ export default function ConfigureView(props: Props) {
 
           <div className="card-label">{t.configure.objective}</div>
           <div className="objective-row">
-            <div className="objective-card active">
-              <div className="objective-title">{t.configure.critValue}</div>
-              <div className="objective-formula">{t.configure.critValueFormula}</div>
-            </div>
+            {objectiveOpts(t, selected?.dmgKey ? (t.stats[selected.dmgKey as keyof Dict['stats']] ?? selected.dmgKey) : t.results.elementalDmgLabel).map((o) => (
+              <button
+                key={o.key}
+                className={'objective-card' + (props.objective === o.key ? ' active' : '')}
+                onClick={() => props.onSelectObjective(o.key)}
+              >
+                <div className="objective-title">{o.title}</div>
+                <div className="objective-formula">{o.formula}</div>
+              </button>
+            ))}
             <div className="objective-card disabled">
               <div className="objective-title">{t.configure.realDmg}</div>
               <div className="objective-formula">{t.configure.realDmgSoon}</div>

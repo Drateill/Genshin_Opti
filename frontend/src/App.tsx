@@ -41,6 +41,7 @@ export default function App() {
   const [goblet, setGoblet] = useState<string[]>([]);
   const [circlet, setCirclet] = useState<string[]>(['critRate_', 'critDMG_']);
   const [constraints, setConstraints] = useState<Record<string, StatRange>>({ critRate_: { min: 70 } });
+  const [objective, setObjective] = useState('critValue');
   const [topN, setTopN] = useState(defaultTopN);
   const [includeEquippedByOthers, setIncludeEquippedByOthers] = useState(true);
   const [weaponOptions, setWeaponOptions] = useState<WeaponOption[]>([]);
@@ -51,6 +52,7 @@ export default function App() {
   const [solving, setSolving] = useState(false);
   const [solveError, setSolveError] = useState<string | null>(null);
   const [results, setResults] = useState<SolveResponse | null>(null);
+  const [solvedObjective, setSolvedObjective] = useState('critValue'); // objective that produced `results` — may lag `objective` until the next solve
   const [selIdx, setSelIdx] = useState(0);
   const [solveProgress, setSolveProgress] = useState<{ tested: number; total: number; elapsedMs: number } | null>(
     null
@@ -100,10 +102,10 @@ export default function App() {
     if (!rawText) return; // nothing imported yet — don't persist an empty session
     savePersisted({
       rawText, view, charKey, targetSetKey, targetSetKey2: dualSetMode ? targetSetKey2 : undefined,
-      weaponId, sands, goblet, circlet, constraints, topN,
+      weaponId, sands, goblet, circlet, constraints, objective, topN,
       accent, showSolverStats, defaultTopN, includeEquippedByOthers, lang, team,
     });
-  }, [rawText, view, charKey, targetSetKey, targetSetKey2, dualSetMode, weaponId, sands, goblet, circlet, constraints, topN, accent, showSolverStats, defaultTopN, includeEquippedByOthers, lang, team]);
+  }, [rawText, view, charKey, targetSetKey, targetSetKey2, dualSetMode, weaponId, sands, goblet, circlet, constraints, objective, topN, accent, showSolverStats, defaultTopN, includeEquippedByOthers, lang, team]);
 
   function setTeamSlot(index: number, element: string | null) {
     setTeam((prev) => prev.map((v, i) => (i === index ? element : v)));
@@ -173,6 +175,7 @@ export default function App() {
     if (restore?.sands) setSands(restore.sands);
     if (restore?.circlet) setCirclet(restore.circlet);
     if (restore?.constraints) setConstraints(restore.constraints);
+    if (restore?.objective) setObjective(restore.objective);
     if (restore?.topN) setTopN(restore.topN);
   }
 
@@ -296,7 +299,7 @@ export default function App() {
         weaponId,
         slotConstraints: { sands, goblet, circlet },
         constraints,
-        objective: 'critValue',
+        objective,
         topN,
         includeEquippedByOthers,
         lang,
@@ -308,6 +311,7 @@ export default function App() {
         if (p.done) {
           if (p.error) throw new ApiError(p.error);
           setResults(p.result ?? null);
+          setSolvedObjective(objective);
           setSelIdx(0);
           setView('results');
           break;
@@ -380,6 +384,8 @@ export default function App() {
             onToggleGoblet={(k) => toggleIn(goblet, setGoblet, k)}
             onToggleCirclet={(k) => toggleIn(circlet, setCirclet, k)}
             onSetConstraint={setConstraint}
+            objective={objective}
+            onSelectObjective={setObjective}
             onSetTopN={setTopN}
             includeEquippedByOthers={includeEquippedByOthers}
             onToggleIncludeEquippedByOthers={setIncludeEquippedByOthers}
@@ -398,6 +404,7 @@ export default function App() {
             roster={roster}
             charKey={charKey}
             weapon={weaponOptions.find((w) => w.id === weaponId)}
+            objective={solvedObjective}
             selIdx={selIdx}
             onSelectRank={setSelIdx}
             onBackToConfigure={() => setView('configure')}

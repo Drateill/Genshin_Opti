@@ -104,6 +104,7 @@ export interface BuildTotals {
   elementalMastery: number;
   energyRecharge: number;
   atk: number;
+  hp: number;
   elementalDMG: number;
 }
 
