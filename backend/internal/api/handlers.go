@@ -9,13 +9,13 @@ import (
 	"io"
 	"math"
 	"net/http"
-	"regexp"
 	"sort"
 
 	"github.com/go-chi/chi/v5"
 
 	"artifact-optimizer/internal/chardb"
 	"artifact-optimizer/internal/good"
+	"artifact-optimizer/internal/insights"
 	"artifact-optimizer/internal/model"
 	"artifact-optimizer/internal/sample"
 	"artifact-optimizer/internal/store"
@@ -35,6 +35,7 @@ func (a *API) Routes(r chi.Router) {
 	r.Get("/api/characters", a.handleCharacters)
 	r.Get("/api/artifacts/sets", a.handleSets)
 	r.Get("/api/weapons", a.handleWeapons)
+	r.Get("/api/insights", a.handleInsights)
 	r.Post("/api/solve", a.handleSolveStart)
 	r.Get("/api/solve/{id}/progress", a.handleSolveProgress)
 	r.Get("/api/characters/{key}/talents", a.handleCharacterTalents)
@@ -83,13 +84,13 @@ func (a *API) handleCharacters(w http.ResponseWriter, r *http.Request) {
 			entry.Icon = ref.Icon
 			entry.Rarity = ref.Rarity
 		} else {
-			entry.Name = spaceOutKey(c.Key)
+			entry.Name = chardb.SpaceOutKey(c.Key)
 		}
 		if wp, ok := equipped[c.Key]; ok {
 			if wref, known := chardb.Weapons[wp.Key]; known {
 				entry.EquippedWeapon, entry.EquippedWeaponKnown = wref.NameFor(lang), true
 			} else {
-				entry.EquippedWeapon = spaceOutKey(wp.Key)
+				entry.EquippedWeapon = chardb.SpaceOutKey(wp.Key)
 			}
 		}
 		entries = append(entries, entry)
@@ -126,7 +127,7 @@ func (a *API) handleSets(w http.ResponseWriter, r *http.Request) {
 			info.Name, info.Short, info.Description = ref.NameFor(lang), ref.ShortFor(lang), ref.DescriptionFor(lang)
 			info.Icon = ref.Icon
 		} else {
-			info.Name, info.Short = spaceOutKey(k), shortCode(k)
+			info.Name, info.Short = chardb.SpaceOutKey(k), chardb.ShortCode(k)
 		}
 		out = append(out, info)
 	}
@@ -182,6 +183,14 @@ func (a *API) handleWeapons(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, out)
 }
 
+// handleInsights returns an account-wide audit of the current import (see
+// internal/insights) — per-character investment scores, element/weapon/set
+// distributions and idle gear. Independent of the solver.
+func (a *API) handleInsights(w http.ResponseWriter, r *http.Request) {
+	lang := chardb.NormalizeLang(r.URL.Query().Get("lang"))
+	writeJSON(w, http.StatusOK, insights.Compute(a.store.Get(), lang))
+}
+
 func summaryFor(export model.GoodExport) model.ImportSummary {
 	setSeen := map[string]bool{}
 	for _, a := range export.Artifacts {
@@ -196,40 +205,6 @@ func summaryFor(export model.GoodExport) model.ImportSummary {
 		Characters: len(export.Characters), Artifacts: len(export.Artifacts),
 		Sets: len(keys), SetKeys: keys,
 	}
-}
-
-var (
-	pascalAcronymBoundary = regexp.MustCompile(`([A-Z]+)([A-Z][a-z])`)
-	pascalWordBoundary    = regexp.MustCompile(`([a-z0-9])([A-Z])`)
-)
-
-// spaceOutKey turns a raw GOOD PascalCase key (e.g. "KamisatoAyaka") into a
-// readable fallback display name ("Kamisato Ayaka") for a character or set
-// we don't have curated display data for yet — otherwise the UI would show
-// the concatenated key with no spaces at all.
-func spaceOutKey(key string) string {
-	s := pascalAcronymBoundary.ReplaceAllString(key, "$1 $2")
-	s = pascalWordBoundary.ReplaceAllString(s, "$1 $2")
-	return s
-}
-
-func shortCode(setKey string) string {
-	if len(setKey) <= 2 {
-		return setKey
-	}
-	out := []byte{setKey[0]}
-	for i := 1; i < len(setKey); i++ {
-		if setKey[i] >= 'A' && setKey[i] <= 'Z' {
-			out = append(out, setKey[i])
-		}
-	}
-	if len(out) < 2 {
-		return setKey[:2]
-	}
-	if len(out) > 2 {
-		out = out[:2]
-	}
-	return string(out)
 }
 
 func round1(v float64) float64 {

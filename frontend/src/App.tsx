@@ -3,6 +3,7 @@ import TopBar, { View } from './components/TopBar';
 import ImportView from './components/ImportView';
 import ConfigureView from './components/ConfigureView';
 import ResultsView from './components/ResultsView';
+import InsightsView from './components/InsightsView';
 import { api, ApiError } from './api/client';
 import type {
   GoodExport,
@@ -333,6 +334,7 @@ export default function App() {
         onNavigate={setView}
         canConfigure={!!summary}
         canResults={!!results}
+        canInsights={!!summary}
         accent={accent}
         onAccentChange={setAccent}
         showSolverStats={showSolverStats}
@@ -393,6 +395,8 @@ export default function App() {
             solving={solving}
           />
         )}
+
+        {view === 'insights' && <InsightsView />}
 
         {view === 'results' && (
           <ResultsView

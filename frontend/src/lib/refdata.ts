@@ -129,6 +129,14 @@ export interface ActiveResonance {
 // --acc/--acc-lt custom properties set in app.css) — one hue per element,
 // used to color element tiles and the active-resonance box so each
 // resonance reads at a glance instead of every element looking identical.
+export const ELEM_CODE: Record<Element, string> = {
+  Pyro: 'PY', Hydro: 'HY', Anemo: 'AN', Electro: 'EL', Dendro: 'DE', Cryo: 'CR', Geo: 'GE',
+};
+
+export function elemCode(element: string): string {
+  return ELEM_CODE[element as Element] ?? element.slice(0, 2).toUpperCase();
+}
+
 export const ELEM_COLOR: Record<Element, string> = {
   Pyro: '0.72 0.18 38',
   Hydro: '0.7 0.14 240',

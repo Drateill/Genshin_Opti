@@ -79,6 +79,125 @@ export interface SetInfo {
   counts: Record<string, number>;
 }
 
+export interface CharacterInsight {
+  key: string;
+  name: string;
+  element?: string; // stable English key (Pyro, Hydro, ...), absent when unknown
+  elementLabel?: string; // localized display text
+  weaponType?: string;
+  rarity?: number;
+  level: number;
+  constellation: number;
+  avgTalent: number;
+  known: boolean;
+  weaponName?: string;
+  weaponRarity?: number;
+  weaponRefinement?: number;
+  weaponLevel?: number;
+  artifactsEquipped: number;
+  avgArtifactLevel: number;
+  investment: number;
+  breakdown: ScoreBreakdown;
+}
+
+export interface ScoreComponent {
+  fraction: number; // 0-1, how "complete" this component is
+  weight: number; // this component's share of the 100-point total, e.g. 20
+  points: number; // fraction * weight
+}
+
+export interface ScoreBreakdown {
+  level: ScoreComponent;
+  constellation: ScoreComponent;
+  talents: ScoreComponent;
+  weapon: ScoreComponent;
+  artifactCount: ScoreComponent;
+  artifactQuality: ScoreComponent;
+}
+
+export interface ElementCount {
+  element: string;
+  label: string;
+  count: number;
+}
+
+export interface WeaponTypeStat {
+  type: string;
+  equipped: number;
+  benched: number;
+}
+
+export interface SetCount {
+  key: string;
+  name: string;
+  short: string;
+  count: number;
+}
+
+export interface IdleWeaponGroup {
+  key: string;
+  name: string;
+  type: string;
+  rarity: number;
+  count: number;
+  maxLevel: number;
+  maxRefinement: number;
+}
+
+export interface InsightsOverview {
+  characters: number;
+  artifacts: number;
+  weapons: number;
+  fiveStarArtifacts: number;
+  lockedArtifacts: number;
+  maxLevelArtifacts: number;
+  equippedArtifacts: number;
+  benchedArtifacts: number;
+  equippedWeapons: number;
+  benchedWeapons: number;
+  avgInvestment: number;
+}
+
+export interface ArtifactQuality {
+  id: number;
+  setKey: string;
+  setName: string;
+  setShort: string;
+  slotKey: string;
+  level: number;
+  mainStatKey: string;
+  location?: string;
+  locationName?: string;
+  lock: boolean;
+  critValue: number;
+  rollQuality?: number; // "RV%", absent when not computable (non-5-star)
+}
+
+export interface RollQualityBucket {
+  label: string;
+  count: number;
+}
+
+export interface ArtifactQualityOverview {
+  ratedArtifacts: number;
+  avgCritValue: number;
+  avgRollQuality: number;
+  belowAverageCount: number;
+}
+
+export interface InsightsResponse {
+  overview: InsightsOverview;
+  characters: CharacterInsight[];
+  elements: ElementCount[];
+  weaponTypes: WeaponTypeStat[];
+  sets: SetCount[];
+  idleWeapons: IdleWeaponGroup[];
+  artifactQuality: ArtifactQualityOverview;
+  rollQualityBuckets: RollQualityBucket[];
+  hiddenGems: ArtifactQuality[];
+  fodderCandidates: ArtifactQuality[];
+}
+
 export interface StatRange {
   min?: number;
   max?: number;

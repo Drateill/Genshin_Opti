@@ -6,6 +6,7 @@ import type {
   EnemyPreset,
   GoodExport,
   ImportSummary,
+  InsightsResponse,
   RosterEntry,
   SetInfo,
   SolveProgress,
@@ -41,6 +42,7 @@ export const api = {
     request<ImportSummary>('/api/import', { method: 'POST', body: JSON.stringify(data) }),
   characters: (lang?: string) => request<RosterEntry[]>('/api/characters' + (lang ? `?lang=${lang}` : '')),
   sets: (lang?: string) => request<SetInfo[]>('/api/artifacts/sets' + (lang ? `?lang=${lang}` : '')),
+  insights: (lang?: string) => request<InsightsResponse>('/api/insights' + (lang ? `?lang=${lang}` : '')),
   weapons: (type?: string, lang?: string) => {
     const params = new URLSearchParams();
     if (type) params.set('type', type);

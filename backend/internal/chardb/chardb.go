@@ -18,6 +18,7 @@ import (
 	"embed"
 	"encoding/json"
 	"fmt"
+	"regexp"
 )
 
 //go:embed data/characters.json data/weapons.json data/sets.json
@@ -286,3 +287,39 @@ func WeaponStatAt(key string, level int) (atk float64, subKey string, subVal flo
 
 // SlotOrder is the fixed slot iteration order the solver and UI use.
 var SlotOrder = []string{"flower", "plume", "sands", "goblet", "circlet"}
+
+var (
+	pascalAcronymBoundary = regexp.MustCompile(`([A-Z]+)([A-Z][a-z])`)
+	pascalWordBoundary    = regexp.MustCompile(`([a-z0-9])([A-Z])`)
+)
+
+// SpaceOutKey turns a raw GOOD PascalCase key (e.g. "KamisatoAyaka") into a
+// readable fallback display name ("Kamisato Ayaka") for a character, weapon
+// or set we don't have curated display data for yet — otherwise the UI
+// would show the concatenated key with no spaces at all.
+func SpaceOutKey(key string) string {
+	s := pascalAcronymBoundary.ReplaceAllString(key, "$1 $2")
+	s = pascalWordBoundary.ReplaceAllString(s, "$1 $2")
+	return s
+}
+
+// ShortCode makes a 2-letter fallback badge code (e.g. "GF") from a raw GOOD
+// set key, for a set we don't have a curated SetRef.Short for yet.
+func ShortCode(setKey string) string {
+	if len(setKey) <= 2 {
+		return setKey
+	}
+	out := []byte{setKey[0]}
+	for i := 1; i < len(setKey); i++ {
+		if setKey[i] >= 'A' && setKey[i] <= 'Z' {
+			out = append(out, setKey[i])
+		}
+	}
+	if len(out) < 2 {
+		return setKey[:2]
+	}
+	if len(out) > 2 {
+		out = out[:2]
+	}
+	return string(out)
+}

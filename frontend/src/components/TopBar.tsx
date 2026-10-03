@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { ACCENTS, Accent, TOPN_OPTS } from '../lib/refdata';
 import { LANGS, useLanguage, type Lang } from '../i18n';
 
-export type View = 'import' | 'configure' | 'results';
+export type View = 'import' | 'configure' | 'results' | 'insights';
 
 interface Props {
   view: View;
   onNavigate: (v: View) => void;
   canConfigure: boolean;
   canResults: boolean;
+  canInsights: boolean;
   accent: Accent;
   onAccentChange: (a: Accent) => void;
   showSolverStats: boolean;
@@ -27,11 +28,13 @@ export default function TopBar(props: Props) {
     { view: 'import', label: t.topbar.steps.import },
     { view: 'configure', label: t.topbar.steps.configure },
     { view: 'results', label: t.topbar.steps.results },
+    { view: 'insights', label: t.topbar.steps.insights },
   ];
 
   const disabledFor = (v: View) => {
     if (v === 'configure') return !props.canConfigure;
     if (v === 'results') return !props.canResults;
+    if (v === 'insights') return !props.canInsights;
     return false;
   };
 

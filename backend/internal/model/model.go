@@ -126,6 +126,179 @@ type StatRange struct {
 	Max *float64 `json:"max,omitempty"`
 }
 
+// CharacterInsight is one roster entry enriched with an "investment score"
+// (0-100) and its equipped gear, for GET /api/insights.
+type CharacterInsight struct {
+	Key           string  `json:"key"`
+	Name          string  `json:"name"`
+	Element       string  `json:"element,omitempty"`      // stable English key (Pyro, Hydro, ...), empty when unknown
+	ElementLabel  string  `json:"elementLabel,omitempty"` // localized display text
+	WeaponType    string  `json:"weaponType,omitempty"`
+	Rarity        int     `json:"rarity,omitempty"`
+	Level         int     `json:"level"`
+	Constellation int     `json:"constellation"`
+	AvgTalent     float64 `json:"avgTalent"`
+	Known         bool    `json:"known"`
+
+	WeaponName       string `json:"weaponName,omitempty"`
+	WeaponRarity     int    `json:"weaponRarity,omitempty"`
+	WeaponRefinement int    `json:"weaponRefinement,omitempty"`
+	WeaponLevel      int    `json:"weaponLevel,omitempty"`
+
+	ArtifactsEquipped int     `json:"artifactsEquipped"`
+	AvgArtifactLevel  float64 `json:"avgArtifactLevel"`
+
+	// Investment is a composite 0-100 score: level (20%, capped at 90 —
+	// Stella Fortuna can push a character to 95/100, but that's a rare bonus
+	// on top of "fully leveled," not a requirement for it), constellation
+	// (15%, capped at C2 for a 5-star and C6 for a 4-star — see
+	// insights.constellationCap), average talent level (20%), equipped
+	// weapon level+refinement (15%, refinement capped at R1 for a 5-star and
+	// R5 for a 4-star/3-star, same reasoning as the constellation cap),
+	// number of equipped artifacts (10%), and the quality of their rolls
+	// (20% — see ScoreBreakdown.ArtifactQuality).
+	// It's a rough "how built is this character" heuristic, not a solver
+	// input — purely for the account-insights overview.
+	Investment float64 `json:"investment"`
+	// Breakdown is Investment's six weighted components, for a per-character
+	// detail view — their Points always sum to Investment (modulo rounding).
+	Breakdown ScoreBreakdown `json:"breakdown"`
+}
+
+// ScoreComponent is one weighted component of a CharacterInsight.Investment
+// score.
+type ScoreComponent struct {
+	Fraction float64 `json:"fraction"` // 0-1, how "complete" this component is (see insights.Compute for how each is capped)
+	Weight   float64 `json:"weight"`   // this component's share of the 100-point total, e.g. 20
+	Points   float64 `json:"points"`   // Fraction * Weight — the actual points earned, 0..Weight
+}
+
+// ScoreBreakdown is CharacterInsight.Investment split into its six inputs:
+// level, constellation, talents, weapon, number of equipped artifacts, and
+// their roll quality — see insights.Compute for the exact formula.
+type ScoreBreakdown struct {
+	Level         ScoreComponent `json:"level"`
+	Constellation ScoreComponent `json:"constellation"`
+	Talents       ScoreComponent `json:"talents"`
+	// Weapon is half the equipped weapon's level (/90) and half its
+	// refinement, the refinement half capped by rarity like Constellation
+	// is — R1 is "complete" for a 5-star (rare to duplicate, signature or
+	// not), R5 is still expected for a cheaply-farmed/crafted 4-star or
+	// 3-star.
+	Weapon        ScoreComponent `json:"weapon"`
+	ArtifactCount ScoreComponent `json:"artifactCount"`
+	// ArtifactQuality averages each equipped artifact's "relevant roll
+	// quality" (see insights.relevantRollQuality): how close its CRIT
+	// Rate/DMG, ATK%, EM and Energy Recharge% substats are to their max
+	// possible rolls, counting a roll spent on HP/DEF/flat ATK as wasted
+	// rather than judging it on its own luck. Falls back to the artifact's
+	// raw level for a piece that isn't 5-star (so it still counts for
+	// something, just not for its substats).
+	ArtifactQuality ScoreComponent `json:"artifactQuality"`
+}
+
+// ElementCount is the number of owned characters of one element.
+type ElementCount struct {
+	Element string `json:"element"` // stable English key (Pyro, Hydro, ...)
+	Label   string `json:"label"`   // localized display text
+	Count   int    `json:"count"`
+}
+
+// WeaponTypeStat is the equipped-vs-benched split of owned weapons of one
+// weapon type.
+type WeaponTypeStat struct {
+	Type     string `json:"type"`
+	Equipped int    `json:"equipped"`
+	Benched  int    `json:"benched"`
+}
+
+// SetCount is the total number of owned artifact pieces belonging to one
+// set, across every slot and character.
+type SetCount struct {
+	Key   string `json:"key"`
+	Name  string `json:"name"`
+	Short string `json:"short"`
+	Count int    `json:"count"`
+}
+
+// IdleWeaponGroup is one weapon model sitting unequipped in the inventory,
+// with its copies collapsed into a single row.
+type IdleWeaponGroup struct {
+	Key           string `json:"key"`
+	Name          string `json:"name"`
+	Type          string `json:"type"`
+	Rarity        int    `json:"rarity"`
+	Count         int    `json:"count"` // how many idle copies of this weapon
+	MaxLevel      int    `json:"maxLevel"`
+	MaxRefinement int    `json:"maxRefinement"`
+}
+
+// InsightsOverview is the top-line counts shown in GET /api/insights.
+type InsightsOverview struct {
+	Characters        int     `json:"characters"`
+	Artifacts         int     `json:"artifacts"`
+	Weapons           int     `json:"weapons"`
+	FiveStarArtifacts int     `json:"fiveStarArtifacts"`
+	LockedArtifacts   int     `json:"lockedArtifacts"`
+	MaxLevelArtifacts int     `json:"maxLevelArtifacts"` // artifacts at level 20
+	EquippedArtifacts int     `json:"equippedArtifacts"`
+	BenchedArtifacts  int     `json:"benchedArtifacts"`
+	EquippedWeapons   int     `json:"equippedWeapons"`
+	BenchedWeapons    int     `json:"benchedWeapons"`
+	AvgInvestment     float64 `json:"avgInvestment"`
+}
+
+// ArtifactQuality is one artifact enriched with its Crit Value and an
+// estimated substat roll quality, for GET /api/insights.
+type ArtifactQuality struct {
+	ID           int     `json:"id"`
+	SetKey       string  `json:"setKey"`
+	SetName      string  `json:"setName"`
+	SetShort     string  `json:"setShort"`
+	SlotKey      string  `json:"slotKey"`
+	Level        int     `json:"level"`
+	MainStatKey  string  `json:"mainStatKey"`
+	Location     string  `json:"location,omitempty"`
+	LocationName string  `json:"locationName,omitempty"`
+	Lock         bool    `json:"lock"`
+	CritValue    float64 `json:"critValue"`
+	// RollQuality is "RV%": the substats' total value against the total
+	// value they'd have if every roll had hit its highest possible tier —
+	// nil when not computable (only rated for 5-star pieces, see
+	// insights.rollQuality).
+	RollQuality *float64 `json:"rollQuality,omitempty"`
+}
+
+// RollQualityBucket is one bucket of a roll-quality histogram.
+type RollQualityBucket struct {
+	Label string `json:"label"`
+	Count int    `json:"count"`
+}
+
+// ArtifactQualityOverview summarizes Crit Value and roll quality across the
+// whole inventory.
+type ArtifactQualityOverview struct {
+	RatedArtifacts    int     `json:"ratedArtifacts"` // 5-star artifacts with a computed RollQuality
+	AvgCritValue      float64 `json:"avgCritValue"`
+	AvgRollQuality    float64 `json:"avgRollQuality"`
+	BelowAverageCount int     `json:"belowAverageCount"` // rated artifacts under 70% roll quality
+}
+
+// InsightsResponse is returned from GET /api/insights — an account-wide
+// audit of the current import, independent of the solver.
+type InsightsResponse struct {
+	Overview           InsightsOverview        `json:"overview"`
+	Characters         []CharacterInsight      `json:"characters"` // sorted by Investment, descending
+	Elements           []ElementCount          `json:"elements"`
+	WeaponTypes        []WeaponTypeStat        `json:"weaponTypes"`
+	Sets               []SetCount              `json:"sets"`        // sorted by Count, descending
+	IdleWeapons        []IdleWeaponGroup       `json:"idleWeapons"` // benched 4-5* weapons, sorted by rarity then count, descending
+	ArtifactQuality    ArtifactQualityOverview `json:"artifactQuality"`
+	RollQualityBuckets []RollQualityBucket     `json:"rollQualityBuckets"`
+	HiddenGems         []ArtifactQuality       `json:"hiddenGems"`       // best Crit Value, currently unequipped
+	FodderCandidates   []ArtifactQuality       `json:"fodderCandidates"` // locked pieces with the worst Crit Value
+}
+
 // SolveRequest is the body of POST /api/solve.
 type SolveRequest struct {
 	CharacterKey string `json:"characterKey"`

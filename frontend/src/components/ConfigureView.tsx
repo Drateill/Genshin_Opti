@@ -1,7 +1,7 @@
 import { useState, type CSSProperties, type SyntheticEvent } from 'react';
 import type { RosterEntry, SetInfo, StatRange, WeaponOption } from '../api/types';
 import {
-  ELEMENTS, ELEM_COLOR, activeResonances, circletOpts, constraintStats, sandsOpts, gobletOpts, objectiveOpts, TOPN_OPTS,
+  ELEMENTS, ELEM_COLOR, elemCode, activeResonances, circletOpts, constraintStats, sandsOpts, gobletOpts, objectiveOpts, TOPN_OPTS,
 } from '../lib/refdata';
 import { useT } from '../i18n';
 import type { Dict } from '../i18n/translations';
@@ -37,13 +37,6 @@ interface Props {
   onToggleIncludeEquippedByOthers: (v: boolean) => void;
   onSolve: () => void;
   solving: boolean;
-}
-
-const ELEM_CODE: Record<string, string> = {
-  Pyro: 'PY', Hydro: 'HY', Anemo: 'AN', Electro: 'EL', Dendro: 'DE', Cryo: 'CR', Geo: 'GE',
-};
-function elemCode(element: string): string {
-  return ELEM_CODE[element] ?? element.slice(0, 2).toUpperCase();
 }
 
 // --el is read by the .elem-tile/.team-slot-row.self/.resonance-row CSS to
