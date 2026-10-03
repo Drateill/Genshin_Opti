@@ -12,6 +12,6 @@ resources:
 # this is the file ArgoCD picks up the new tag from.
 images:
   - name: ghcr.io/drateill/genshin_opti-backend
-    newTag: d8cc242
+    newTag: 816d059
   - name: ghcr.io/drateill/genshin_opti-frontend
-    newTag: d8cc242
+    newTag: 816d059
