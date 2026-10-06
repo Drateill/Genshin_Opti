@@ -165,12 +165,15 @@ export interface ArtifactQuality {
   setShort: string;
   slotKey: string;
   level: number;
+  rarity: number;
   mainStatKey: string;
+  mainStatValue: number;
   location?: string;
   locationName?: string;
   lock: boolean;
   critValue: number;
   rollQuality?: number; // "RV%", absent when not computable (non-5-star)
+  substats: Stat[];
 }
 
 export interface RollQualityBucket {

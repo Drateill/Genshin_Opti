@@ -251,22 +251,28 @@ type InsightsOverview struct {
 // ArtifactQuality is one artifact enriched with its Crit Value and an
 // estimated substat roll quality, for GET /api/insights.
 type ArtifactQuality struct {
-	ID           int     `json:"id"`
-	SetKey       string  `json:"setKey"`
-	SetName      string  `json:"setName"`
-	SetShort     string  `json:"setShort"`
-	SlotKey      string  `json:"slotKey"`
-	Level        int     `json:"level"`
-	MainStatKey  string  `json:"mainStatKey"`
-	Location     string  `json:"location,omitempty"`
-	LocationName string  `json:"locationName,omitempty"`
-	Lock         bool    `json:"lock"`
-	CritValue    float64 `json:"critValue"`
+	ID            int     `json:"id"`
+	SetKey        string  `json:"setKey"`
+	SetName       string  `json:"setName"`
+	SetShort      string  `json:"setShort"`
+	SlotKey       string  `json:"slotKey"`
+	Level         int     `json:"level"`
+	Rarity        int     `json:"rarity"`
+	MainStatKey   string  `json:"mainStatKey"`
+	MainStatValue float64 `json:"mainStatValue"`
+	Location      string  `json:"location,omitempty"`
+	LocationName  string  `json:"locationName,omitempty"`
+	Lock          bool    `json:"lock"`
+	CritValue     float64 `json:"critValue"`
 	// RollQuality is "RV%": the substats' total value against the total
 	// value they'd have if every roll had hit its highest possible tier —
 	// nil when not computable (only rated for 5-star pieces, see
 	// insights.rollQuality).
 	RollQuality *float64 `json:"rollQuality,omitempty"`
+	// SubStats is included so the frontend can show the full roll detail
+	// (e.g. in a click-to-expand artifact card) instead of just the
+	// summary CritValue/RollQuality numbers.
+	SubStats []Stat `json:"substats"`
 }
 
 // RollQualityBucket is one bucket of a roll-quality histogram.

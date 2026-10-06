@@ -1502,6 +1502,34 @@
   color: var(--muted);
 }
 
+/* ---- collapsible panel (native <details>/<summary>) ---- */
+.ins-panel {
+  display: block;
+}
+.ins-panel-summary {
+  cursor: pointer;
+  list-style: none;
+}
+.ins-panel-summary::-webkit-details-marker {
+  display: none;
+}
+.ins-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+.ins-panel-chevron {
+  flex-shrink: 0;
+  display: inline-block;
+  font-size: 11px;
+  color: oklch(var(--acc-lt));
+  transition: transform 0.12s ease;
+}
+.ins-panel[open] > .ins-panel-summary .ins-panel-chevron {
+  transform: rotate(90deg);
+}
+
 /* ---- hero: investment ring + kpi grid ---- */
 .ins-hero {
   display: grid;
@@ -1554,6 +1582,17 @@
   font-size: 13px;
   color: var(--muted);
   text-wrap: pretty;
+}
+.ins-ring-clear {
+  align-self: flex-start;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: oklch(var(--acc-lt));
+  margin-top: 2px;
+}
+.ins-ring-clear:hover {
+  text-decoration: underline;
 }
 
 .ins-kpi-grid {
@@ -1811,12 +1850,19 @@
   opacity: 0.7;
 }
 
+.ins-roster-hint {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
 .ins-roster-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 10px;
 }
 .ins-roster-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1843,6 +1889,31 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  padding-right: 18px;
+}
+.ins-roster-check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1.5px solid var(--border-strong);
+  background: var(--bg-input);
+  cursor: pointer;
+}
+.ins-roster-check:hover {
+  border-color: oklch(var(--el) / 0.7);
+}
+.ins-roster-check.checked {
+  background: oklch(var(--el) / 0.7);
+  border-color: oklch(var(--el) / 0.7);
+}
+.ins-roster-check:focus-visible {
+  outline: 2px solid oklch(var(--el) / 0.7);
+  outline-offset: 2px;
 }
 .ins-roster-avatar {
   width: 36px;
@@ -1959,9 +2030,39 @@
   color: oklch(var(--acc-lt));
 }
 .ins-rail-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: block;
+}
+.ins-rail-group > *:not(summary) {
+  margin-top: 8px;
+}
+.ins-rail-group > summary {
+  cursor: pointer;
+  list-style: none;
+}
+.ins-rail-group > summary::-webkit-details-marker {
+  display: none;
+}
+.ins-rail-group .ins-panel-chevron {
+  color: var(--muted);
+}
+.ins-rail-group[open] > summary .ins-panel-chevron {
+  transform: rotate(90deg);
+}
+
+/* ---- collapsible row of panels (the element/weapon/roll trio) ---- */
+.ins-row {
+  display: block;
+}
+.ins-row-summary {
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 12px;
+}
+.ins-row-summary::-webkit-details-marker {
+  display: none;
+}
+.ins-row[open] > .ins-row-summary .ins-panel-chevron {
+  transform: rotate(90deg);
 }
 .ins-rail-group-head {
   display: flex;
@@ -2009,6 +2110,19 @@
   border-radius: 9px;
   background: var(--bg-chip);
   border: 1px solid var(--border);
+}
+.ins-rail-item.clickable {
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.ins-rail-item.clickable:hover,
+.ins-rail-item.clickable:focus-visible {
+  background: var(--bg-row-sel);
+  border-color: var(--border-strong);
+}
+.ins-rail-item.clickable:focus-visible {
+  outline: 2px solid var(--border-strong);
+  outline-offset: 1px;
 }
 .ins-rail-item-icon {
   width: 30px;
@@ -2207,6 +2321,66 @@
   font-size: 10.5px;
   color: var(--muted);
   margin-top: 4px;
+}
+
+/* ---------------- artifact detail modal ---------------- */
+
+.artifact-modal-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: oklch(var(--acc-lt));
+  background: oklch(var(--acc) / 0.14);
+  border: 1px solid oklch(var(--acc) / 0.4);
+}
+.artifact-modal-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.artifact-modal-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 12.5px;
+  color: var(--text-mid);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.artifact-modal-stat-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.artifact-modal-stat-row.main {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+.artifact-modal-stat-row span:last-child {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-bright);
+}
+.artifact-modal-main-tag {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 400;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.artifact-modal-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: var(--muted);
 }
 
 /* ---------------- solving overlay ---------------- */

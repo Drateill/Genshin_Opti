@@ -251,8 +251,8 @@ func Compute(export model.GoodExport, lang string) model.InsightsResponse {
 	for _, a := range export.Artifacts {
 		aq := model.ArtifactQuality{
 			ID: a.ID, SetKey: a.SetKey, SetName: setDisplayName(a.SetKey, lang), SetShort: setShortCode(a.SetKey, lang), SlotKey: a.SlotKey,
-			Level: a.Level, MainStatKey: a.MainStatKey, Location: a.Location, Lock: a.Lock,
-			CritValue: critValue(a),
+			Level: a.Level, Rarity: a.Rarity, MainStatKey: a.MainStatKey, MainStatValue: a.MainStatValue,
+			Location: a.Location, Lock: a.Lock, CritValue: critValue(a), SubStats: a.SubStats,
 		}
 		if a.Location != "" {
 			aq.LocationName = charDisplayName(a.Location, lang)

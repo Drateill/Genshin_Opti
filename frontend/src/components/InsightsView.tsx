@@ -1,10 +1,11 @@
-import { useEffect, useState, type CSSProperties } from 'react';
+import { useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 import { api, ApiError } from '../api/client';
 import type { ArtifactQuality, CharacterInsight, IdleWeaponGroup, InsightsResponse } from '../api/types';
 import { ELEM_COLOR, ELEMENTS, elemCode, abbrev, type Element } from '../lib/refdata';
 import { useLanguage } from '../i18n';
 import type { Dict } from '../i18n/translations';
 import ScoreBreakdownModal from './ScoreBreakdownModal';
+import ArtifactDetailModal from './ArtifactDetailModal';
 
 // Score tiers for the roster cards — S lights up in the app's own accent,
 // A/B/C step down through neutral inks so only a truly built character
@@ -42,6 +43,29 @@ function Kpi({ label, value, sub }: { label: string; value: string | number; sub
   );
 }
 
+// Panel is a collapsible section (native <details>/<summary>, no JS state
+// needed) — lets the reader fold away charts they don't care about instead
+// of scrolling past everything every time. Open by default so nothing is
+// hidden on first load.
+function Panel({ title, meta, children }: { title: string; meta?: ReactNode; children: ReactNode }) {
+  return (
+    <details className="card ins-panel" open>
+      <summary className="ins-card-head ins-panel-summary">
+        <span className="ins-panel-title">
+          <span className="ins-panel-chevron" aria-hidden="true">
+            ▸
+          </span>
+          <span className="card-label" style={{ marginBottom: 0 }}>
+            {title}
+          </span>
+        </span>
+        {meta}
+      </summary>
+      {children}
+    </details>
+  );
+}
+
 interface RailItem {
   key: string;
   icon: string;
@@ -50,6 +74,7 @@ interface RailItem {
   val: string;
   tag: string;
   alert?: boolean;
+  artifact?: ArtifactQuality;
 }
 
 function RailGroup({
@@ -60,6 +85,7 @@ function RailGroup({
   items,
   open,
   onToggle,
+  onItemClick,
 }: {
   t: Dict;
   title: string;
@@ -68,17 +94,21 @@ function RailGroup({
   items: RailItem[];
   open: boolean;
   onToggle: () => void;
+  onItemClick?: (a: ArtifactQuality) => void;
 }) {
   const shown = open ? items : items.slice(0, 3);
   return (
-    <div className="ins-rail-group">
-      <div className="ins-rail-group-head">
+    <details className="ins-rail-group" open>
+      <summary className="ins-rail-group-head">
+        <span className="ins-panel-chevron" aria-hidden="true">
+          ▸
+        </span>
         <span className="ins-rail-dot" style={{ background: color, boxShadow: `0 0 8px ${color}` }} />
         <span className="ins-rail-group-title">{title}</span>
         <span className="ins-rail-count" style={{ background: `color-mix(in oklab, ${color} 18%, transparent)`, color }}>
           {items.length}
         </span>
-      </div>
+      </summary>
       <div className="ins-rail-hint">{hint}</div>
       {items.length === 0 ? (
         <div className="ins-rail-empty">{t.insights.actionQueue.none}</div>
@@ -86,7 +116,20 @@ function RailGroup({
         <>
           <div className="ins-rail-items">
             {shown.map((it) => (
-              <div className="ins-rail-item" key={it.key}>
+              <div
+                className={'ins-rail-item' + (it.artifact ? ' clickable' : '')}
+                key={it.key}
+                role={it.artifact ? 'button' : undefined}
+                tabIndex={it.artifact ? 0 : undefined}
+                onClick={it.artifact ? () => onItemClick?.(it.artifact!) : undefined}
+                onKeyDown={
+                  it.artifact
+                    ? (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') onItemClick?.(it.artifact!);
+                      }
+                    : undefined
+                }
+              >
                 <span className="ins-rail-item-icon">{it.icon}</span>
                 <div className="ins-rail-item-info">
                   <div className="ins-rail-item-title">{it.title}</div>
@@ -113,7 +156,7 @@ function RailGroup({
           )}
         </>
       )}
-    </div>
+    </details>
   );
 }
 
@@ -126,6 +169,8 @@ export default function InsightsView() {
   const [showAllRoster, setShowAllRoster] = useState(false);
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({});
   const [selectedChar, setSelectedChar] = useState<CharacterInsight | null>(null);
+  const [selectedArtifact, setSelectedArtifact] = useState<ArtifactQuality | null>(null);
+  const [avgSelection, setAvgSelection] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     let cancelled = false;
@@ -212,6 +257,15 @@ export default function InsightsView() {
     { key: 'All', label: t.insights.roster.all, n: data.characters.length },
     ...ELEMENTS.map((el) => ({ key: el, label: elemCode(el), n: data.characters.filter((c) => c.element === el).length })),
   ];
+  const toggleAvgSelection = (key: string) =>
+    setAvgSelection((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  const selectedChars = data.characters.filter((c) => avgSelection.has(c.key));
+  const selectedAvg = selectedChars.length ? selectedChars.reduce((a, c) => a + c.investment, 0) / selectedChars.length : null;
 
   // --- action queue ---
   const artQualityItem = (a: ArtifactQuality, subLabel: string): RailItem => ({
@@ -221,6 +275,7 @@ export default function InsightsView() {
     sub: `${(t.slots as Record<string, string>)[a.slotKey] ?? a.slotKey} · ${abbrev(t, a.mainStatKey)} · ${subLabel}`,
     val: a.critValue.toFixed(1),
     tag: a.rollQuality !== undefined ? t.insights.actionQueue.rv(a.rollQuality.toFixed(0)) : '—',
+    artifact: a,
   });
   const idleItem = (g: IdleWeaponGroup): RailItem => ({
     key: g.key,
@@ -239,7 +294,8 @@ export default function InsightsView() {
 
   const toggleGroup = (k: string) => setOpenGroups((s) => ({ ...s, [k]: !s[k] }));
 
-  const avgPct = Math.max(0, Math.min(100, o.avgInvestment));
+  const displayedAvg = selectedAvg ?? o.avgInvestment;
+  const avgPct = Math.max(0, Math.min(100, displayedAvg));
 
   return (
     <div>
@@ -258,15 +314,22 @@ export default function InsightsView() {
                 style={{ background: `conic-gradient(oklch(var(--acc)) 0 ${avgPct}%, var(--track) 0)` }}
               >
                 <div className="ins-ring-inner">
-                  <span className="ins-ring-value">{o.avgInvestment}</span>
+                  <span className="ins-ring-value">{displayedAvg.toFixed(1)}</span>
                   <span className="ins-ring-unit">/ 100</span>
                 </div>
               </div>
               <div className="ins-ring-label">
                 <span className="card-label" style={{ marginBottom: 0 }}>
-                  {t.insights.avgInvestment}
+                  {selectedAvg !== null ? t.insights.roster.selectAvgLabel(selectedChars.length) : t.insights.avgInvestment}
                 </span>
-                <span className="ins-ring-desc">{t.insights.avgInvestmentDesc}</span>
+                <span className="ins-ring-desc">
+                  {selectedAvg !== null ? t.insights.roster.selectAvgDesc : t.insights.avgInvestmentDesc}
+                </span>
+                {selectedAvg !== null && (
+                  <span role="button" className="ins-ring-clear" onClick={() => setAvgSelection(new Set())}>
+                    {t.insights.roster.clearSelection}
+                  </span>
+                )}
               </div>
             </div>
             <div className="ins-kpi-grid">
@@ -277,14 +340,19 @@ export default function InsightsView() {
           </div>
 
           {/* trio */}
-          <div className="ins-trio">
-            <div className="card">
-              <div className="ins-card-head">
-                <span className="card-label" style={{ marginBottom: 0 }}>
-                  {t.insights.elements.title}
+          <details className="ins-row" open>
+            <summary className="ins-row-summary">
+              <span className="ins-panel-title">
+                <span className="ins-panel-chevron" aria-hidden="true">
+                  ▸
                 </span>
-                <span className="ins-card-meta">{t.insights.elements.charCount(o.characters)}</span>
-              </div>
+                <span className="card-label" style={{ marginBottom: 0 }}>
+                  {t.insights.rowTitle}
+                </span>
+              </span>
+            </summary>
+          <div className="ins-trio">
+            <Panel title={t.insights.elements.title} meta={<span className="ins-card-meta">{t.insights.elements.charCount(o.characters)}</span>}>
               <div className="ins-elem-bar">
                 {data.elements.map((e) => (
                   <div
@@ -315,13 +383,11 @@ export default function InsightsView() {
                   </div>
                 ))}
               </div>
-            </div>
+            </Panel>
 
-            <div className="card">
-              <div className="ins-card-head">
-                <span className="card-label" style={{ marginBottom: 0 }}>
-                  {t.insights.weapons.title}
-                </span>
+            <Panel
+              title={t.insights.weapons.title}
+              meta={
                 <div className="ins-wpn-legend">
                   <span>
                     <i style={{ background: 'var(--teal)' }} />
@@ -332,7 +398,8 @@ export default function InsightsView() {
                     {t.insights.weapons.stash}
                   </span>
                 </div>
-              </div>
+              }
+            >
               {weaponRows.map((w) => (
                 <div className="ins-wpn-row" key={w.type}>
                   <span className="ins-wpn-type">{weaponTypeLabel(t, w.type)}</span>
@@ -347,15 +414,12 @@ export default function InsightsView() {
                   </span>
                 </div>
               ))}
-            </div>
+            </Panel>
 
-            <div className="card">
-              <div className="ins-card-head">
-                <span className="card-label" style={{ marginBottom: 0 }}>
-                  {t.insights.rollQuality.title}
-                </span>
-                <span className="ins-card-meta">{t.insights.rollQuality.avg(Math.round(data.artifactQuality.avgRollQuality))}</span>
-              </div>
+            <Panel
+              title={t.insights.rollQuality.title}
+              meta={<span className="ins-card-meta">{t.insights.rollQuality.avg(Math.round(data.artifactQuality.avgRollQuality))}</span>}
+            >
               <div className="ins-rv-chart">
                 {data.rollQualityBuckets.map((b, i) => {
                   const hi = i >= data.rollQualityBuckets.length - 2;
@@ -379,17 +443,12 @@ export default function InsightsView() {
                   <span key={b.label}>{b.label}</span>
                 ))}
               </div>
-            </div>
+            </Panel>
           </div>
+          </details>
 
           {/* sets wall */}
-          <div className="card">
-            <div className="ins-card-head">
-              <span className="card-label" style={{ marginBottom: 0 }}>
-                {t.insights.sets.title}
-              </span>
-              <span className="ins-card-meta">{t.insights.sets.equippedPieces(setTotal)}</span>
-            </div>
+          <Panel title={t.insights.sets.title} meta={<span className="ins-card-meta">{t.insights.sets.equippedPieces(setTotal)}</span>}>
             <div className="ins-sets-grid">
               {topSets.map((s) => (
                 <div className="ins-set-chip" key={s.key}>
@@ -402,35 +461,28 @@ export default function InsightsView() {
                 </div>
               ))}
             </div>
-          </div>
+          </Panel>
 
           {/* roster */}
-          <div className="card">
-            <div className="ins-card-head" style={{ marginBottom: 2 }}>
-              <span className="card-label" style={{ marginBottom: 0 }}>
-                {t.insights.roster.title}
-              </span>
-              <div className="ins-filter-row">
-                {filterChips.map((f) => {
-                  const active = filterEl === f.key;
-                  const style =
-                    f.key === 'All'
-                      ? undefined
-                      : ({ '--el': ELEM_COLOR[f.key as Element] } as CSSProperties);
-                  return (
-                    <div
-                      key={f.key}
-                      role="button"
-                      className={'ins-filter-chip' + (active ? ' active' : '') + (f.key !== 'All' ? ' elem' : '')}
-                      style={style}
-                      onClick={() => setFilterEl(f.key)}
-                    >
-                      {f.label} <span className="ins-filter-n">{f.n}</span>
-                    </div>
-                  );
-                })}
-              </div>
+          <Panel title={t.insights.roster.title} meta={<span className="ins-card-meta">{data.characters.length}</span>}>
+            <div className="ins-filter-row" style={{ marginBottom: 10 }}>
+              {filterChips.map((f) => {
+                const active = filterEl === f.key;
+                const style = f.key === 'All' ? undefined : ({ '--el': ELEM_COLOR[f.key as Element] } as CSSProperties);
+                return (
+                  <div
+                    key={f.key}
+                    role="button"
+                    className={'ins-filter-chip' + (active ? ' active' : '') + (f.key !== 'All' ? ' elem' : '')}
+                    style={style}
+                    onClick={() => setFilterEl(f.key)}
+                  >
+                    {f.label} <span className="ins-filter-n">{f.n}</span>
+                  </div>
+                );
+              })}
             </div>
+            <p className="ins-roster-hint">{t.insights.roster.selectHint}</p>
             <div className="ins-roster-grid">
               {rosterShown.map((c: CharacterInsight) => (
                 <div
@@ -444,6 +496,24 @@ export default function InsightsView() {
                     if (e.key === 'Enter' || e.key === ' ') setSelectedChar(c);
                   }}
                 >
+                  <span
+                    className={'ins-roster-check' + (avgSelection.has(c.key) ? ' checked' : '')}
+                    role="checkbox"
+                    aria-checked={avgSelection.has(c.key)}
+                    aria-label={c.name}
+                    tabIndex={0}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleAvgSelection(c.key);
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        toggleAvgSelection(c.key);
+                      }
+                    }}
+                  />
                   <div className="ins-roster-top">
                     <div className="ins-roster-avatar">
                       {c.name
@@ -476,7 +546,7 @@ export default function InsightsView() {
                 {showAllRoster ? t.insights.roster.showTop(15) : t.insights.roster.showAll(filtered.length)}
               </div>
             )}
-          </div>
+          </Panel>
         </div>
 
         {/* action queue rail */}
@@ -493,6 +563,7 @@ export default function InsightsView() {
             items={gemItems}
             open={!!openGroups.gems}
             onToggle={() => toggleGroup('gems')}
+            onItemClick={setSelectedArtifact}
           />
           <RailGroup
             t={t}
@@ -502,6 +573,7 @@ export default function InsightsView() {
             items={fodderItems}
             open={!!openGroups.fodder}
             onToggle={() => toggleGroup('fodder')}
+            onItemClick={setSelectedArtifact}
           />
           <RailGroup
             t={t}
@@ -516,6 +588,7 @@ export default function InsightsView() {
       </div>
 
       {selectedChar && <ScoreBreakdownModal character={selectedChar} onClose={() => setSelectedChar(null)} />}
+      {selectedArtifact && <ArtifactDetailModal artifact={selectedArtifact} onClose={() => setSelectedArtifact(null)} />}
     </div>
   );
 }
